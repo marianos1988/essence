@@ -4,9 +4,11 @@
 
 
 <header>
-    <div class="box-logo">
-        <img src="header/logoAnimado.gif" alt="Logo">
-    </div>
+    <a href="/">
+        <div class="box-logo">
+            <img src="header/logoAnimado.gif" alt="Logo">
+        </div>
+    </a>
     <div>
         <h1>Somos una combinación de música, arte y energía.</h1>
     </div>
@@ -14,6 +16,25 @@
 
 
 <style>
+
+:root{
+  --gradient:  linear-gradient(to right, 
+    #000000,
+    #353535,
+    #474747,
+    #696969,
+    #8b8b8b,
+    #696969,
+    #474747,
+    #353535,
+    #000000
+  );
+}
+
+    /* Roboto Mono */
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
     header {
         width: 100%;
         height: 300px;
@@ -21,8 +42,9 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: radial-gradient(circle,rgba(0, 0, 0, 1) 0%, rgba(36, 31, 31, 1) 80%, rgba(176, 175, 165, 1) 100%);
-        background-size: 100%;
+        background-image: var(--gradient);
+  background-size: 400%;
+  animation: fondo-anim 20s infinite alternate;
         border-bottom: solid 2px #bebebe;
     }
 
@@ -36,9 +58,9 @@
 
         .box-logo img {
             border-radius: 20px;
-            border: solid 2px #E5E4E2;
+            border: solid 2px rgba(26, 29, 194, 0.6);
             width: 100%; 
-            transform: translatey(25px);
+            transform: translatey(45px);
             border-radius: 50px;
             background: #e0e0e0;
             box-shadow:  5px 5px 20px #bebebe,
@@ -54,6 +76,11 @@
         
         h1 {
             color: #ffffff;
+            transform: translateY(-35px);
+            padding: 4px;
+            font-family: "Fira Sans", sans-serif;
+            width: 100%;
+            text-shadow: -7px -1px 6px rgba(26, 29, 194, 0.6);
         }
     }
 
@@ -61,4 +88,8 @@
         
     }
 
+    @keyframes fondo-anim{
+        0%{background-position: left;} /*por defecto*/
+        100%{background-position: right;}
+    }
 </style>
