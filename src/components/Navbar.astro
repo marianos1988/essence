@@ -2,8 +2,8 @@
 
 ---
 
-<div class="container-navbar open">
-  <button class="burger"></button>
+<div class="container-navbar" >
+  <button class="burger"  onclick=""></button>
   <div class="background"></div>
   <div class="menu">
     <nav>
@@ -115,9 +115,9 @@
   .container-navbar .menu a {
     position: relative;
     color: #f9f9f9;
-    font-size: 32px;
+    font-size: 30px;
     font-family: "Euclid Circular A";
-    padding: 20px 0 20px 20px;
+    padding: 20px 0 10px 0px;
     text-decoration: none;
     opacity: 0;
     cursor: pointer;
@@ -130,7 +130,7 @@
     top: 50%;
     right: -26px;
     translate: 0 -50%;
-    margin-top: 2px;
+    margin-top: 1px;
     width: 10px;
     height: 10px;
     border-top: 3px solid #ffffff;
@@ -166,3 +166,11 @@
     }
   }
 </style>
+
+<script>
+  const btnBurguer = document.querySelector(".burger");
+
+  btnBurguer?.addEventListener("click", ()=>{
+    document.querySelector(".container-navbar")?.classList.toggle("open")
+  })
+</script>
