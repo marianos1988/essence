@@ -1,4 +1,5 @@
 ---
+import BorderEffectLogo from "./BorderEffectLogo.astro";
 import Navbar from "./Navbar.astro";
 
 
@@ -12,7 +13,10 @@ import Navbar from "./Navbar.astro";
         </div>
     </a>
     <div>
-        <h1>Somos una combinación de música, arte y energía.</h1>
+        <BorderEffectLogo>
+            <h1>Somos una combinación de música, arte y energía.</h1>
+        </BorderEffectLogo>
+
     </div>
     <Navbar></Navbar>
 </header>
@@ -65,7 +69,7 @@ import Navbar from "./Navbar.astro";
         
         h1 {
             color: #ffffff;
-            transform: translateY(-35px);
+
             font-family: "Fira Sans", sans-serif;
             width: 100%;
             text-shadow: -7px -1px 6px rgba(255, 255, 255, 0.6);
