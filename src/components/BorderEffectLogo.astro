@@ -84,40 +84,41 @@
         --border-angle-3: 180deg;
         color: inherit;
         font-family: inherit;
-        border: 0;
+        border: 3px;
         padding: var(--border-size);
         display: flex;
         width: max-content;
         border-radius: var(--border-radius);
-        background-color: inherit;
-        background-image: conic-gradient(
-            from var(--border-angle-1) at 10% 15%,
-            transparent,
-            var(--bright-blue) 10%,
-            transparent 30%,
-            transparent
-        ),
-        conic-gradient(
-            from var(--border-angle-2) at 70% 60%,
+        background-color: transparent;
+        background-image: 
+            conic-gradient(
+                from var(--border-angle-1) at 10% 15%,
                 transparent,
-                var(--bright-green) 10%,
+                #4605f8,
+                transparent 30%,
+                transparent
+            ),
+            conic-gradient(
+                from var(--border-angle-2) at 70% 60%,
+                transparent,
+                #3051e0 10%,
                 transparent 60%,
                 transparent
             ),
-        conic-gradient(
-            from var(--border-angle-3) at 50% 20%,
-            transparent,
-            var(--bright-red) 10%,
-            transparent 50%,
-            transparent
-        );
-        animation: rotateBackground 3s linear infinite,
-            rotateBackground2 8s linear infinite, rotateBackground3 13s linear infinite;
-        }
+            conic-gradient(
+                from var(--border-angle-3) at 50% 20%,
+                transparent,
+                #7685ca 10%,
+                transparent 50%,
+                transparent
+            );
+            animation: rotateBackground 3s linear infinite,
+                rotateBackground2 8s linear infinite, rotateBackground3 13s linear infinite;
+            }
 
         /* Change this background to transparent to see how the gradient works */
         .container div {
-            background: transparent;
+            background: black;
             padding: 1em;
             border-radius: calc(var(--border-radius) - var(--border-size));
             color: var(--foreground);
@@ -131,9 +132,9 @@
 
     @media (min-width:770px) {
         .container {
-            width:95%;
+            width:100%;
             text-align: center;
-            height: 80px;
+            
             display: flex;
             justify-content: center;
             align-items: center;
