@@ -1,0 +1,294 @@
+---
+
+---
+
+<div class="container-carousel carousel-active">
+    <article class="box-images">
+      <ul class='slider'>
+        <li class='item item-1'>
+          <div class='content'>
+            <h2 class='title'>"Essence Crew"</h2>
+            <p class='description'>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet eveniet, doloribus vel veritatis nam commodi vero quod praesentium non ad obcaecati atque et sint in illo autem, animi porro corporis!
+            </p>      
+        </li>
+        <li class='item item-2'>
+          <div class='content'>
+            <h2 class='title'>"Proximos Eventos"</h2>
+            <p class='description'>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque culpa cupiditate laudantium possimus beatae accusamus praesentium voluptas quisquam odio eveniet assumenda architecto rerum, repellendus quis. Optio quae accusantium ducimus aut.
+            </p>                
+          </div>
+        </li>
+        <li class='item item-3'>
+          <div class='content'>
+            <h2 class='title'>"Nuestro Staff"</h2>
+            <p class='description'>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero eius nihil quas laudantium reprehenderit. Veritatis nemo perferendis iusto quisquam aut ipsa itaque voluptatum porro mollitia laboriosam fugiat, omnis distinctio reiciendis.
+            </p>      
+          </div>
+        </li>
+        <li class='item item-4'>
+          <div class='content'>
+            <h2 class='title'>"Contactanos"</h2>
+            <p class='description'>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit illum hic optio dolor doloremque ut accusantium perspiciatis at, tempore dolorum quis sapiente, unde repellendus nesciunt possimus accusamus neque. Doloremque, accusamus!
+            </p>      
+          </div>
+        </li>
+        <li class='item item-5'>
+          <div class='content'>
+            <h2 class='title'>"Organizacion de eventos"</h2>
+            <p class='description'>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, molestias. Officiis, a. Eius, repellat. Corrupti quae quasi, nesciunt, aliquam quo cum necessitatibus explicabo consectetur, obcaecati est tempora eum pariatur libero.
+            </p>      
+          </div>
+        </li>
+        <li class='item item-6'>
+          <div class='content'>
+            <h2 class='title'>"Set de nuestros Dj"</h2>
+            <p class='description'>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolorem sunt assumenda magni. Voluptas porro maxime est assumenda, quam dolor inventore illo fugiat, voluptatem accusantium autem quis distinctio quo amet.
+            </p>      
+        </li>
+      </ul>
+      <nav class='nav'>
+
+            <svg  xmlns="http://www.w3.org/2000/svg" class="btn prev" width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-arrow-big-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9.586 4l-6.586 6.586a2 2 0 0 0 0 2.828l6.586 6.586a2 2 0 0 0 2.18 .434l.145 -.068a2 2 0 0 0 1.089 -1.78v-2.586h7a2 2 0 0 0 2 -2v-4l-.005 -.15a2 2 0 0 0 -1.995 -1.85l-7 -.001v-2.585a2 2 0 0 0 -3.414 -1.414z" /></svg>
+
+
+            <svg class="btn next" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-arrow-big-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12.089 3.634a2 2 0 0 0 -1.089 1.78l-.001 2.586h-6.999a2 2 0 0 0 -2 2v4l.005 .15a2 2 0 0 0 1.995 1.85l6.999 -.001l.001 2.587a2 2 0 0 0 3.414 1.414l6.586 -6.586a2 2 0 0 0 0 -2.828l-6.586 -6.586a2 2 0 0 0 -2.18 -.434l-.145 .068z" /></svg>  
+      </nav>
+    </article>
+</div>
+
+
+<style>
+    
+  .container-carousel {
+    animation: aparecer .1s ease-in;
+    margin-top: -18px;
+  }
+
+  .carousel-active {
+    display: inherit;
+  }
+
+  .carousel-inactive {
+    display: none;
+  }
+  
+  .box-images {
+
+    position: relative;
+    width: 100%;
+    height: 500px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  }
+  
+  .box-images .slider .item {
+    transform: translate(-76px,122px);
+    filter: brightness(90%);
+    filter: drop-shadow(50%);
+    width: 55px;
+    height: 55px;
+    list-style-type: none;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 30px rgba(255,255,255,0.3) inset;
+    transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
+  
+    &:nth-child(1), &:nth-child(2) {
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transform: none;
+      border-radius: 0;
+      box-shadow: none;
+      opacity: 1;
+    }
+    
+    &:nth-child(3) { left: 48%; }
+    &:nth-child(4) { left: calc(46% + 100px); }
+    &:nth-child(5) { left: calc(44% + 200px); }
+    &:nth-child(6) { left: calc(50% + 280px); opacity: 0; }
+  }
+
+  .box-images .slider .item-1 {
+    background-image: url(../../public/carousel/carousel-1.jpeg);
+  }
+  .box-images .slider .item-2 {
+    background-image: url(../../public/carousel/carousel-2.jpeg);
+  }
+  .box-images .slider .item-3 {
+    background-image: url(../../public/carousel/carousel-3.jpeg);
+  }
+  .box-images .slider .item-4 {
+    background-image: url(../../public/carousel/carousel-4.jpeg);
+  }
+  .box-images .slider .item-5 {
+    background-image: url(../../public/carousel/carousel-5.jpeg);
+  }
+  .box-images .slider .item-6 {
+    background-image: url(../../public/carousel/carousel-6.jpeg);
+  }
+
+  .box-images .slider .content {
+    border-radius: 20px;
+    padding: 8px;
+    & .title        { font-size: 1.4rem; }
+    & .description  { font-size: 1.1rem; }
+    & button        { font-size: 1.1rem; }
+  }
+
+  
+  .box-images .slider .content {
+    width: min(30vw,2500px);
+    position: absolute;
+    top: 50%;
+    left: 3rem;
+    transform: translate(30px,-50%);
+    font: 400 0.85rem helvetica,sans-serif;
+    color: white;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.5);
+    opacity: 0;
+    display: none;
+  
+    & .title {
+      font-family: 'arial-black';
+      text-transform: uppercase;
+    }
+  
+    & .description {
+      line-height: 1.7;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.8rem;
+    }
+  
+    & button {
+      width: fit-content;
+      background-color: rgba(0,0,0,0.1);
+      color: white;
+      border: 2px solid white;
+      border-radius: 0.25rem;
+      padding: 0.75rem;
+      cursor: pointer;
+    }
+  }
+  
+  .box-images .slider .item:nth-of-type(2) .content {
+    display: block;
+    animation: show 0.75s ease-in-out 0.3s forwards;
+  }
+  
+  @keyframes show {
+    0% {
+      filter: blur(5px);
+      transform: translateY(calc(-50% + 75px));
+    }
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+  
+  .box-images .nav {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    user-select: none;
+  
+    & .btn {
+      background-color: rgba(255,255,255,0.5);
+      color: rgba(0,0,0,0.7);
+      border: 2px solid rgba(0,0,0,0.6);
+      margin: 0 0.25rem;
+      padding: 0.75rem;
+      border-radius: 50%;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: rgba(255,255,255,0.3);
+      }
+    }
+  }
+  @media (width > 899px) and (width < 1200px) {
+    .box-images .slider .content {
+      & .title        { font-size: 1.4rem; }
+      & .description  { font-size: 1.1rem; }
+      & button        { font-size: 1.1rem; }
+    }
+    .box-images .slider .item {
+        
+        transform: translate(-81px,130px);
+        width: 50px;
+        height: 50px;
+  
+        &:nth-child(3) { left: 49%; }
+        &:nth-child(4) { left: calc(51% + 50px); }
+        &:nth-child(5) { left: calc(53% + 100px); }
+        &:nth-child(6) { left: calc(50% + 80px); opacity: 0; }
+    }
+  }
+  @media (width > 650px) and (width < 900px) {
+    .box-images .slider .content {
+      & .title        { font-size: 1.4rem; }
+      & .description  { font-size: 1.1rem; }
+      & button        { font-size: 1.1rem; }
+    }
+    .box-images .slider .item {
+    transform: translate(-71px,140px);
+      width: 45px;
+      height: 45px;
+  
+      &:nth-child(3) { left: 50%; }
+      &:nth-child(4) { left: calc(50% + 50px); }
+      &:nth-child(5) { left: calc(50% + 100px); }
+      &:nth-child(6) { left: calc(50% + 80px); opacity: 0; }
+    }
+  }
+  
+  @media (width <= 650px) {
+    .box-images .slider .content {
+      transform: translate(30px,-70%);
+      & .title        { font-size: 0.9rem; }
+      & .description  { font-size: 0.65rem; }
+      & button        { font-size: 0.7rem; }
+    }
+    .box-images .slider .item {
+    transform: translate(-71px,140px);
+      width: 40px;
+      height: 40px;
+  
+      &:nth-child(3) { left: 50%; }
+      &:nth-child(4) { left: calc(50% + 50px); }
+      &:nth-child(5) { left: calc(50% + 100px); }
+      &:nth-child(6) { left: calc(50% + 80px); opacity: 0; }
+    }
+  }
+</style>
+
+<script>
+
+    // Funcion Carousel
+    const slider:any = document.querySelector('.slider');
+function activate(e:any) {
+  const items = document.querySelectorAll('.item');
+  e.target.matches('.next') && slider.append(items[0])
+  e.target.matches('.prev') && slider.prepend(items[items.length-1]);
+}
+
+document.addEventListener('click',activate,false);
+const runCarousel = () => {
+  const slider = document.querySelector('.slider');
+  document.addEventListener('click',activate,false);
+
+}
+</script>
