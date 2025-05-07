@@ -8,7 +8,9 @@ import Carousel from "./Carousel.astro";
 <main class="container-main">
     <Carousel></Carousel>
     <section class="image">
-      <BackgroundEffects></BackgroundEffects>
+      <BackgroundEffects>
+        
+      </BackgroundEffects>
     </section>
     <section class="text">
       <h2>CSS Parallax</h2>
@@ -98,7 +100,7 @@ p {
 
   top: 50%;
   left: 50%;
-  width: 150%;
+  width: 96%;
   height: 150%;
   background: #ffffff;
   rotate: -3deg;
@@ -108,5 +110,10 @@ p {
 
 }
 
-
+@media (max-width:552px) {
+  .text::before {
+    width: 92%;
+  }
+        
+    }
 </style>
