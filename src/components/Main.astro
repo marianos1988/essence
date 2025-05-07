@@ -1,4 +1,5 @@
 ---
+import BackgroundEffects from "./BackgroundEffects.astro";
 import Carousel from "./Carousel.astro";
 
 ---
@@ -6,7 +7,9 @@ import Carousel from "./Carousel.astro";
 
 <main class="container-main">
   <Carousel></Carousel>
-  <section class="image"></section>
+  <section class="image">
+    <BackgroundEffects></BackgroundEffects>
+  </section>
   <section class="text">
     <h2>CSS Parallax</h2>
     <p>
@@ -28,7 +31,9 @@ import Carousel from "./Carousel.astro";
       omnis illo magni?
     </p>
   </section>
-  <section class="image image-2"></section>
+  <section class="image image-2">
+    <BackgroundEffects></BackgroundEffects>
+  </section>
   <section class="text">
     <h2>Nice Right?</h2>
     <p>
@@ -72,21 +77,20 @@ p {
   opacity: 0.8;
 }
 
-section {
-  padding: 40px 0;
-}
 
 .image {
   background-color: black;
-  height: 380px;
+  height: 350px;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  background-image: url("bg.avif");
+
 }
 
 .text {
   position: relative;
+  color:#ffffff;
+
 }
 
 .text::before {
@@ -100,6 +104,9 @@ section {
   background: #ffffff;
   rotate: -3deg;
   translate: -50% -50%;
+  background: linear-gradient(90deg, #1e1e1e, #2f2e2e, #7f7f7f, #2f2e2e, #1e1e1e);
+	box-shadow:  10px 10px 40px #8f8d8d, -10px -10px 40px #ccc;
 }
+
 
 </style>
