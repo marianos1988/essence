@@ -6,65 +6,61 @@ import Carousel from "./Carousel.astro";
 
 
 <main class="container-main">
-  <Carousel></Carousel>
-  <section class="image">
-    <BackgroundEffects></BackgroundEffects>
-  </section>
-  <section class="text">
-    <h2>CSS Parallax</h2>
-    <p>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
-      facilis voluptatem aliquid natus iure? Rerum porro iste neque quod
-      facilis cupiditate possimus voluptatem corrupti, quae beatae asperiores
-      omnis illo magni?
-    </p>
-    <p>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
-      facilis voluptatem aliquid natus iure? Rerum porro iste neque quod
-      facilis cupiditate possimus voluptatem corrupti, quae beatae asperiores
-      omnis illo magni?
-    </p>
-    <p>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
-      facilis voluptatem aliquid natus iure? Rerum porro iste neque quod
-      facilis cupiditate possimus voluptatem corrupti, quae beatae asperiores
-      omnis illo magni?
-    </p>
-  </section>
-  <section class="image image-2">
-    <BackgroundEffects></BackgroundEffects>
-  </section>
-  <section class="text">
-    <h2>Nice Right?</h2>
-    <p>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
-      facilis voluptatem aliquid natus iure? Rerum porro iste neque quod
-      facilis cupiditate possimus voluptatem corrupti, quae beatae asperiores
-      omnis illo magni?
-    </p>
-    <p>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
-      facilis voluptatem aliquid natus iure? Rerum porro iste neque quod
-      facilis cupiditate possimus voluptatem corrupti, quae beatae asperiores
-      omnis illo magni?
-    </p>
-    <p>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
-      facilis voluptatem aliquid natus iure? Rerum porro iste neque quod
-      facilis cupiditate possimus voluptatem corrupti, quae beatae asperiores
-      omnis illo magni?
-    </p>
-  </section>
+    <Carousel></Carousel>
+    <section class="image">
+      <BackgroundEffects></BackgroundEffects>
+    </section>
+    <section class="text">
+      <h2>CSS Parallax</h2>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
+        facilis voluptatem aliquid natus iure? Rerum porro iste neque quod
+        facilis cupiditate possimus voluptatem corrupti, quae beatae asperiores
+        omnis illo magni?
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
+        facilis voluptatem aliquid natus iure? Rerum porro iste neque quod
+        facilis cupiditate possimus voluptatem corrupti, quae beatae asperiores
+        omnis illo magni?
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
+        facilis voluptatem aliquid natus iure? Rerum porro iste neque quod
+        facilis cupiditate possimus voluptatem corrupti, quae beatae asperiores
+        omnis illo magni?
+      </p>
+    </section>
+    <section class="image">
+      <BackgroundEffects></BackgroundEffects>
+    </section>
+    <section class="text">
+      <h2>Nice Right?</h2>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
+        facilis voluptatem aliquid natus iure? Rerum porro iste neque quod
+        facilis cupiditate possimus voluptatem corrupti, quae beatae asperiores
+        omnis illo magni?
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
+        facilis voluptatem aliquid natus iure? Rerum porro iste neque quod
+        facilis cupiditate possimus voluptatem corrupti, quae beatae asperiores
+        omnis illo magni?
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
+        facilis voluptatem aliquid natus iure? Rerum porro iste neque quod
+        facilis cupiditate possimus voluptatem corrupti, quae beatae asperiores
+        omnis illo magni?
+      </p>
+    </section>
 </main>
 
 <style>
-/* body {
-  margin: 0;
-  font-family: "Euclid Circular A";
-  color: #1d1d1d;
-  background: #071a20;
-  overflow-x: hidden;
-} */
+
+
+
 
 p,
 h2 {
@@ -90,6 +86,8 @@ p {
 .text {
   position: relative;
   color:#ffffff;
+  z-index: 9;
+
 
 }
 
@@ -97,15 +95,17 @@ p {
   content: "";
   display: block;
   position: absolute;
+
   top: 50%;
   left: 50%;
   width: 150%;
-  height: 125%;
+  height: 150%;
   background: #ffffff;
   rotate: -3deg;
   translate: -50% -50%;
   background: linear-gradient(90deg, #1e1e1e, #2f2e2e, #7f7f7f, #2f2e2e, #1e1e1e);
 	box-shadow:  10px 10px 40px #8f8d8d, -10px -10px 40px #ccc;
+
 }
 
 
