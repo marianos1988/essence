@@ -22,8 +22,10 @@
         @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
     .box-share {
-        margin-top: 25px;
+
         position: relative;
+        width: 100% !important;
+
     }
 
     a {
@@ -31,14 +33,13 @@
     }
 
     .share {
-        position: absolute;
+        /* position: absolute; */
         width: 200px;
-        left: 50%;
-        margin-left: -200px;
-        top: 50%;
-        margin-top: -40px;
+        right: -10%;
+        margin: auto;
         border-radius: 80px;
-        transform: translateY(30px);
+        transform: scale(.6);
+
     }
     .share span {
         color: #000;
@@ -49,10 +50,10 @@
         font-weight: 900;
         text-transform: uppercase;
         position: absolute;
-        left: 65%;
-        margin-left: -100px;
+        left: 65%;    
         opacity: 1;
-        transform: translateY(20px);
+        z-index: 99;
+        transform: translate(-100px, 20px);
         transition: opacity 0.3s ease-in-out;
         pointer-events: none;
     }
@@ -60,6 +61,7 @@
         font-size: 0;
     }
     .share a {
+        position: relative;
         line-height: 80px;
         width: 80px;
         text-align: center;
@@ -76,7 +78,7 @@
     .share a svg {
         width: 50%;
         height: 50%;
-        transform: translateY(5px);
+        transform: translateY(10px);
         color: transparent;
     }
     .share a svg:hover {
@@ -119,6 +121,7 @@
     .share:hover a:hover, .share.hover a:hover {
         color: #fff;
     }
+
 </style>
 
 <script>
