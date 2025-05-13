@@ -13,8 +13,11 @@ import BtnSocialMedia from "./BtnSocialMedia.astro";
             <p>
                 Somos una productora de musica electronica bla bla bla bla bla bla bla bla bla bla bla bal blabla bla bla bla bla bla bla bla bla bla bla bal bla bla bla bla bla bla bla bla bla bla bla bla bal blabla bla bla bla bla bla bla bla bla bla bla bal bla bla bla bla bla bla bla bla bla bla bla bla bal blabla bla bla bla bla bla bla bla bla bla bla bal bla bla bla bla bla bla bla bla bla bla bla bla bal blabla bla bla bla bla bla bla bla bla bla bla bal bla
             </p>
-            <BtnSocialMedia></BtnSocialMedia>
-            <BtnCardPrincipal></BtnCardPrincipal>
+            <div class="btns-group">
+                <BtnSocialMedia></BtnSocialMedia>
+                <BtnCardPrincipal></BtnCardPrincipal>
+            </div>
+
         </div>
     </div>
 </div>
@@ -98,7 +101,11 @@ font-family: "Euclid Circular A", "Poppins";
         opacity: 0.5;
     }
 
-
+    .btns-group {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
 
 
     @media (width <= 600px) {
