@@ -80,12 +80,19 @@ p {
 
 }
 
-.text.block-2 {
-  position: relative;
-}
+
 
 
 @media (max-width:440px) {
+
+  .image {
+  background-color: black;
+  height: 400px;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+
+}
 
   .text::before {
     rotate: 0deg;
@@ -95,6 +102,13 @@ p {
 
   .text.block-1 {
   height: 600px !important;
+  margin: 100px 0 250px 0;
+
+  }
+
+    .text.block-2 {
+  height: 600px !important;
+  margin: 100px 0 350px 0;
 
   }
 
@@ -103,11 +117,19 @@ p {
 @media (min-width:441px) AND (max-width:600px) {
   .text.block-1 {
 
-  margin: 50px auto 100px auto; */
+  margin: 50px auto 100px auto; 
   width: 80% !important;
   height: 550px !important;
 
 }
+
+.text.block-2 {
+  margin: 50px auto 100px auto; 
+  width: 80% !important;
+  height: 550px !important;
+
+}
+
 
   .text::before {
     width: 90%;

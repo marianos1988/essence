@@ -215,11 +215,20 @@
         }
     }
 
+        @media (max-width:440px) {
+        .glowing-btn {
+            transform: translateY(-39px) scale(.5);
+            font-size: 27px;
+        }
+        .text::before {
+            height: 161%;
+        }
+    }
 
-    @media (width <= 440px) {
+    /* @media (min-width:417) <= 440px) {
         .glowing-btn {
             transform: scale(.6);
             font-size: 1.4em;
         }
-    }
+    } */
 </style>
