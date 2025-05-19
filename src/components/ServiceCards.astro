@@ -7,9 +7,26 @@
         <div class="content">
           <h2 class="title">Eventos</h2>
           <p class="copy">
-            Check out all of these gorgeous mountain trips with beautiful views
-            of, you guessed it, the mountains
+            Entérate las novedades de nuestros eventos.
           </p>
+          <button class="btn">Ver Mas...</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h2 class="title">Rooster DJs</h2>
+          <p class="copy">
+            Conoce a nuestros artistas.
+          </p>
+          <button class="btn">Ver Mas...</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h2 class="title">Sets</h2>
+          <p class="copy">
+            Experimenta nuestros Sets.
+        </p>
           <button class="btn">Ver Mas...</button>
         </div>
       </div>
@@ -17,25 +34,9 @@
         <div class="content">
           <h2 class="title">Merch</h2>
           <p class="copy">
-            Plan your next beach trip with these fabulous destinations
+            Mirá nuestro merchadasing oficial.
           </p>
           <button class="btn">Ver Mas...</button>
-        </div>
-      </div>
-      <div class="card">
-        <div class="content">
-          <h2 class="title">Desert Destinations</h2>
-          <p class="copy">It's the desert you've always dreamed of</p>
-          <button class="btn">Book Now</button>
-        </div>
-      </div>
-      <div class="card">
-        <div class="content">
-          <h2 class="title">Explore The Galaxy</h2>
-          <p class="copy">
-            Seriously, straight up, just blast off into outer space today
-          </p>
-          <button class="btn">Book Now</button>
         </div>
       </div>
     </div>
@@ -49,18 +50,7 @@
         --font-sans: "Rubik", sans-serif;
         --font-serif: "Cardo", serif;
     }
-    /* * {
-        box-sizing: border-box;
-    }
-    html,
-    body {
-        height: 100%;
-    }
-    body {
-        display: grid;
-        place-items: center;
-        background-color: black;
-    } */
+
     .page-content {
         display: grid;
         width: 80%;
@@ -140,16 +130,17 @@
         transition: transform calc(var(--d) * 2) var(--e);
     }
     .card:nth-child(1):before {
-        background-image: url(https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+        object-fit: cover;
+        background-image: url(../assets/serviceCards/eventos.jpg);
     }
     .card:nth-child(2):before {
-        background-image: url(../assets/serviceCards/merch1.jpg);
+        background-image: url(https://images.unsplash.com/photo-1545243424-0ce743321e11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
     }
     .card:nth-child(3):before {
         background-image: url(https://images.unsplash.com/photo-1545243424-0ce743321e11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
     }
     .card:nth-child(4):before {
-        background-image: url(https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+        background-image: url(../assets/serviceCards/merch1.jpg);
     }
     .content {
         position: relative;
@@ -234,6 +225,16 @@
         .card:focus-within .content > *:not(.title) {
             transition-duration: 0s;
         }
+    }
+
+    @media (min-width:1200px) {
+
+        .page-content {
+
+            width: 1000px;
+
+        }
+        
     }
 
 </style>

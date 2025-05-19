@@ -86,13 +86,13 @@ p {
 @media (max-width:440px) {
 
   .image {
-  background-color: black;
-  height: 400px;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
+    background-color: black;
+    height: 400px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 
-}
+  }
 
   .text::before {
     rotate: 0deg;
@@ -115,20 +115,43 @@ p {
 }
 
 @media (min-width:441px) AND (max-width:600px) {
+  .image {
+    background-color: black;
+    height: 450px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+  }
+
+
+  .text::before {
+
+    width: 106% !important;
+    height: 1050px;
+  }
+
+   .text:last-child::before {
+
+    width: 106% !important;
+    height: 1000px;
+  }
+
   .text.block-1 {
 
   margin: 50px auto 100px auto; 
   width: 80% !important;
   height: 550px !important;
+  margin-bottom: 300px;
 
 }
 
-.text.block-2 {
-  margin: 50px auto 100px auto; 
-  width: 80% !important;
-  height: 550px !important;
+  .text.block-2 {
+    margin: 50px auto 100px auto; 
+    width: 80% !important;
+    height: 550px !important;
 
-}
+  }
 
 
   .text::before {
@@ -136,6 +159,58 @@ p {
   }
 
 
+}
+
+@media (min-width:600px) {
+
+    .image {
+    background-color: black;
+    height: 650px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+  }
+  .text::before {
+
+    width: 90% !important;
+    height: 800px;
+  }
+
+  .text.block-1 {
+
+    margin-top: -150px;
+
+  }
+
+    .text.block-2 {
+
+    margin-top: 50px;
+
+  }
+
+}
+
+
+@media (min-width:800px) {
+
+      .text.block-2 {
+
+    margin-top: 0px;
+
+  }
+   .text:last-child::before {
+
+
+    height: 600px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .text::before {
+    width: 1150px !important;
+  }
 }
 
 
