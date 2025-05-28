@@ -1,0 +1,175 @@
+---
+---
+
+<footer>
+  
+      <div class="background">
+          <svg
+              class="my-svg"
+              viewBox="400 600 200 600"
+          >
+            <defs>
+              <path
+                  id="wave"
+                  fill="rgba(105, 27, 252, 0.6)"
+                  d="M-363.852,502.589c0,0,236.988-41.997,505.475,0
+                  s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z"
+              />
+            </defs>
+            <g>
+              <use xlink:href="#wave" opacity=".4">
+                  <animateTransform
+                  class="animate"
+                  attributeName="transform"
+                  attributeType="XML"
+                  type="translate"
+                
+                  dur="8s"
+                  calcMode="spline"
+                  values="270 230; -634 180; 270 230"
+                  keyTimes="0; .5; 1"
+                  keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                  repeatCount="indefinite"
+                  />
+              </use>
+              <use xlink:href="#wave" opacity=".4">
+                  <animateTransform
+                  class="animate"
+                  attributeName="transform"
+                  attributeType="XML"
+                  type="translate"
+                  dur="8s"
+                  calcMode="spline"
+                  values="270 230; -334 180; 270 230"
+                  keyTimes="0; .5; 1"
+                  keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                  repeatCount="indefinite"
+                  />
+              </use>
+            </g>
+          </svg>
+        </div>
+      <!-- <section>
+        <ul class="socials">
+            <li>
+              <a class="fa-brands instagram">
+                  <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg>
+              </a>
+            </li>
+            <li>
+              <a class="fa-brands tiktok">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-tiktok"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" /></svg>
+              </a>
+            </li>
+        </ul>
+        <ul class="links">
+            <li><a>Quienes Somos</a></li>
+            <li><a>Experience</a></li>
+            <li><a>Portfolio</a></li>
+            <li><a>Skills</a></li>
+        </ul>
+        <p class="legal">© 2025 Essence Crew All rights reserved</p>
+    </section> -->
+</footer>
+
+
+<style>
+
+  footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: 250px;
+  display: flex;
+  position: relative;
+  background-color: #000;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  width: 1500% !important;
+  z-index: 100;
+    color:aliceblue;
+  transform: translateY(150px);
+}
+
+
+.background {
+
+  z-index: 2;
+  background-color: transparent;
+ 
+}
+
+.socials,
+.links,
+.legal {
+  display: flex;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.links {
+  flex-direction: column;
+}
+
+.my-svg {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+    transform: scaleY(2) scaleX(2.25);
+  transform-origin: bottom;
+  box-sizing: border-box;
+}
+
+.animate {
+width: 1000%;
+}
+
+
+ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.socials {
+  gap: 20px;
+}
+
+.socials a {
+  font-size: 24px;
+}
+
+.links {
+  gap: 10px;
+}
+
+.legal {
+  font-size: 12px;
+  margin: 0;
+}
+
+
+
+@media (width > 520px) {
+  footer {
+    padding-top: 150px;
+  }
+
+  .background {
+
+  }
+}
+
+</style>
