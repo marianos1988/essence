@@ -9,18 +9,6 @@
     <div class="wave wave4"></div>
   </div>
   <section>
-      <!-- <ul class="socials">
-          <li>
-            <a class="fa-brands instagram">
-                <svg  xmlns="http://www.w3.org/2000/svg"  width="30"  height="30"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg>
-            </a>
-          </li>
-          <li>
-            <a class="fa-brands tiktok">
-              <svg  xmlns="http://www.w3.org/2000/svg"  width="30"  height="30"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-tiktok"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" /></svg>
-            </a>
-          </li>
-      </ul> -->
       <div class="box-logo">
         <img src="footer/logo.png" alt="">
       </div>
@@ -36,25 +24,30 @@
         </ul>
         <ul class="links-2">
           <li><a href="">Whatsapp</a></li>
-          <li><a href="">Telefono</a></li>
           <li><a href="">Email</a></li>
           <li><a href="">Tiktok</a></li>
           <li><a href="">Instagram</a></li>
         </ul>
       </div>
 
-      <p class="legal">© 2025 Essence Crew All rights reserved</p>
+      <div class="group-text">
+        <p class="legal">© 2025 Essence Crew All rights reserved</p>
+
+      </div>
   </section>
 </footer>
 
 
 <style>
 
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
   footer {
 
+    font-family: "Fira Sans", sans-serif;
     position: relative;
     width: 100%;
-    height: 320px;
+    height: 370px;
     margin-top: 50px;
     background-color: #000000;
     
@@ -114,23 +107,13 @@
     align-items: center;
   }
 
-  .socials {
-    display: ruby;
-    width: 150px;
-    padding: 6px;
-    list-style: none;
-    border-radius: 50px;
-    transform: translateY(30px);
-    background: #7a7a7a;
-    box-shadow:  5px 5px 10px #686868,
-                -5px -5px 10px #8c8c8c;
-  }
 
   .group-links {
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
     justify-content:space-evenly;
+    transform: translateY(25px);
   }
 
   .links,
@@ -140,29 +123,38 @@
 
   ul li a {
     text-decoration: none;
+    font-weight: 600;
+    line-height: 2;
   }
 
   ul li a:visited {
     color:#000000
   }
 
-  .socials li svg {
-    transform: translateX(35px);
-    border-radius: 50%;
+  .box-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .socials li svg:hover {
-    cursor: pointer;
-    background-color: rgb(33, 21, 209);
-    transition: all .4s ease-in !important;
-
-  }
-
   .box-logo img {
-    width: 200px;
-    height: 100px;
+    width: 150px;
+    height: 75px;
     object-fit: contain;
-    transform: translateY(50px);
+    transform: translateY(30px);
   }
+
+  .group-text {
+    font-size: medium;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .legal {
+    margin-right: 23px;
+
+  }
+
 
   @keyframes animate {
     0% {
