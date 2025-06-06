@@ -473,7 +473,7 @@ import Layout from "../layouts/Layout.astro";
         },
     ];
 
-    const _ = (id) => document.getElementById(id);
+    const _ = (id:any) => document.getElementById(id);
     const cards = data
     .map(
         (i, index) =>
