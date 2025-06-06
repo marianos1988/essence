@@ -105,7 +105,7 @@
     width: 100%;
     height: 370px;
     margin-top: 50px;
- background-color: transparent;
+    background-color: transparent;
     
   }
   .box-waves {
@@ -117,7 +117,7 @@
   }
 
     .box-waves svg {
-
+      
       background-color: transparent;
   }
 
@@ -211,7 +211,7 @@
 
   
 .waves > use {
-  animation: move-forever 2s -2s linear infinite;
+  animation: move-forever 10s -10s linear infinite;
 }
 
 .waves > use:nth-child(2) {
@@ -266,6 +266,12 @@
       margin: 30px auto;
     } 
 
+    .box-waves svg {
+      width: 100%;
+      height: 130px;
+    }
+
+
   }
   @media (min-width:361px) AND (max-width: 440px) {
 
@@ -287,9 +293,14 @@
       margin-right:0;
       margin: 30px auto;
     } 
+
+    .box-waves svg {
+      width: 100%;
+      height: 130px;
+    }
   }
 
-    @media (min-width: 440px) AND (max-width:550px) {
+    @media (min-width: 441px) AND (max-width:550px) {
 
       .box-logo img {
 
@@ -308,11 +319,15 @@
 
         margin: 30px auto;
       } 
+    .box-waves svg {
+      width: 100%;
+      transform:translateY(-82px);
+    }
   
 
     }
 
-    @media (min-width: 551px) AND (max-width:749px) {
+    @media (min-width: 551px) AND (max-width:599px) {
       .box-logo img {
 
         transform: translateY(50px);
@@ -322,6 +337,69 @@
       .legal {
 
         margin: 30px auto;
+      }
+    .box-waves svg {
+        width: 100%;
+        transform:translateY(-103px);
+      }
+    }
+
+    @media (min-width:600px) AND (max-width:649px) {
+      .box-waves svg {
+        width: 100%;
+        transform:translateY(16px);
+      }
+    }
+
+    @media (min-width:650px) AND (max-width:749px) {
+      .box-waves svg {
+        width: 100%;
+        transform:translateY(16px);
+      }
+    }
+
+    @media (min-width:750px) AND (max-width:999px) {
+      .box-waves svg {
+        width: 100%;
+        transform:translateY(-12px);
+      }
+    }
+
+    @media (min-width:1000px) AND (max-width:1500px) {
+      .box-waves svg {
+        width: 100%;
+        transform:translateY(-59px);
+      }
+    }
+
+    @media (min-width:1000px) AND (max-width:1299px) {
+      .box-waves svg {
+        width: 100%;
+        transform:translateY(-59px);
+      }
+    }
+    @media (min-width:1300px) AND (max-width:1499px) {
+      .box-waves svg {
+        width: 100%;
+        transform:translateY(-116px);
+      }
+    }
+    @media (min-width:1500px) AND (max-width:1699px) {
+      .box-waves svg {
+        width: 100%;
+        transform:translateY(-151px);
+      }
+    }
+    @media (min-width:1700px) AND (max-width:1899px) {
+      .box-waves svg {
+        width: 100%;
+        transform:translateY(-189px);
+      } 
+    }
+        @media (min-width:1900px) AND (max-width:2000px) {
+      .box-waves svg {
+        width: 100%;
+        transform:translateY(-227px);
       } 
     }
 
