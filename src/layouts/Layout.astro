@@ -1,5 +1,8 @@
 ---
-import { ClientRouter } from "astro:transitions";
+import { ClientRouter } from "astro:transitions"
+import Navbar from "../components/Navbar.astro"
+
+export const prerender = true
 ---
 
 <!doctype html>
@@ -15,6 +18,7 @@ import { ClientRouter } from "astro:transitions";
 		<ClientRouter></ClientRouter>
 	</head>
 	<body>
+		<Navbar server:defer></Navbar>
 		<slot />
 	</body>
 </html>
