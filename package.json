@@ -9,10 +9,9 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^4.3.0",
     "astro": "^5.7.5",
-    "gsap": "^3.13.0",
-    "react": "^19.1.0",
-    "swiper": "^11.2.8"
+    "react": "^19.1.0"
   },
   "devDependencies": {
     "@types/react": "^19.1.8"
