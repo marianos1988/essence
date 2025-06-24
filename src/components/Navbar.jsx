@@ -1,19 +1,34 @@
 
+import { useState } from "react";
+import "../styles/Navbar.css"
 
-export default function() {
-    <div class="container-navbar" >
-        <button class="burger"  onclick=""></button>
-        <div class="background"></div>
-        <div class="menu">
-            <nav>
-            <a id="inicio-nav" style="animation-delay: 0.2s">Quienes Somos</a>
-            <a href="/Events" id="galeria-nav" style="animation-delay: 0.3s">Eventos</a>
-            <a id="servicios-nav" style="animation-delay: 0.4s">Sets</a>
-            <a id="contacto-nav" style="animation-delay: 0.5s">Rooster</a>
-            <a id="contacto-nav" style="animation-delay: 0.6s">Merch</a>
-            <a id="contacto-nav" style="animation-delay: 0.7s">Trabaja con nosotros</a>
-            <a id="contacto-nav" style="animation-delay: 0.8s">Contacto</a>
-            </nav>
-        </div>
-    </div>
+export default function Navbar() {
+
+        const [open,setOpen] = useState(false);
+
+        const handleSetOpen = () => {
+        
+            setOpen(!open)
+        }
+    
+    return (
+
+            <div className={(open) ? "container-navbar open" : "container-navbar"} >
+                <button className="burger"  onClick={()=>handleSetOpen()}></button>
+                <div className="background"></div>
+                <div className="menu">
+                    <nav>
+                    <a id="inicio-nav">Quienes Somos</a>
+                    <a href="/Events" id="eventos-nav">Eventos</a>
+                    <a id="sets-nav">Sets</a>
+                    <a id="roosters-nav">Rooster</a>
+                    <a id="merch-nav">Merch</a>
+                    <a id="works-nav">Trabaja con nosotros</a>
+                    <a id="contacto-nav">Contacto</a>
+                    </nav>
+                </div>
+            </div>
+    )
+
+
 }

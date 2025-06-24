@@ -1,7 +1,7 @@
 ---
 import { ClientRouter } from "astro:transitions"
-import Navbar from "../components/Navbar.astro"
-import OpenNavbar from "../services/Navbar"
+import Navbar from "../components/Navbar.jsx"
+
 
 ---
 
@@ -17,8 +17,8 @@ import OpenNavbar from "../services/Navbar"
 		<ClientRouter></ClientRouter>
 	</head>
 	<body>
-		<Navbar server:defer></Navbar>
-		<center><OpenNavbar client:load></OpenNavbar></center>
+		<Navbar client:load></Navbar>
+
 		<slot />
 	</body>
 </html>
