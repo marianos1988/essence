@@ -1,14 +1,45 @@
+import { useState } from "react"
 import "../../styles/Events.css"
+
 
 export default function EventsR() {
 
+    const [numImg, setNumImg] = useState(1);
+
+
+
+    const next = () => {
+        if(numImg > 6) {
+            setNumImg(1)
+        } else {
+            setNumImg(numImg+1)
+            if(numImg > 6) {
+                setNumImg(1)
+            }
+        }
+        console.log(numImg)
+    }
+    const previus = () => {
+        if(numImg < 1) {
+            setNumImg(6)
+        } else {
+            setNumImg(numImg-1)
+            if(numImg < 1) {
+                setNumImg(6)
+            }
+        }
+        console.log(numImg)
+    }
 
     return(
         <>  
             <div className="container-events">
                 <div className="container">
                         <div className="slide">
-                            <div className="item image-1">
+                            {
+
+                            }
+                            <div className={`item image-1`}>
                                 <div className="content">
                                     <div className="name">Switzerland</div>
                                     <div className="description">Renowned for its breathtaking Alpine scenery and precision in craftsmanship</div>
@@ -19,7 +50,7 @@ export default function EventsR() {
                             <div className="item image-2">
                                 <div className="content">
                                     <div className="name">Finland</div>
-                                    <div clasName="description">Known for its saunas, lakes, and a deep connection to nature</div>
+                                    <div className="description">Known for its saunas, lakes, and a deep connection to nature</div>
                                     <button>See More</button>
                                 </div>
                             </div>
@@ -58,8 +89,8 @@ export default function EventsR() {
                     </div>
 
                     <div className="button">
-                        <button className="prev"><i class="fa-solid fa-arrow-left"></i></button>
-                        <button className="next"><i class="fa-solid fa-arrow-right"></i></button>
+                        <button className="prev" onClick={previus}><i className="fa-solid fa-arrow-left"></i></button>
+                        <button className="next" onClick={next}><i className="fa-solid fa-arrow-right"></i></button>
                     </div>
                 </div>
             </div>
