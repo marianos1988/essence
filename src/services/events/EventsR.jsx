@@ -2,9 +2,13 @@ import { useState } from "react"
 import "../../styles/Events.css"
 
 
-export default function EventsR() {
 
+
+export default async function EventsR( events ) {
+
+    console.log(events)
     const [numImg, setNumImg] = useState(1);
+
 
 
 
@@ -36,9 +40,7 @@ export default function EventsR() {
             <div className="container-events">
                 <div className="container">
                         <div className="slide">
-                            {
 
-                            }
                             <div className={`item image-1`}>
                                 <div className="content">
                                     <div className="name">Switzerland</div>

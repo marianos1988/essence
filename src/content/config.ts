@@ -11,7 +11,6 @@ const events = defineCollection({
         img: z.string(),
         link_comprar: z.string().url(),
 
-
     })
 })
 
