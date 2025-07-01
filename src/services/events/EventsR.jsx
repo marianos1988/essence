@@ -4,9 +4,30 @@ import "../../styles/Events.css"
 
 
 
-export default async function EventsR( events ) {
+export default async function EventsR( data ) {
 
-    console.log(events)
+    const { events } = data;
+
+    const getEvents = (allEvents) => {
+
+        let numEvents = allEvents.length;
+        let arrEvents = [];
+
+        
+        allEvents.forEach(element => {
+
+            arrEvents.push(element.data);
+        });
+
+        return {
+            numEvents,
+            arrEvents
+        }
+    } 
+
+    const dataEvents = getEvents(events)
+    console.log(dataEvents)
+
     const [numImg, setNumImg] = useState(1);
 
 
