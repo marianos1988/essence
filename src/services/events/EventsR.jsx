@@ -3,20 +3,23 @@ import "../../styles/Events.css"
 
 
 
-
-export default async function EventsR( data ) {
+export default function EventsR( data ) {
 
     const { events } = data;
+
+
 
     const getEvents = (allEvents) => {
 
         let numEvents = allEvents.length;
         let arrEvents = [];
-
+        
         
         allEvents.forEach(element => {
 
+
             let dataEvent = {
+                id: parseInt(element.slug[7]),
                 slug: element.slug,
                 data: element.data,
                 description: element.body
@@ -30,26 +33,26 @@ export default async function EventsR( data ) {
         }
     } 
 
-    const dataEvents = getEvents(events)
+    const allData = getEvents(events)
+    const { numEvents } = allData; // Total de eventos
+    
 
+    const [ dataEvents, setDataEvents ] = useState(allData.arrEvents);
 
+    
+    
 
-    const [numImg, setNumImg] = useState(1);
+    const next = (dataEvents) => {
+        
+        let listDataEvents = dataEvents;
+        const delFirstEvent = listDataEvents.shift();
+        listDataEvents.push(delFirstEvent)
 
-
-
-
-    const next = () => {
-        if(numImg > 6) {
-            setNumImg(1)
-        } else {
-            setNumImg(numImg+1)
-            if(numImg > 6) {
-                setNumImg(1)
-            }
-        }
-        console.log(numImg)
+        setDataEvents(listDataEvents);
+        console.log(listDataEvents)
     }
+
+
     const previus = () => {
         if(numImg < 1) {
             setNumImg(6)
@@ -59,7 +62,7 @@ export default async function EventsR( data ) {
                 setNumImg(6)
             }
         }
-        console.log(numImg)
+
     }
 
     return(
@@ -69,10 +72,10 @@ export default async function EventsR( data ) {
                     <div className="slide">
 
                         {
-                            dataEvents.arrEvents.map( (event) => (
-                                <div key={event.slug} className={`item ${event.slug}`}>
+                            dataEvents.map( (event) => (
+                                <div key={event.id} className={`item ${event.slug}`}>
                                     <div className="content">
-                                        <div className="name">{event.titulo}</div>
+                                        <div className="name">{event.data.titulo}</div>
                                         <div className="description">{event.description}</div>
                                         <button>Leer Mas</button>
                                     </div>
@@ -86,7 +89,7 @@ export default async function EventsR( data ) {
 
                     <div className="button">
                         <button className="prev" onClick={previus}><i className="fa-solid fa-arrow-left"></i></button>
-                        <button className="next" onClick={next}><i className="fa-solid fa-arrow-right"></i></button>
+                        <button className="next" onClick={()=>next(dataEvents)}><i className="fa-solid fa-arrow-right"></i></button>
                     </div>
                 </div>
             </div>

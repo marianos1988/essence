@@ -50,7 +50,7 @@ body {
   border-radius: 15px;
 }
 
-.slide .item:nth-child(2) .content {
+.slide .item:nth-child(1) .content {
   display: block;
 }
 
@@ -84,6 +84,7 @@ body {
 }
 
 .content .name {
+  color: #000;
   font-size: 40px;
   text-transform: uppercase;
   font-weight: bold;
@@ -92,6 +93,7 @@ body {
 }
 
 .content .description {
+  color:#000;
   margin-top: 10px;
   margin-bottom: 20px;
   opacity: 0;

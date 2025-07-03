@@ -13,7 +13,7 @@ const events = await getCollection("events");
 
 <Layout>
     <EventsR 
-        server:defer
+        client:load
         events={events}
     ></EventsR>    
 </Layout>
