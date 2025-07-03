@@ -39,31 +39,22 @@ export default function EventsR( data ) {
 
     const [ dataEvents, setDataEvents ] = useState(allData.arrEvents);
 
+    const handleNext = () => {
+        setDataEvents((prev) => {
+        const [first, ...rest] = prev;
+        return [...rest, first];
+        });
+    };
+
+    const handlePrev = () => {
+        setDataEvents((prev) => {
+        const last = prev[prev.length - 1];
+        const rest = prev.slice(0, prev.length - 1);
+        return [last, ...rest];
+        });
+    };
     
-    
 
-    const next = (dataEvents) => {
-        
-        let listDataEvents = dataEvents;
-        const delFirstEvent = listDataEvents.shift();
-        listDataEvents.push(delFirstEvent)
-
-        setDataEvents(listDataEvents);
-        console.log(listDataEvents)
-    }
-
-
-    const previus = () => {
-        if(numImg < 1) {
-            setNumImg(6)
-        } else {
-            setNumImg(numImg-1)
-            if(numImg < 1) {
-                setNumImg(6)
-            }
-        }
-
-    }
 
     return(
         <>  
@@ -88,8 +79,8 @@ export default function EventsR( data ) {
                     </div>
 
                     <div className="button">
-                        <button className="prev" onClick={previus}><i className="fa-solid fa-arrow-left"></i></button>
-                        <button className="next" onClick={()=>next(dataEvents)}><i className="fa-solid fa-arrow-right"></i></button>
+                        <button className="prev" onClick={()=>handlePrev(dataEvents)}><i className="fa-solid fa-arrow-left"></i></button>
+                        <button className="next" onClick={()=>handleNext(dataEvents)}><i className="fa-solid fa-arrow-right"></i></button>
                     </div>
                 </div>
             </div>
