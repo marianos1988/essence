@@ -10,6 +10,7 @@
 body {
   background: #eaeaea;
   overflow: hidden;
+
 }
 
 .container {
@@ -53,6 +54,7 @@ body {
 
 .slide .item:nth-child(1){
   z-index: 10;
+  background-image: url(../../public/events/evento-1.png);
 }
 .slide .item:nth-child(1) .content {
   display: block;
@@ -74,6 +76,17 @@ body {
 .slide .item:nth-child(n + 6) {
   left: calc(50% + 440px);
   overflow: hidden;
+}
+
+.slide .item:nth-child(3),
+.slide .item:nth-child(4),
+.slide .item:nth-child(5),
+.slide .item:nth-child(6),
+.slide .item:nth-child(7),
+.slide .item:nth-child(8),
+.slide .item:nth-child(9),
+.slide .item:nth-child(10) {
+z-index: 16;
 }
 
 .item .content {
