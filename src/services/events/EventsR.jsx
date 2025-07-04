@@ -67,8 +67,12 @@ export default function EventsR( data ) {
                                 <div key={event.id} className={`item ${event.slug}`}>
                                     <div className="content">
                                         <div className="name">{event.data.titulo}</div>
+                                        <div className="site">{event.data.lugar}</div>
+                                        <div className="date">{event.data.fecha}</div>
                                         <div className="description">{event.description}</div>
-                                        <button>Leer Mas</button>
+                                        <a href={`${event.data.link_comprar}`} target="_blank">
+                                            Adquirir Ticket
+                                        </a>
                                     </div>
                                 </div>
                             ))
