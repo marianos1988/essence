@@ -1,6 +1,7 @@
 import { useState } from "react"
 import "../../styles/events/Events.css"
 import BtnBuy from "../../components/events/BtnBuy";
+import BtnInfo from "../../components/events/BtnInfo";
 
 
 
@@ -71,9 +72,15 @@ export default function EventsR( data ) {
                                         <div className="site">{event.data.lugar}</div>
                                         <div className="date">{event.data.fecha}</div>
                                         <div className="description">{event.description}</div>
-                                        <a href={`${event.data.link_comprar}`} target="_blank">
-                                            <BtnBuy>Comprar Ticket</BtnBuy>
-                                        </a>
+                                        <div className="group-btns">
+                                            <a href={`${event.data.link_comprar}`} target="_blank">
+                                                <BtnBuy>Comprar Ticket</BtnBuy>
+                                            </a>
+                                            <a href="">
+                                                <BtnInfo />
+                                            </a>
+                                        </div>
+
                                     </div>
                                 </div>
                             ))

@@ -1,19 +1,23 @@
 
-.btn-buy {
-
+.btn-info {
   position: relative;
   background: #444;
   color: #fff;
+  left: -35%;
   text-decoration: none;
-  text-transform: uppercase;
-  border: none;
   height: 45px;
+  width: 55px;
+  border: none;
   font-size: .8rem;
-  padding: 1rem 1rem;
   transition: 0.2s;
 }
 
-.btn-buy:hover {
+.i-btn-info {
+  transform: scale(1.5);
+ 
+}
+
+.btn-info:hover {
 
   background: #0FF0FC;
   color: #0FF0FC;
@@ -22,56 +26,57 @@
   cursor: pointer;
 }
 
-.btn-buy::before {
+.btn-info::before {
   content: "";
   position: absolute;
   inset: 2px;
   background: #272822;
 }
 
-.btn-buy span {
+.btn-info span {
   position: relative;
   z-index: 1;
 }
-.btn-buy i {
+.btn-info i {
   position: absolute;
+  height: 40px;
   inset: 0;
   display: block;
 }
 
-.btn-buy i::before {
+.btn-info i::before {
   content: "";
   position: absolute;
-  width: 10px;
+  width: 6px;
   height: 2px;
-  left: 80%;
+  left: 60%;
   top: -2px;
   border: 2px solid #0FF0FC;
   background: #272822;
   transition: 0.2s;
 }
 
-.btn-buy:hover i::before {
-  width: 15px;
-  left: 20%;
+.btn-info:hover i::before {
+  width: 10px;
+  left: 10%;
   animation: move 3s infinite;
 }
 
-.btn-buy i::after {
+.btn-info i::after {
   content: "";
   position: absolute;
-  width: 10px;
+  width: 6px;
   height: 2px;
-  left: 20%;
-  bottom: -2px;
+  left: 25%;
+  bottom: -7px;
   border: 2px solid #0FF0FC;
   background: #272822;
   transition: 0.2s;
 }
 
-.btn-buy:hover i::after {
-  width: 15px;
-  left: 80%;
+.btn-info:hover i::after {
+  width: 10px;
+  left: 50%;
   animation: move 3s infinite;
 }
 
