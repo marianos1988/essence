@@ -1,5 +1,6 @@
 import { useState } from "react"
-import "../../styles/Events.css"
+import "../../styles/events/Events.css"
+import BtnBuy from "../../components/events/BtnBuy";
 
 
 
@@ -71,7 +72,7 @@ export default function EventsR( data ) {
                                         <div className="date">{event.data.fecha}</div>
                                         <div className="description">{event.description}</div>
                                         <a href={`${event.data.link_comprar}`} target="_blank">
-                                            Adquirir Ticket
+                                            <BtnBuy>Comprar Ticket</BtnBuy>
                                         </a>
                                     </div>
                                 </div>
