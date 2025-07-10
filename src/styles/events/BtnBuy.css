@@ -4,6 +4,7 @@
   position: relative;
   background: #444;
   color: #fff;
+  font-weight: 600;
   text-decoration: none;
   text-transform: uppercase;
   border: none;
@@ -11,6 +12,7 @@
   font-size: .8rem;
   padding: 1rem 1rem;
   transition: 0.2s;
+  border-radius: 10px;
 }
 
 .btn-buy:hover {
@@ -27,6 +29,7 @@
   position: absolute;
   inset: 2px;
   background: #272822;
+  border-radius: 10px;
 }
 
 .btn-buy span {
