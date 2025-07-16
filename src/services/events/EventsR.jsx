@@ -24,7 +24,7 @@ export default function EventsR( data ) {
                 id: parseInt(element.slug[7]),
                 slug: element.slug,
                 data: element.data,
-                description: element.body
+                description: element.body 
             }
             arrEvents.push(dataEvent);
         });
