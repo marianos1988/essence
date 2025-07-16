@@ -5,6 +5,7 @@ import BtnInfo from "../../components/events/BtnInfo";
 
 
 
+
 export default function EventsR( data ) {
 
     const { events } = data;
@@ -66,8 +67,10 @@ export default function EventsR( data ) {
 
                         {
                             dataEvents.map( (event) => (
-                                <div key={event.id} className={`item ${event.slug}`} style={{ backgroundImage: `url(../../public/events/${event.data.img})` }}>
-                                    <div className="content">
+                                
+                                <div key={event.id} className={`item ${event.slug}`} style={{ backgroundImage: `url(/events/${event.data.img})` }}>
+
+                                        <div className="content">
                                         <div className="name">{event.data.titulo}</div>
                                         <div className="site">{event.data.lugar}</div>
                                         <div className="date">{event.data.fecha}</div>
@@ -80,12 +83,11 @@ export default function EventsR( data ) {
                                                 <BtnInfo />
                                             </a>
                                         </div>
-
                                     </div>
+
                                 </div>
                             ))
 
-                            
                         }
 
                     </div>
