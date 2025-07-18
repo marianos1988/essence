@@ -79,7 +79,7 @@ export default function EventsR( data ) {
                                             <a href={`${event.data.link_comprar}`} target="_blank">
                                                 <BtnBuy>Comprar Ticket</BtnBuy>
                                             </a>
-                                            <a href="">
+                                            <a href={`/info-eventos/${event.slug}`}>
                                                 <BtnInfo />
                                             </a>
                                         </div>

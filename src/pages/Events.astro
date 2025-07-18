@@ -8,6 +8,7 @@ import EventsR from "../services/events/EventsR"
 export const prerender = true;
 
 const events = await getCollection("events");
+console.log(events)
 
 ---
  
@@ -17,7 +18,6 @@ const events = await getCollection("events");
         events={events}
     ></EventsR>    
 </Layout>
-
 
 
 

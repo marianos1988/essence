@@ -1,0 +1,38 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import BackgroundEffects from "../../components/BackgroundEffects.astro";
+import { getCollection } from "astro:content";
+
+
+export async function getStaticPaths() {
+
+    const events = await getCollection("events")
+
+    return events.map(
+
+        (event) => ({
+            params: { id: event.slug },
+            props: event
+        })
+    )
+
+}
+
+const infoEvent = Astro.props
+
+
+---
+
+
+<Layout>
+    <BackgroundEffects>
+        <h1>Essence</h1>
+    </BackgroundEffects>
+</Layout>
+
+
+<style>
+    h1 {
+        color: #fff;
+    }
+</style>
