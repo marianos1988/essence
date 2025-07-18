@@ -2,7 +2,8 @@
 
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
-import EventsR from "../services/events/EventsR"
+import EventsR from "../services/events/EventsR";
+import Footer from "../components/Footer.astro";
 
 //ESta pagina se tiene que prerenderizar
 export const prerender = true;
@@ -16,7 +17,7 @@ console.log(events)
     <EventsR 
         client:load
         events={events}
-    ></EventsR>    
+    ></EventsR>
 </Layout>
 
 

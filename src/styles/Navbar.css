@@ -34,7 +34,7 @@
   .menu .btn-home {
     background-color: #000;
     position: absolute;
-    transform: translate(158%, -744%);
+    transform: translate(158%, -745%);
     width: 40px;
 		height: 40px;
     border-radius: 50%;
@@ -188,9 +188,4 @@ animation-delay: 0.7s
     animation: appear 0.35s backwards;
   }
   
-  @media (min-width:350px) AND (max-width:600px) {
 
-    .container-navbar .menu a {
-        transform: scale(.9);
-    }
-  }

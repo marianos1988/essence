@@ -1,6 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import BackgroundEffects from "../../components/BackgroundEffects.astro";
+import BackgroundEffects2 from "../../components/BackgroundEffects2.astro";
 import { getCollection } from "astro:content";
 
 
@@ -19,20 +19,66 @@ export async function getStaticPaths() {
 }
 
 const infoEvent = Astro.props
+const { data } = infoEvent;
+console.log(infoEvent)
 
 
 ---
 
 
 <Layout>
-    <BackgroundEffects>
-        <h1>Essence</h1>
-    </BackgroundEffects>
+    <BackgroundEffects2>
+        <div class="container-info-event">
+            <div class="box-logo">
+                <img class="logo" src="/logos/WhiteLogo.png" alt="Logo">
+            </div>
+            <div class="box-info">
+                <div class="img-flyer">
+                    <img src={`/events/${data.img}`} alt={infoEvent.slug}>
+                </div>
+                <div class="info">
+
+                </div>
+            </div>
+        </div>
+    </BackgroundEffects2>
 </Layout>
 
 
 <style>
-    h1 {
+
+    h1{
         color: #fff;
+        font-size: 60px;
+        background-color: black;
+        z-index: 15;
     }
+    .box-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 150px;
+    }
+
+    .logo {
+        max-width: 60%;
+    }
+    .box-info {
+        display: flex;
+        width: 100%;
+
+    }
+    .img-flyer {
+        width: 50%;
+        max-height: 700px;
+    }
+    .img-flyer img {
+        width: 100%;
+        height: ;
+    }
+    .info {
+        width: 50%;
+    }
+
 </style>

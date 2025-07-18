@@ -6,6 +6,10 @@
         <div class="line"></div>
         <div class="line"></div>
     </div>
+    <div class="container-section">
+        <slot />
+    </div>
+
 </div>
 
 
@@ -16,7 +20,7 @@
 
         display: table;
         width: 100%;
-        height: 200%;
+        height: inherit;
         background-color: #171717;
         color: #000;
         line-height: 1.6;
@@ -33,7 +37,13 @@
         height: 100%;
         margin: auto;
         width: 90vw;
-    }   
+        z-index: 1;
+
+    }
+    .container-section {
+        position: absolute;
+        z-index: 2;
+    }
     .lines .line {
         position: absolute;
         width: 1px;
