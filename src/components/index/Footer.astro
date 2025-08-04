@@ -1,10 +1,14 @@
 ---
+ const { page } = Astro.props
+
+
 ---
 
 <footer>
 
   <div class="box-waves">
     <svg
+      class={`${page}`}
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
       viewBox="0 24 150 28"
@@ -96,7 +100,7 @@
 
 <style>
 
-      @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
   footer {
 
@@ -267,7 +271,7 @@
       margin: 30px auto;
     } 
 
-    .box-waves svg {
+    .box-waves svg.index {
       width: 100%;
       height: 130px;
     }
@@ -295,7 +299,7 @@
       margin: 30px auto;
     } 
 
-    .box-waves svg {
+    .box-waves svg.index {
       width: 100%;
       height: 130px;
     }
@@ -320,7 +324,7 @@
 
         margin: 30px auto;
       } 
-    .box-waves svg {
+    .box-waves svg.index {
       width: 100%;
       transform:translateY(-82px);
     }
@@ -339,66 +343,66 @@
 
         margin: 30px auto;
       }
-    .box-waves svg {
+    .box-waves svg.index {
         width: 100%;
         transform:translateY(-103px);
       }
     }
 
     @media (min-width:600px) AND (max-width:649px) {
-      .box-waves svg {
+      .box-waves svg.index {
         width: 100%;
         transform:translateY(16px);
       }
     }
 
     @media (min-width:650px) AND (max-width:749px) {
-      .box-waves svg {
+      .box-waves svg.index {
         width: 100%;
         transform:translateY(16px);
       }
     }
 
     @media (min-width:750px) AND (max-width:999px) {
-      .box-waves svg {
+      .box-waves svg.index {
         width: 100%;
         transform:translateY(-12px);
       }
     }
 
     @media (min-width:1000px) AND (max-width:1500px) {
-      .box-waves svg {
+      .box-waves svg.index {
         width: 100%;
         transform:translateY(-59px);
       }
     }
 
     @media (min-width:1000px) AND (max-width:1299px) {
-      .box-waves svg {
+      .box-waves svg.index {
         width: 100%;
         transform:translateY(-59px);
       }
     }
     @media (min-width:1300px) AND (max-width:1499px) {
-      .box-waves svg {
+      .box-waves svg.index {
         width: 100%;
         transform:translateY(-116px);
       }
     }
     @media (min-width:1500px) AND (max-width:1699px) {
-      .box-waves svg {
+      .box-waves svg.index {
         width: 100%;
         transform:translateY(-151px);
       }
     }
     @media (min-width:1700px) AND (max-width:1899px) {
-      .box-waves svg {
+      .box-waves svg.index {
         width: 100%;
         transform:translateY(-189px);
       } 
     }
         @media (min-width:1900px) AND (max-width:2000px) {
-      .box-waves svg {
+      .box-waves svg.index {
         width: 100%;
         transform:translateY(-227px);
       } 

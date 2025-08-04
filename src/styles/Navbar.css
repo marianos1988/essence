@@ -146,6 +146,9 @@
     opacity: 1;
   }
   
+  .container-navbar .menu a:hover:first-child::after{
+    display: none;
+  }
   @keyframes appear {
     0% {
       opacity: 0;
