@@ -4,7 +4,7 @@
 
 ---
 
-<footer>
+<footer class={`${page}`}>
 
   <div class="box-waves">
     <svg
@@ -52,7 +52,7 @@
   </div>
   
 
-  <section>
+  <section class={`${page}`}>
       <div class="box-logo">
         <img src="footer/logo.png" alt="">
       </div>
@@ -103,16 +103,17 @@
     @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
   footer {
-
+    height: 370px;
     font-family: "Fira Sans", sans-serif;
     position: relative;
     width: 100%;
-    height: 370px;
     margin-top: 50px;
     background-color: transparent;
     z-index: 990;
     
   }
+
+
   .box-waves {
 
       height: 25%;
@@ -128,7 +129,7 @@
 
 
   section {
-    transform: translateY(35px);
+
     background-color: #fff;
     width: 100%;
     height: 100%;
@@ -137,6 +138,15 @@
     justify-content: center;
     align-items: center;
   }
+
+  section.index {
+        transform: translateY(35px);
+  }
+
+    section.events {
+        transform: translateY(0px);
+  }
+
 
 
   .group-links {
@@ -276,6 +286,12 @@
       height: 130px;
     }
 
+    .box-waves svg.events {
+      width: 100%;
+      transform: translateY(-37px);
+      height: 130px;
+    }
+
 
   }
   @media (min-width:361px) AND (max-width: 440px) {
@@ -303,6 +319,12 @@
       width: 100%;
       height: 130px;
     }
+
+  .box-waves svg.events {
+      width: 100%;
+      transform: translateY(-37px);
+      height: 130px;
+    }
   }
 
     @media (min-width: 441px) AND (max-width:550px) {
@@ -328,7 +350,11 @@
       width: 100%;
       transform:translateY(-82px);
     }
-  
+    .box-waves svg.events {
+      width: 100%;
+      transform: translateY(-37px);
+      height: 130px;
+    }
 
     }
 
@@ -343,9 +369,15 @@
 
         margin: 30px auto;
       }
-    .box-waves svg.index {
+      .box-waves svg.index {
+          width: 100%;
+          transform:translateY(-103px);
+      }
+
+      .box-waves svg.events {
         width: 100%;
-        transform:translateY(-103px);
+        transform: translateY(-37px);
+        height: 130px;
       }
     }
 
@@ -354,6 +386,11 @@
         width: 100%;
         transform:translateY(16px);
       }
+      .box-waves svg.events {
+        width: 100%;
+        transform: translateY(-37px);
+        height: 130px;
+      }
     }
 
     @media (min-width:650px) AND (max-width:749px) {
@@ -361,51 +398,118 @@
         width: 100%;
         transform:translateY(16px);
       }
+
+      .box-waves svg.events {
+        width: 100%;
+        transform:translateY(-28px);
+      }
     }
 
     @media (min-width:750px) AND (max-width:999px) {
-      .box-waves svg.index {
+      .box-waves svg.index
+       {
         width: 100%;
         transform:translateY(-12px);
       }
+
+            .box-waves svg.events {
+        width: 100%;
+        transform:translateY(-38px);
+      }
     }
 
-    @media (min-width:1000px) AND (max-width:1500px) {
+    /* @media (min-width:1000px) AND (max-width:1500px) {
       .box-waves svg.index {
         width: 100%;
         transform:translateY(-59px);
       }
-    }
+            .box-waves svg.events {
+        width: 100%;
+        transform:translateY(-97px);
+      }
+    } */
 
     @media (min-width:1000px) AND (max-width:1299px) {
+
+      footer.events {
+        margin-top: 100px;
+      }
+
       .box-waves svg.index {
         width: 100%;
         transform:translateY(-59px);
+        
+      }
+      .box-waves svg.events {
+        width: 100%;
+        transform:translateY(-94px);
+
       }
     }
     @media (min-width:1300px) AND (max-width:1499px) {
+      footer.events {
+        margin-top: 180px;
+      }
+
       .box-waves svg.index {
         width: 100%;
         transform:translateY(-116px);
       }
+
+            .box-waves svg.events {
+        width: 100%;
+        transform:translateY(-150px);
+
+      }
     }
     @media (min-width:1500px) AND (max-width:1699px) {
+      footer.events {
+        margin-top: 220px;
+      }
+
       .box-waves svg.index {
         width: 100%;
         transform:translateY(-151px);
       }
+
+      .box-waves svg.events {
+        width: 100%;
+        transform:translateY(-187px);
+
+      }
     }
     @media (min-width:1700px) AND (max-width:1899px) {
+
+      footer.events {
+        margin-top: 250px;
+      }
+
       .box-waves svg.index {
         width: 100%;
         transform:translateY(-189px);
       } 
+            .box-waves svg.events {
+        width: 100%;
+        transform:translateY(-224px);
+
+      }
     }
         @media (min-width:1900px) AND (max-width:2000px) {
+
+      footer.events {
+        margin-top: 280px;
+      }
+
       .box-waves svg.index {
         width: 100%;
         transform:translateY(-227px);
       } 
+
+      .box-waves svg.events {
+        width: 100%;
+        transform:translateY(-262px);
+
+      }
     }
 
 </style>
