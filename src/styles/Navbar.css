@@ -31,12 +31,12 @@
 		background-position: center;
 	}
 
-  .menu .btn-home {
+  .container-navbar.open .btn-home {
     background-color: #000;
     position: absolute;
-    transform: translate(158%, -745%);
-    width: 40px;
-		height: 40px;
+    transform: translate(60px, -301px);
+    width: 45px;
+		height: 45px;
     border-radius: 50%;
     cursor: pointer;
     animation: appear 0.35s backwards;
@@ -142,11 +142,11 @@
     transition: 0.3s;
   }
   
-  .container-navbar .menu a:hover::after {
+  .container-navbar .menu nav a:hover::after {
     opacity: 1;
   }
   
-  .container-navbar .menu a:hover:first-child::after{
+  .container-navbar.open .menu .btn-home::after{
     display: none;
   }
   @keyframes appear {
