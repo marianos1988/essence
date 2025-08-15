@@ -1,7 +1,8 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import BackgroundEffects2 from "../../components/BackgroundEffects2.astro";
+import BackgroundEffects2 from "../../components/events/BackgroundEffects2.astro";
 import { getCollection } from "astro:content";
+import BtnBuy from "../../components/events/BtnBuy";
 
 
 export async function getStaticPaths() {
@@ -20,8 +21,7 @@ export async function getStaticPaths() {
 
 const infoEvent = Astro.props
 const { data } = infoEvent;
-console.log(infoEvent)
-
+// console.log(infoEvent)
 
 ---
 
@@ -37,7 +37,19 @@ console.log(infoEvent)
                     <img src={`/events/${data.img}`} alt={infoEvent.slug}>
                 </div>
                 <div class="info">
-
+                    <h1>{data.titulo}</h1>
+                    <dir class="box-place-date">
+                        <h5>{data.lugar}</h5>
+                        <h5>{data.fecha}</h5>
+                    </dir>
+                    <div class="box-description">
+                        <p>
+                            {infoEvent.body}
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <BtnBuy>Comprar Ticket</BtnBuy>
                 </div>
             </div>
         </div>
@@ -47,13 +59,15 @@ console.log(infoEvent)
 
 <style>
 
-    h1{
+    h1 {
         color: #fff;
         font-size: 60px;
-        background-color: black;
+        background-color: transparent;
         z-index: 15;
     }
     .box-logo {
+        margin-top: 10px;
+        height: 30%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -65,20 +79,57 @@ console.log(infoEvent)
         max-width: 60%;
     }
     .box-info {
-        display: flex;
-        width: 100%;
+        background: transparent;
+
+        /* padding: 10px; */
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        height: 380px;
+
+        padding: 10px;
+        margin: 20px 20px 0 20px;
+        border: 4px solid #0FF0FC;
+        border-radius: 15px;
 
     }
     .img-flyer {
-        width: 50%;
-        max-height: 700px;
+
+        
+
+        width: 45%;
+
     }
     .img-flyer img {
-        width: 100%;
-        height: ;
+        
+        width: 300px;
+        height: 380px;
+        object-fit: cover;
+
     }
     .info {
-        width: 50%;
+        width: 100%;
     }
+
+    .info h1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .box-place-date {
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+    }
+
+    .box-description {
+        color: #fff;
+        margin-left: 10px;
+        text-align: justify;
+    }
+
+
 
 </style>
