@@ -31,20 +31,28 @@
 		background-position: center;
 	}
 
-  .container-navbar.open .btn-home {
+ .btn-home {
+
     background-color: #000;
-    position: absolute;
-    transform: translate(60px, -301px);
+    position: fixed;
+    left: 60px;
+    top: 9px;
+    /* transform: translate(60px, -301px); */
     width: 45px;
 		height: 45px;
     border-radius: 50%;
     cursor: pointer;
     animation: appear 0.35s backwards;
-    animation-delay: 0.4s
+    animation-delay: 0.4s;
+    z-index: 9998;
 
   }  
 
-    .menu .btn-home:hover {
+  .btn-home.hide{
+    display: none;
+  }
+
+.btn-home:hover {
 		-webkit-box-shadow: 0px 0px 5px 4px rgba(255,255,255,1);
 		-moz-box-shadow: 0px 0px 5px 4px rgba(255,255,255,1);
 		box-shadow: 0px 0px 5px 4px rgba(255,255,255,1);
@@ -52,12 +60,14 @@
 
   }  
   
-  .menu .btn-home svg {
+  .btn-home svg {
     background-color: #000;
     fill: #ffffff;
 
   }
+
   
+
   .container-navbar.open .burger {
     background-image: url("../../public/navbar/close.svg");
   }
