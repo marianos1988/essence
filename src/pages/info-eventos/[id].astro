@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import BackgroundEffects2 from "../../components/events/BackgroundEffects2.astro";
 import { getCollection } from "astro:content";
 import BtnBuy from "../../components/events/BtnBuy";
+import BtnReturn from "../../components/events/BtnReturn.astro";
 
 
 export async function getStaticPaths() {
@@ -29,6 +30,7 @@ const { data } = infoEvent;
 <Layout>
     <BackgroundEffects2>
         <div class="container-info-event">
+            <BtnReturn />
             <div class="box-logo">
                 <img class="logo" src="/logos/WhiteLogo.png" alt="Logo">
             </div>
@@ -39,8 +41,8 @@ const { data } = infoEvent;
                 <div class="info">
                     <h1>{data.titulo}</h1>
                     <dir class="box-place-date">
-                        <h5>{data.lugar}</h5>
-                        <h5>{data.fecha}</h5>
+                        <h5>Lugar: {data.lugar}</h5>
+                        <h5>Fecha: {data.fecha}</h5>
                     </dir>
                     <div class="box-description">
                         <p>
@@ -118,13 +120,15 @@ const { data } = infoEvent;
         flex-wrap: nowrap;
         justify-content: center;
         text-align: center;
-        font-size: 30px;
+        font-size: 40px;
+        text-decoration: underline;
     }
 
     .box-place-date {
         display: flex;
         justify-content: space-between;
         color: #fff;
+        font-size: larger;
     }
 
     .box-description {
