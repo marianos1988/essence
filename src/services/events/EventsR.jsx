@@ -68,7 +68,7 @@ export default function EventsR( data ) {
                         {
                             dataEvents.map( (event) => (
                                 
-                                <div key={event.id} className={`item ${event.slug}`} style={{ backgroundImage: `url(/events/${event.data.img})` }}>
+                                <div key={event.id} className={`item ${event.slug}`} style={{ backgroundImage: `url(/events/PreEvents/${event.data.img})` }}>
 
                                         <div className="content">
                                         <div className="name">{event.data.titulo}</div>
