@@ -1,6 +1,6 @@
 ---
  const { page } = Astro.props
-import Logo from "../../public/footer/logo.png";
+import logo from "../assets/footer/logo.png";
 
 ---
 
@@ -54,12 +54,12 @@ import Logo from "../../public/footer/logo.png";
 
   <section class={`${page}`}>
       <div class="box-logo">
-        <img src="footer/logo.png" alt="Logo">
+        <img src={logo.src} alt="Logo">
       </div>
       <div class="group-links">
         <ul class="links">
             <li><a href="">Quienes Somos</a></li>
-            <li><a href="">Eventos</a></li>
+            <li><a href="/Events">Eventos</a></li>
             <li><a href="">Sets</a></li>
             <li><a href="">Rooster</a></li>
             <li><a href="">Merch</a></li>

@@ -6,6 +6,7 @@ import BtnBuy from "../../components/events/BtnBuy";
 import BtnReturn from "../../components/events/BtnReturn.astro";
 
 
+
 export async function getStaticPaths() {
 
     const events = await getCollection("events")
@@ -30,7 +31,7 @@ const { data } = infoEvent;
 <Layout>
     <BackgroundEffects2>
         <div class="container-info-event">
-            <BtnReturn />
+            <BtnReturn></BtnReturn>
             <div class="box-logo">
                 <img class="logo" src="/logos/WhiteLogo.png" alt="Logo">
             </div>
