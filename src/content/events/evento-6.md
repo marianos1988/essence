@@ -3,7 +3,7 @@
     titulo: Psytrance FEst
     fecha: 04-09-2025
     lugar: Olivos
-    img: evento-6.png
+    img: evento6
     link_comprar: https://www.google.com.ar
 
 ---

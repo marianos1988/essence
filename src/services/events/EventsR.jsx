@@ -4,6 +4,14 @@ import BtnBuy from "../../components/events/BtnBuy";
 import BtnInfo from "../../components/events/BtnInfo";
 
 
+import Evento1 from "../../assets/Events/PreEvents/evento-1.png"
+import Evento2 from "../../assets/Events/PreEvents/evento-2.png"
+import Evento3 from "../../assets/Events/PreEvents/evento-3.png"
+import Evento4 from "../../assets/Events/PreEvents/evento-4.png"
+import Evento5 from "../../assets/Events/PreEvents/evento-5.png"
+import Evento6 from "../../assets/Events/PreEvents/evento-6.png"
+
+
 
 
 export default function EventsR( data ) {
@@ -11,11 +19,48 @@ export default function EventsR( data ) {
     const { events } = data;
 
 
+            const selectIMG = (id) =>{
+
+            switch(id) {
+                case 1: 
+                    return Evento1.src;
+
+                case 2: 
+                    return Evento2.src;
+
+                case 3: 
+                    return Evento3.src;
+
+                case 4: 
+                    return Evento4.src;
+
+                case 5: 
+                    return Evento5.src;
+
+                case 6: 
+                    return Evento6.src;
+
+                case 7: 
+                    return Evento7.src;
+
+                case 8: 
+                    return Evento8.src;
+
+                case 9: 
+                    return Evento9.src;
+
+                case 10: 
+                    return Evento10.src;
+
+            }
+
+        }
 
     const getEvents = (allEvents) => {
 
         let numEvents = allEvents.length;
         let arrEvents = [];
+
         
         
         allEvents.forEach(element => {
@@ -25,7 +70,9 @@ export default function EventsR( data ) {
                 id: parseInt(element.slug[7]),
                 slug: element.slug,
                 data: element.data,
-                description: element.body 
+                description: element.body,
+                img: selectIMG(parseInt(element.slug[7]))
+                 
             }
             arrEvents.push(dataEvent);
         });
@@ -41,6 +88,7 @@ export default function EventsR( data ) {
     
 
     const [ dataEvents, setDataEvents ] = useState(allData.arrEvents);
+    
 
     const handleNext = () => {
         setDataEvents((prev) => {
@@ -68,7 +116,7 @@ export default function EventsR( data ) {
                         {
                             dataEvents.map( (event) => (
                                 
-                                <div key={event.id} className={`item ${event.slug}`} style={{ backgroundImage: `url(/events/PreEvents/${event.data.img})` }}>
+                                <div key={event.id} className={`item ${event.slug}`} style={{ backgroundImage: `url(${selectIMG(event.id)})` }}>
 
                                         <div className="content">
                                         <div className="name">{event.data.titulo}</div>
@@ -86,6 +134,8 @@ export default function EventsR( data ) {
                                     </div>
 
                                 </div>
+
+
                             ))
 
                         }

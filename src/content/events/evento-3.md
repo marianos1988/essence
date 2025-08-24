@@ -3,7 +3,7 @@
     titulo: Creamfields
     fecha: 12-09-2025
     lugar: Club Hipico
-    img: evento-3.png
+    img: evento3
     link_comprar: https://www.youtube.com
 
 ---

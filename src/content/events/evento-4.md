@@ -2,8 +2,8 @@
 
     titulo: Armin Only
     fecha: 19-01-2026
-    lugar: MAndarine Park
-    img: evento-4.png
+    lugar: Mandarine Park
+    img: evento4
     link_comprar: https://www.google.com.ar
 
 ---

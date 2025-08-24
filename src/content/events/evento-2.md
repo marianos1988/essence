@@ -3,7 +3,7 @@
     titulo: Ultra Music Festival
     fecha: 21-11-2025
     lugar: Autodromo
-    img: evento-2.png
+    img: evento2
     link_comprar: https://www.infobae.com
 
 ---

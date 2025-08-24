@@ -4,6 +4,7 @@ import BackgroundEffects2 from "../../components/events/BackgroundEffects2.astro
 import { getCollection } from "astro:content";
 import BtnBuy from "../../components/events/BtnBuy";
 import BtnReturn from "../../components/events/BtnReturn.astro";
+import logo from "../../assets/events/logo.png";
 
 
 
@@ -33,7 +34,7 @@ const { data } = infoEvent;
         <div class="container-info-event">
             <BtnReturn></BtnReturn>
             <div class="box-logo">
-                <img class="logo" src="/logos/WhiteLogo.png" alt="Logo">
+                <img class="logo" src={logo.src} alt="Logo">
             </div>
             <div class="box-info">
                 <div class="img-flyer">

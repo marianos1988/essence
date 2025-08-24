@@ -3,7 +3,7 @@
     titulo: Tomorrowland
     fecha: 16-12-2025
     lugar: Crobar
-    img: evento-1.png
+    img: evento1
     link_comprar: https://www.google.com.ar
 
 ---
