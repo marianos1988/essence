@@ -6,7 +6,65 @@ import BtnBuy from "../../components/events/BtnBuy";
 import BtnReturn from "../../components/events/BtnReturn.astro";
 import logo from "../../assets/events/logo.png";
 
+import Evento1 from "../../assets/Events/PostEvents/evento-1.png"
+import Evento2 from "../../assets/Events/PostEvents/evento-2.png"
+import Evento3 from "../../assets/Events/PostEvents/evento-3.png"
+import Evento4 from "../../assets/Events/PostEvents/evento-4.png"
+import Evento5 from "../../assets/Events/PostEvents/evento-5.png"
+import Evento6 from "../../assets/Events/PostEvents/evento-6.png"
+// import Evento7 from "../../assets/Events/PostEvents/evento-7.png"
+// import Evento8 from "../../assets/Events/PostEvents/evento-8.png"
+// import Evento9 from "../../assets/Events/PostEvents/evento-9.png"
+// import Evento10 from "../../assets/Events/PostEvents/evento-10.png"
 
+let { id } = Astro.params;
+let imagen:any ;
+
+switch(id) {
+
+    case "evento-1": 
+        imagen = Evento1; 
+        break;
+
+    case "evento-2": 
+        imagen = Evento2; 
+        break;
+
+    case "evento-3": 
+        imagen = Evento3; 
+        break;
+
+    case "evento-4": 
+        imagen = Evento4; 
+        break;
+
+    case "evento-5": 
+        imagen = Evento5; 
+        break;
+
+    case "evento-6": 
+        imagen = Evento6; 
+        break;
+
+    // case "evento-7": 
+    //     imagen = Evento7; 
+    //     break;
+
+    // case "evento-8": 
+    //     imagen = Evento8; 
+    //     break;
+
+    // case "evento-9": 
+    //     imagen = Evento9; 
+    //     break;
+
+    // case "evento-10": 
+    //     imagen = Evento10; 
+    //     break;
+
+}
+
+        
 
 export async function getStaticPaths() {
 
@@ -38,7 +96,7 @@ const { data } = infoEvent;
             </div>
             <div class="box-info">
                 <div class="img-flyer">
-                    <img src={`/events/PostEvents/${data.img}`} alt={infoEvent.slug}>
+                    <img src={imagen.src} alt={infoEvent.slug}>
                 </div>
                 <div class="info">
                     <h1>{data.titulo}</h1>

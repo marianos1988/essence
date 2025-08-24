@@ -10,6 +10,10 @@ import Evento3 from "../../assets/Events/PreEvents/evento-3.png"
 import Evento4 from "../../assets/Events/PreEvents/evento-4.png"
 import Evento5 from "../../assets/Events/PreEvents/evento-5.png"
 import Evento6 from "../../assets/Events/PreEvents/evento-6.png"
+// import Evento7 from "../../assets/Events/PreEvents/evento-7.png"
+// import Evento8 from "../../assets/Events/PreEvents/evento-8.png"
+// import Evento9 from "../../assets/Events/PreEvents/evento-9.png"
+// import Evento10 from "../../assets/Events/PreEvents/evento-10.png"
 
 
 
@@ -19,7 +23,7 @@ export default function EventsR( data ) {
     const { events } = data;
 
 
-            const selectIMG = (id) =>{
+        const selectIMG = (id) =>{
 
             switch(id) {
                 case 1: 
