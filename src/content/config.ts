@@ -22,11 +22,11 @@ const rooster =  defineCollection({
         genero: z.string(),
         img1: z.string(),
         img2: z.string(),
-        instagram: z.string().url(),
-        youtube: z.string().url(),
-        spotify: z.string().url(),
-        soundcloud: z.string().url(),
-        tiktok: z.string().url(),
+        instagram: z.string().url().optional(),
+        youtube: z.string().url().optional(),
+        spotify: z.string().url().optional(),
+        soundcloud: z.string().url().optional(),
+        tiktok: z.string().url().optional(),
     })
 })
 
