@@ -1,12 +1,13 @@
 ---
 import BtnCardPrincipal from "./BtnCardPrincipal.astro";
 import BtnSocialMedia from "./BtnSocialMedia.astro";
+import Image from "../../assets/principalCard/essence.jpg";
 
 ---
 
 <div class="container-principal-card">
     <div class="card">
-        <img src="principalCard/essence.jpg" />
+        <img src={Image.src} />
         <div>
             <h2>Essence Crew</h2>
             <h3>Música - Arte - Energía</h3>
