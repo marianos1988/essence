@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+
+const rooster = await getCollection("rooster");
+
+console.log(rooster)
+---
+
+
+
+<Layout>
+
+</Layout>

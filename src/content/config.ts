@@ -14,4 +14,24 @@ const events = defineCollection({
     })
 })
 
-export const collections = { events: events } 
+const rooster =  defineCollection({
+    schema: z.object({
+        nombre: z.string(),
+        artistico: z.string(),
+        profesion: z.string(),
+        genero: z.string(),
+        img1: z.string(),
+        img2: z.string(),
+        instagram: z.string().url(),
+        youtube: z.string().url(),
+        spotify: z.string().url(),
+        soundcloud: z.string().url(),
+        tiktok: z.string().url(),
+    })
+})
+
+export const collections = { 
+    
+    events: events,
+    rooster: rooster
+ } 

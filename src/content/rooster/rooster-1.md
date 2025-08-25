@@ -1,17 +1,16 @@
 ---
 
-    Nombre: Gaston Aliaga
-    Artistico: Gaston Aliaga
-    Profesion: DJ / Productor Musical
-    Genero: Progresive / Deep House
-    img1: Aliaga1
-    img2: Aliaga2
-    Instagram: https://www.instagram.com/gaston.aliaga/
-    SoundCloud: https://soundcloud.com/gastonaliaga
-    Youtube: 
-    TechRider1: 2 (O MAS) CDJ 2000 NXS / 2000 NXS2 / 3000
-    TechRider2: 1 Mixer Pioneer DJM 900 NXS o similar
-    TechRider3: 2 Monitores con low + Mid/High
+    nombre: Gaston Aliaga
+    artistico: Gaston Aliaga
+    profesion: DJ / Productor Musical
+    genero: Progresive / Deep House
+    img1: aliaga1
+    img2: aliaga2
+    instagram: https://www.instagram.com/gaston.aliaga/
+    soundcloud: https://soundcloud.com/gastonaliaga
+    tiktok: https://www.tiktok.com/@gaston.aliaga?_t=ZM-8zB8BDg1yDu&_r=1
+
+
 
 ---
 
