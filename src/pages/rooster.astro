@@ -1,15 +1,46 @@
 ---
+
+import TresdeCard from "../components/rooster/TresdeCard.astro";
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
 
+
 const rooster = await getCollection("rooster");
 
+console.log(rooster[3].data)
 
-console.log(rooster);
+
 ---
 
 
 <Layout>
+    <h1>Rooster</h1>
 
+    <div class="container-cards">
+        <TresdeCard
+            img1="aliaga1.jpg"
+            img2="aliaga2.jpg"
+        />
+        <TresdeCard 
+            img1="nazarv1.jpg"
+            img2="nazarv2.jpg"
+        />
+    </div>
 </Layout>
+
+
+<style>
+    h1 {
+        color: #fff;
+        text-align: center;
+    }
+
+    .container-cards {
+
+        margin-top: 150px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+</style>
