@@ -113,8 +113,8 @@ export default function EventsR( data ) {
 
     return(
         <>  
-            <div className="container-events">
-                <div className="container">
+            <main className="container-events">
+                <section className="container">
                     <div className="slide">
 
                         {
@@ -150,8 +150,8 @@ export default function EventsR( data ) {
                         <button className="prev" onClick={()=>handlePrev(dataEvents)}><i className="fa-solid fa-arrow-left"></i></button>
                         <button className="next" onClick={()=>handleNext(dataEvents)}><i className="fa-solid fa-arrow-right"></i></button>
                     </div>
-                </div>
-            </div>
+                </section>
+            </main>
         </>
 
     )
