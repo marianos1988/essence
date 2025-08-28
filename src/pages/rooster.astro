@@ -1,5 +1,6 @@
 ---
 
+import BackgroundEffects3 from "../components/rooster/BackgroundEffects3.astro";
 import TresdeCard from "../components/rooster/TresdeCard.astro";
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
@@ -15,35 +16,50 @@ console.log(rooster[3].data)
 
 
 <Layout>
-    <h1>Rooster</h1>
+    <BackgroundEffects3>
+    <main class="container-rooster">
+        <h1>Rooster</h1>
 
-    <div class="container-cards">
-        <TresdeCard
-            img1="aliaga1.jpg"
-            img2="aliaga2.jpg"
-        />
-        <TresdeCard 
-            img1="nazarv1.jpg"
-            img2="nazarv2.jpg"
-        />
-        <TresdeCard 
-            img1="huncho1.jpg"
-            img2="huncho2.jpg"
-        />
-        <TresdeCard 
-            img1="nazarv1.jpg"
-            img2="nazarv2.jpg"
-        />
-        <TresdeCard 
-            img1="nazarv1.jpg"
-            img2="nazarv2.jpg"
-        />
-    </div>
+        <div class="box-cards">
+
+            <TresdeCard
+                img1="aliaga1.jpg"
+                img2="aliaga2.jpg"
+            />
+            <TresdeCard 
+                img1="nazarv1.jpg"
+                img2="nazarv2.jpg"
+            />
+            <TresdeCard 
+                img1="huncho1.jpg"
+                img2="huncho2.jpg"
+            />
+            <TresdeCard 
+                img1="nazarv1.jpg"
+                img2="nazarv2.jpg"
+            />
+            <TresdeCard 
+                img1="nazarv1.jpg"
+                img2="nazarv2.jpg"
+            />
+        </div>  
+    </main>
+
+    </BackgroundEffects3>
+
 </Layout>
 
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap'); 
+
+    .container-rooster {
+        width: 100%;
+        display: flex;
+        flex-direction: columngit;
+        justify-content: center;
+        align-items: center;
+    }
 
     h1 {
         font-family: "Fira Sans", sans-serif;
@@ -52,9 +68,10 @@ console.log(rooster[3].data)
         font-size: 40px;
     }
 
-    .container-cards {
+    .box-cards {
 
         margin-top: 150px;
+        max-width: 1200px;
         display: flex;
         flex-wrap: wrap;
         gap: 25px;
