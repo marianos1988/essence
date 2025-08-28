@@ -231,38 +231,46 @@ const { data } = infoEvent;
 
     @media (max-width: 750px) {
 
-    .box-info {
-        background: transparent;
-        display: grid;
-        grid-template-columns: 1fr;
-        height: 100%
-        padding: 20px;
-        margin: 20px;
-        border: 4px solid #0FF0FC;
-        border-radius: 15px;
+        .box-info {
+            background: transparent;
+            display: grid;
+            grid-template-columns: 1fr;
+            height: 100%
+            padding: 20px;
+            margin: 20px;
+            border: 4px solid #0FF0FC;
+            border-radius: 15px;
+        }
+
+        .img-flyer {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .box-btn-buy {
+            margin: 20px 0 20px 0;
+
+        }
+
+        .box-description {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .info {
+            margin-left: 10px;
+        }
+
     }
 
-    .img-flyer {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-    }
-
+    @media (min-width:1020px) {
+        
         .box-btn-buy {
-        margin: 20px 0 20px 0;
-
-    }
-
-    .box-description {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .info {
-        margin-left: 10px;
-    }
+            margin-top: 45px;
+        }
 
     }
 

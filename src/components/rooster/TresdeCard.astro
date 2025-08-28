@@ -45,7 +45,7 @@ import Huncho2 from "../../assets/rooster/huncho2.jpg"
     align-items: flex-end;
     padding: 0 36px;
     perspective: 2500px;
-    margin: 100px 50px;
+    margin: 100px 0px;
     }
 
     .cover-image {
@@ -125,7 +125,24 @@ import Huncho2 from "../../assets/rooster/huncho2.jpg"
 
     .card:hover .character {
       opacity: 1;
-      transform: translate3d(0%, -5%, 100px);
+      transform: translate3d(0%, -15%, 100px);
+    }
+
+    @media (max-width:350px) {
+
+      .card:first-child {
+
+      }
+
+      .card {
+        margin: 100px 0;
+      }
+    }
+
+    @media (min-width:900px) {
+      .card {
+        margin: 100px 25px;
+      }
     }
 
 </style>
