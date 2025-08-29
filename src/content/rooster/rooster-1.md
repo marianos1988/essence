@@ -6,6 +6,7 @@
     genero: Progresive / Deep House
     img1: aliaga1
     img2: aliaga2
+    logo: aliagalogo
     instagram: https://www.instagram.com/gaston.aliaga/
     soundcloud: https://soundcloud.com/gastonaliaga
     tiktok: https://www.tiktok.com/@gaston.aliaga?_t=ZM-8zB8BDg1yDu&_r=1

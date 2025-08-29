@@ -6,6 +6,7 @@
     genero: Techno
     img1: nazarv1
     img2: nazarv2
+    logo: nazarvlogo
     instagram: https://www.instagram.com/nazarv.dj/
     soundcloud: https://soundcloud.com/nazarv_dj
     youtube:  https://www.youtube.com/@naza.ravesound

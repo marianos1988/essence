@@ -6,6 +6,7 @@
     genero: Tech House / Tech Deep / Minimal House 
     img1: huncho1
     img2: huncho2
+    logo: hunchologo
     instagram: https://www.instagram.com/facu.rapetti/
     youtube: https://www.youtube.com/@facu.rapetti
     tiktok: https://www.tiktok.com/@nazarv.dj?_t=ZM-8zB8DnIZg9w&_r=1

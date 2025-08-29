@@ -10,7 +10,11 @@ import { getCollection } from "astro:content";
 
 const rooster = await getCollection("rooster");
 
-console.log(rooster[3].data)
+
+
+
+
+
 
 
 ---
@@ -24,27 +28,18 @@ console.log(rooster[3].data)
             <h1>Rooster</h1>
 
             <div class="box-cards">
-
-            <TresdeCard
-                img1="aliaga1.jpg"
-                img2="aliaga2.jpg"
-            />
-            <TresdeCard 
-                img1="nazarv1.jpg"
-                img2="nazarv2.jpg"
-            />
-            <TresdeCard 
-                img1="huncho1.jpg"
-                img2="huncho2.jpg"
-            />
-            <TresdeCard 
-                img1="nazarv1.jpg"
-                img2="nazarv2.jpg"
-            />
-            <TresdeCard 
-                img1="nazarv1.jpg"
-                img2="nazarv2.jpg"
-            />
+            
+            {
+                rooster.map(
+                    (rooster) => (
+                        <TresdeCard
+                            img1={rooster.data.img1}
+                            img2={rooster.data.img2}
+                            logo={rooster.data.logo}
+                        />
+                    )
+                )
+            }
         </div>  
     
         </BackgroundEffects3>

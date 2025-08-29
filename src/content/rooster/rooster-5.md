@@ -4,8 +4,9 @@
     artistico: ATMØZ
     profesion: DJ / Productor Musical
     genero: Techno
-    img1: atmos1
-    img2: atmos2
+    img1: atmoz1
+    img2: atmoz2
+    logo: atmozlogo
     instagram: https://www.instagram.com/atmoz_music/
     youtube: https://www.youtube.com/@atmozmusic
     spotify: https://open.spotify.com/artist/0bXfzKQfSQszDeCAqT9wfc?si=MJpIJOtETm-QYXfVJcAmcA

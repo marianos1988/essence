@@ -1,15 +1,100 @@
 ---
-const info = Astro.props
+const { img1, img2, logo } = Astro.props
+
+console.log(img1)
+
 import Aliaga1 from "../../assets/rooster/aliaga1.jpg"
 import Aliaga2 from "../../assets/rooster/aliaga2.jpg"
+import AliagaLogo from "../../assets/rooster/aliagalogo.png"
+
 import NazaRv1 from "../../assets/rooster/nazarv1.jpg"
 import NazaRv2 from "../../assets/rooster/nazarv2.jpg"
+import NazaRvLogo from "../../assets/rooster/nazarvlogo.png"
+
 import Huncho1 from "../../assets/rooster/huncho1.jpg"
 import Huncho2 from "../../assets/rooster/huncho2.jpg"
+import HunchoLogo from "../../assets/rooster/hunchologo.png"
 
+import Rapetti1 from "../../assets/rooster/rapetti1.jpg"
+import Rapetti2 from "../../assets/rooster/rapetti2.jpg"
+import RapettiLogo from "../../assets/rooster/rapettilogo.png"
 
+import Atmoz1 from "../../assets/rooster/atmoz1.jpg"
+import Atmoz2 from "../../assets/rooster/atmoz2.jpg"
+import AtmozLogo from "../../assets/rooster/atmozlogo.png"
 
+let finalImg1:any;
+let finalImg2:any;
+let finalLogo:any;
 
+switch(img1) {
+
+    case "aliaga1": 
+      finalImg1 = Aliaga1.src; 
+    break;
+
+    case "nazarv1": 
+      finalImg1 = NazaRv1.src; 
+    break;
+
+    case "rapetti1": 
+      finalImg1 = Rapetti1.src; 
+    break;
+
+    case "huncho1": 
+      finalImg1 = Huncho1.src; 
+    break;
+
+    case "atmoz1": 
+      finalImg1 = Atmoz1.src; 
+    break;
+}
+
+switch(img2) {
+
+    case "aliaga2": 
+        finalImg2 = Aliaga2.src; 
+    break;
+
+    case "nazarv2": 
+        finalImg2 = NazaRv2.src; 
+    break;
+    
+    case "rapetti2": 
+        finalImg2 = Rapetti2.src; 
+    break;
+
+    case "huncho2": 
+        finalImg2 = Huncho2.src; 
+    break;
+
+    case "atmoz2": 
+        finalImg2 = Atmoz2.src; 
+    break;
+}
+
+switch(logo) {
+
+    case "aliagalogo": 
+        finalLogo = AliagaLogo.src; 
+    break;
+
+    case "nazarvlogo": 
+      finalLogo = NazaRvLogo.src; 
+    break;
+
+    case "rapettilogo": 
+      finalLogo = RapettiLogo.src; 
+    break;
+
+    case "hunchologo": 
+      finalLogo = HunchoLogo.src; 
+    break;
+
+    case "atmozlogo": 
+      finalLogo = AtmozLogo.src; 
+    break;
+}
 
 
 
@@ -23,10 +108,11 @@ import Huncho2 from "../../assets/rooster/huncho2.jpg"
 
 <div class="card">
     <div class="wrapper">
-      <img src={Huncho1.src} class="cover-image" />
+      <img src={finalImg1} class="cover-image" />
     </div>
-    <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-title.png" class="title" />
-    <img src={Huncho2.src} class="character" />
+    <!-- <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-title.png" class="title" /> -->
+    <img src={finalLogo} class="title" />
+    <img src={finalImg2} class="character" />
 </div>
 
 
@@ -110,6 +196,7 @@ import Huncho2 from "../../assets/rooster/huncho2.jpg"
     .title {
       width: 100%;
       transition: transform 0.5s;
+      cursor: pointer;
     }
     .card:hover .title {
       transform: translate3d(0%, -50px, 100px);
@@ -117,6 +204,7 @@ import Huncho2 from "../../assets/rooster/huncho2.jpg"
 
     .character {
       width: 100%;
+      height: 400px;
       opacity: 0;
       transition: all 0.5s;
       position: absolute;
@@ -126,6 +214,11 @@ import Huncho2 from "../../assets/rooster/huncho2.jpg"
     .card:hover .character {
       opacity: 1;
       transform: translate3d(0%, -15%, 100px);
+      /* transition: all .3s ease-in; */
+      border: 3px #328f94 solid;
+-webkit-box-shadow: 0px 0px 10px 10px rgba(255,255,255,0.7); 
+box-shadow: 0px 0px 8px 8px rgba(255,255,255,0.7);
+cursor: pointer;
     }
 
     @media (max-width:350px) {
