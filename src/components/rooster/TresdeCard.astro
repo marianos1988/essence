@@ -1,7 +1,7 @@
 ---
 const { img1, img2, logo } = Astro.props
 
-console.log(img1)
+
 
 import Aliaga1 from "../../assets/rooster/aliaga1.jpg"
 import Aliaga2 from "../../assets/rooster/aliaga2.jpg"
@@ -111,7 +111,7 @@ switch(logo) {
       <img src={finalImg1} class="cover-image" />
     </div>
     <!-- <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-title.png" class="title" /> -->
-    <img src={finalLogo} class="title" />
+    <img src={finalLogo} class={`title ${logo}`} />
     <img src={finalImg2} class="character" />
 </div>
 
@@ -198,9 +198,50 @@ switch(logo) {
       transition: transform 0.5s;
       cursor: pointer;
     }
+
+
     .card:hover .title {
       transform: translate3d(0%, -50px, 100px);
     }
+    .card:hover .title {
+      transform: translate3d(0%, -50px, 100px);
+    }
+
+    .title.aliagalogo {
+      transform: translateY(-50px);
+    }
+
+    .card:hover .title.aliagalogo {
+      transform: translate3d(0%, -100px, 100px) scale(1.2);
+    }
+
+    .title.nazarvlogo {
+      transform: translate(0px,-25px) scale(1.1) ;
+    }
+
+    .card:hover .title.nazarvlogo {
+      transform: translate3d(0%, -32px, 0px) scale(1.3);
+    }
+
+    .title.rapettilogo {
+      transform: translateY(50px);
+    }
+
+    .title.hunchologo {
+
+      transform: scale(1.3) translateY(60px);
+    } 
+    .card:hover .title.hunchologo {
+      transform: scale(1.5);
+    } 
+
+    /* .title.atmozlogo {
+
+      transform: translateY(-20px);
+    } 
+    .card:hover .title.atmozlogo {
+      transform: translateY(-40px);
+    }  */
 
     .character {
       width: 100%;
