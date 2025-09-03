@@ -14,7 +14,7 @@ const events = defineCollection({
     })
 })
 
-const rooster =  defineCollection({
+const roster =  defineCollection({
     schema: z.object({
         nombre: z.string(),
         artistico: z.string(),
@@ -34,5 +34,5 @@ const rooster =  defineCollection({
 export const collections = { 
     
     events: events,
-    rooster: rooster
+    roster: roster
  } 

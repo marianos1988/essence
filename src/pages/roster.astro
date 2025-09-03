@@ -1,14 +1,14 @@
 ---
 
 import Footer from "../components/Footer.astro";
-import BackgroundEffects3 from "../components/rooster/BackgroundEffects3.astro";
-import TresdeCard from "../components/rooster/TresdeCard.astro";
+import BackgroundEffects3 from "../components/roster/BackgroundEffects3.astro";
+import TresdeCard from "../components/roster/TresdeCard.astro";
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
 
 
-const rooster = await getCollection("rooster");
+const roster = await getCollection("roster");
 
 
 
@@ -25,17 +25,17 @@ const rooster = await getCollection("rooster");
         <BackgroundEffects3>
 
 
-            <h1>Rooster</h1>
+            <h1>Roster</h1>
 
             <div class="box-cards">
             
             {
-                rooster.map(
-                    (rooster) => (
+                roster.map(
+                    (roster) => (
                         <TresdeCard
-                            img1={rooster.data.img1}
-                            img2={rooster.data.img2}
-                            logo={rooster.data.logo}
+                            img1={roster.data.img1}
+                            img2={roster.data.img2}
+                            logo={roster.data.logo}
                         />
                     )
                 )

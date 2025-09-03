@@ -29,7 +29,7 @@ export default function Navbar() {
                     <a id="inicio-nav">Quienes Somos</a>
                     <a href="/events" id="eventos-nav">Eventos</a>
                     <a id="sets-nav">Sets</a>
-                    <a href="/rooster" id="roosters-nav">Rooster</a>
+                    <a href="/roster" id="rosters-nav">Roster</a>
                     <a id="merch-nav">Merch</a>
                     <a id="works-nav">Trabaja con nosotros</a>
                     <a id="contacto-nav">Contacto</a>
