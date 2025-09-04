@@ -10,6 +10,8 @@ import { getCollection } from "astro:content";
 
 const roster = await getCollection("roster");
 
+// ordenar alfabéticamente por slug
+const sortedBySlug = roster.sort((a, b) => a.slug.localeCompare(b.slug));
 
 
 
@@ -30,7 +32,7 @@ const roster = await getCollection("roster");
             <div class="box-cards">
             
             {
-                roster.map(
+                sortedBySlug.map(
                     (roster) => (
                         <TresdeCard
                             img1={roster.data.img1}
