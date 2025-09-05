@@ -200,5 +200,12 @@ animation-delay: 0.7s
     opacity: 1;
     animation: appear 0.35s backwards;
   }
+
+@media (max-width: 381px) {
+  
+   .container-navbar .menu nav {
+      padding-left: 60px;
+   }
+}
   
 
