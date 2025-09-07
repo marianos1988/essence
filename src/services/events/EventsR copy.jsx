@@ -120,7 +120,6 @@ export default function EventsR( data ) {
                         {
                             dataEvents.map( (event) => (
                                 
-                                
                                 <div key={event.id} className={`item ${event.slug}`} style={{ backgroundImage: `url(${selectIMG(event.id)})` }}>
 
                                         <div className="content">
@@ -130,7 +129,7 @@ export default function EventsR( data ) {
                                         <div className="description">{event.description}</div>
                                         <div className="group-btns">
                                             <a href={`${event.data.link_comprar}`} target="_blank">
-                                                <BtnBuy>Comprar</BtnBuy>
+                                                <BtnBuy>Comprar Ticket</BtnBuy>
                                             </a>
                                             <a href={`/info-eventos/${event.slug}`}>
                                                 <BtnInfo />

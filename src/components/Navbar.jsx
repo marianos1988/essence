@@ -26,16 +26,16 @@ export default function Navbar() {
                 <div className="menu">
 
                     <nav>
-                    <a id="inicio-nav">Quienes Somos</a>
-                    <a href="/events" id="eventos-nav">Eventos</a>
-                    <a id="sets-nav">Sets</a>
-                    <a href="/roster" id="rosters-nav">Roster</a>
-                    <a id="merch-nav">Merch</a>
-                    <a id="works-nav">Trabaja con nosotros</a>
-                    <a id="contacto-nav">Contacto</a>
+                        <a id="inicio-nav">Quienes Somos</a>
+                        <a href="/events" id="eventos-nav">Eventos</a>
+                        <a id="sets-nav">Sets</a>
+                        <a href="/roster" id="rosters-nav">Roster</a>
+                        <a id="merch-nav">Merch</a>
+                        <a id="works-nav">Trabaja con nosotros</a>
+                        <a id="contacto-nav">Contacto</a>
                     </nav>
                 </div>
-            </div>
+            </div> 
     )
 
 
