@@ -1,5 +1,5 @@
 ---
-const { img1, img2, logo } = Astro.props
+const { img1, img2, logo, slug } = Astro.props
 
 
 
@@ -97,23 +97,23 @@ switch(logo) {
 }
 
 
-
-
-
-
-
-
-
 ---
 
-<div class="card">
+<a href={`/info-roster/${slug}`}>
+  <div class="card">
     <div class="wrapper">
       <img src={finalImg1} class="cover-image" />
     </div>
-    <!-- <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-title.png" class="title" /> -->
-    <img src={finalLogo} class={`title ${logo}`} />
-    <img src={finalImg2} class="character" />
-</div>
+    <img
+      transition:name= {`logo-${slug}`} 
+      src={finalLogo} class={`title ${logo}`} 
+    />
+    <img
+      transition:name= {`img2-${slug}`} 
+      src={finalImg2} class="character" 
+    />
+  </div>
+</a>
 
 
 <style>

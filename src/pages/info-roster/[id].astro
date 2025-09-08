@@ -1,122 +1,113 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import BackgroundEffects2 from "../../components/events/BackgroundEffects2.astro";
-import { getCollection } from "astro:content";
-import BtnBuy from "../../components/events/BtnBuy";
-import BtnReturn from "../../components/events/BtnReturn.astro";
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import BackgroundEfects4 from "../../components/roster/BackgroundEffects4.astro"
 import logo from "../../assets/events/logo.png";
 
-import Evento1 from "../../assets/Events/PostEvents/evento-1.png"
-import Evento2 from "../../assets/Events/PostEvents/evento-2.png"
-import Evento3 from "../../assets/Events/PostEvents/evento-3.png"
-import Evento4 from "../../assets/Events/PostEvents/evento-4.png"
-import Evento5 from "../../assets/Events/PostEvents/evento-5.png"
-import Evento6 from "../../assets/Events/PostEvents/evento-6.png"
-// import Evento7 from "../../assets/Events/PostEvents/evento-7.png"
-// import Evento8 from "../../assets/Events/PostEvents/evento-8.png"
-// import Evento9 from "../../assets/Events/PostEvents/evento-9.png"
-// import Evento10 from "../../assets/Events/PostEvents/evento-10.png"
+import Aliaga2 from "../../assets/roster/aliaga2.jpg"
+import AliagaLogo from "../../assets/roster/aliagalogo.png"
 
-let { id } = Astro.params;
-let imagen:any ;
+import NazaRv2 from "../../assets/roster/nazarv2.jpg"
+import NazaRvLogo from "../../assets/roster/nazarvlogo.png"
 
-switch(id) {
+import Huncho2 from "../../assets/roster/huncho2.jpg"
+import HunchoLogo from "../../assets/roster/hunchologo.png"
 
-    case "evento-1": 
-        imagen = Evento1; 
-        break;
+import Rapetti2 from "../../assets/roster/rapetti2.jpg"
+import RapettiLogo from "../../assets/roster/rapettilogo.png"
 
-    case "evento-2": 
-        imagen = Evento2; 
-        break;
-
-    case "evento-3": 
-        imagen = Evento3; 
-        break;
-
-    case "evento-4": 
-        imagen = Evento4; 
-        break;
-
-    case "evento-5": 
-        imagen = Evento5; 
-        break;
-
-    case "evento-6": 
-        imagen = Evento6; 
-        break;
-
-    // case "evento-7": 
-    //     imagen = Evento7; 
-    //     break;
-
-    // case "evento-8": 
-    //     imagen = Evento8; 
-    //     break;
-
-    // case "evento-9": 
-    //     imagen = Evento9; 
-    //     break;
-
-    // case "evento-10": 
-    //     imagen = Evento10; 
-    //     break;
-
-}
-
-        
+import Atmoz2 from "../../assets/roster/atmoz2.jpg"
+import AtmozLogo from "../../assets/roster/atmozlogo.png"
+import BtnReturn from '../../components/events/BtnReturn.astro';
 
 export async function getStaticPaths() {
 
-    const events = await getCollection("events")
+    const rosters = await getCollection("roster")
 
-    return events.map(
+    return rosters.map(
 
-        (event) => ({
-            params: { id: event.slug },
-            props: event
+        (roster) => ({
+            params: { id: roster.slug },
+            props: roster
         })
     )
 
 }
 
-const infoEvent = Astro.props
-const { data } = infoEvent;
+const infoRoster = Astro.props
+const { data } = infoRoster;
+
+let imagen:any;
+let logoDj: any;
+
+switch(infoRoster.slug) {
+
+    case "roster-1": 
+        imagen = Aliaga2;
+        logoDj = AliagaLogo;
+        break;
+
+    case "roster-2": 
+        imagen = NazaRv2; 
+        logoDj = NazaRvLogo;
+        break;
+
+    case "roster-3": 
+        imagen = Rapetti2; 
+        logoDj = RapettiLogo;
+        break;
+
+    case "roster-4": 
+        imagen = Huncho2;
+        logoDj = HunchoLogo
+        break;
+
+    case "roster-5": 
+        imagen = Atmoz2; 
+        logoDj = AtmozLogo;
+        break;
 
 
+
+}
 ---
 
-
 <Layout>
-    <BackgroundEffects2>
-        <div class="container-info-event">
+    <BackgroundEfects4>
+        <div class="container-info-rooster">
             <BtnReturn></BtnReturn>
             <div class="box-logo">
                 <img class="logo" src={logo.src} alt="Logo">
             </div>
             <div class="box-info">
                 <div class="img-flyer">
-                    <img src={imagen.src} alt={infoEvent.slug}>
+                    <img 
+                        src={imagen.src} alt={infoRoster.slug}
+                        transition:name= {`img2-${infoRoster.slug}`} 
+                    >
                 </div>
                 <div class="info">
-                    <h1>{data.titulo}</h1>
-                    <dir class="box-place-date">
+                    <img 
+                        src={logoDj.src}
+                        transition:name= {`logo-${infoRoster.slug}`}
+                    >
+                    <!-- <dir class="box-place-date">
                         <h5>Lugar: {data.lugar}</h5>
                         <h5>Fecha: {data.fecha}</h5>
-                    </dir>
+                    </dir> -->
                     <div class="box-description">
                         <p>
-                            {infoEvent.body}
+                            {infoRoster.body}
                         </p>
                     </div>
                     <div class="box-btn-buy">
-                        <a href={data.link_comprar} target="_blank"><BtnBuy>Comprar Ticket</BtnBuy></a>
+                        <!-- <a href={data.link_comprar} target="_blank"><BtnBuy>Comprar Ticket</BtnBuy></a> -->
                     </div>
 
                 </div>
             </div>
         </div>
-    </BackgroundEffects2>
+    </BackgroundEfects4>
 </Layout>
 
 

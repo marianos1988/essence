@@ -31,18 +31,19 @@ const sortedBySlug = roster.sort((a, b) => a.slug.localeCompare(b.slug));
 
             <div class="box-cards">
             
-            {
-                sortedBySlug.map(
-                    (roster) => (
-                        <TresdeCard
-                            img1={roster.data.img1}
-                            img2={roster.data.img2}
-                            logo={roster.data.logo}
-                        />
+                {
+                    sortedBySlug.map(
+                        (roster) => (
+                            <TresdeCard
+                                img1={roster.data.img1}
+                                img2={roster.data.img2}
+                                logo={roster.data.logo}
+                                slug={roster.slug}
+                            />
+                        )
                     )
-                )
-            }
-        </div>  
+                }
+            </div>  
     
         </BackgroundEffects3>
     </main>
