@@ -38,6 +38,9 @@ export async function getStaticPaths() {
 const infoRoster = Astro.props
 const { data } = infoRoster;
 
+console.log(data)
+// console.log(infoRoster.slug)
+
 let imagen:any;
 let logoDj: any;
 
@@ -75,7 +78,7 @@ switch(infoRoster.slug) {
 
 <Layout>
     <BackgroundEfects4>
-        <div class="container-info-rooster">
+        <div class="container-info-roster">
             <BtnReturn></BtnReturn>
             <div class="box-logo">
                 <img class="logo" src={logo.src} alt="Logo">
@@ -89,23 +92,23 @@ switch(infoRoster.slug) {
                 </div>
                 <div class="info">
                     <div class="box-logo-dj">
-                        <img class="logo-dj"
+                        <img class={`logo-dj ${data.logo}`}
                             src={logoDj.src}
                             transition:name= {`logo-${infoRoster.slug}`}
                         >
                     </div>
 
-                    <!-- <dir class="box-place-date">
-                        <h5>Lugar: {data.lugar}</h5>
-                        <h5>Fecha: {data.fecha}</h5>
-                    </dir> -->
+                    <dir class="box-profesion">
+                        <h5>Profesion: {data.profesion}</h5>
+                        <h5>Genero: {data.genero}</h5>
+                    </dir>
                     <div class="box-description">
                         <p>
                             {infoRoster.body}
                         </p>
                     </div>
-                    <div class="box-btn-buy">
-                        <!-- <a href={data.link_comprar} target="_blank"><BtnBuy>Comprar Ticket</BtnBuy></a> -->
+                    <div class="box-social-media">
+
                     </div>
 
                 </div>
@@ -132,6 +135,7 @@ switch(infoRoster.slug) {
     }
     .box-info {
         background: transparent;
+        width: 95%;
         display: grid;
         grid-template-columns: 1fr 2fr;
         height: 100%
@@ -148,13 +152,19 @@ switch(infoRoster.slug) {
         align-items: center;
     }
     .logo-dj {
-        display: block;
-        max-width: 60%;
-        text-align: center;
+        height: 150px;
+
     }
+
+    .aliagalogo {
+
+        width: 450px;
+
+    }
+
     .img-flyer {
 
-
+        margin: auto 0 auto 15px;
         width: 45%;
 
     }
@@ -175,59 +185,157 @@ switch(infoRoster.slug) {
         
     }
 
-    .info h1 {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: center;
-        text-align: center;
-        font-size: 40px;
-        text-decoration: underline;
-    }
 
-    .box-place-date {
+    .box-profesion {
         display: flex;
         justify-content: space-between;
         color: #fff;
         font-size: larger;
     }
 
-    .box-description {
+    .box-description p {
         color: #fff;
-
+        width: 80%;
         text-align: justify;
     }
 
 
-    .box-btn-buy {
-        margin-top: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+
     
 @media (min-width:300px) AND (max-width: 350px) {
 
     .box-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         padding: 0px;
         margin: 0px;
+        width: 85%;
     }
+
+    .img-flyer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
     .img-flyer img {
-        width: 220px;
+
+        width: 200px;
         padding: 0;
+        margin-left: -15px;
+    }
+    .box-profesion {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+    .aliagalogo {
+        width: 215px;
+        height: 84px;
+        transform: scale(.8);
     }
 }
 
 @media (min-width:351px) AND (max-width: 400px) {
 
     .box-info {
-        padding: 0px;
-        margin: 0px;
+        padding: 0px !important;
+        margin: 0px 0px 0px 5px !important;
     }
     .img-flyer img {
         width: 260px;
         padding: 0;
     }
-}
+        .box-profesion {
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+        align-items: center;
+
+    }
+    .aliagalogo {
+        width: 255px;
+        height: 124px;
+        transform: scale(.9);
+    }
+}   
+    @media (min-width:401px) AND (max-width: 500px) {
+        .box-info {
+            padding: 0px !important;
+            margin: 0px 0px 0px 5px !important;
+
+        }
+        .img-flyer img {
+            width: 300px;
+            padding: 0;
+        }
+        .box-profesion {
+            flex-direction: column;
+            justify-content: center;
+            width: 90%;
+            align-items: center;
+
+        }
+
+        .aliagalogo {
+            width: 314px;
+            height: 129px;
+            transform: scale(.9);
+        }   
+    }
+
+    @media (min-width:501px) AND (max-width: 600px) {
+        .box-info {
+            padding: 0px !important;
+            margin: 0px 0px 0px 10px !important;
+
+        }
+        .img-flyer img {
+            width: 400px;
+            padding: 0;
+        }
+        .box-profesion {
+            justify-content: space-between;
+            width: 90%;
+            align-items: center;
+
+        }
+
+        .aliagalogo {
+            width: 450px;
+            height: 135px;
+            transform: scale(1);
+        }
+    }
+
+    @media (min-width:601px) AND (max-width: 749px) {
+        .box-info {
+            padding: 0px !important;
+            margin: 0px 0px 0px 10px !important;
+
+        }
+        .img-flyer img {
+            width: 350px;
+            padding: 0;
+        }
+        .box-profesion {
+            justify-content: space-between;
+            width: 90%;
+            align-items: center;
+
+        }
+
+        .aliagalogo {
+            width: 394px;
+            height: 132px;
+            transform: scale(.9);
+        }
+    }
 
     @media (max-width: 750px) {
 
