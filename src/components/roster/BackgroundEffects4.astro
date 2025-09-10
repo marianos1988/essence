@@ -1,4 +1,6 @@
 ---
+
+
 ---
 <div class="background">
     <div class="lines">
@@ -21,8 +23,8 @@
         width: 100%;
         height: 800px;
         overflow:visible;
-        /* background-color: #171717; */
-        background-color: #c90000;
+        background-color: #171717;
+        /* background-color: #c90000; */
         color: #000;
         line-height: 1.6;
         font-family: sans-serif;
@@ -36,7 +38,7 @@
         right: 0;
         height: 1500px;
         margin: auto;
-        width: 90vw;
+        width: 100%;
     
 
     }
@@ -109,12 +111,13 @@
         }
     }
     @media (min-width:300px) AND (max-width: 400px) {
+
         .lines {
-            height: 1850px;
+            height: 2200px !important;
         }
         .background{
 
-            height: 1850px; 
+            height: 2200px !important; 
         }
     }
 
@@ -158,11 +161,6 @@
         }
     }
 
-    @media (max-width:750px) {
-        .lines {
-            height: 1100px;
-        }
-    }
 
     @media (max-width:568px) {
             .background{
@@ -179,62 +177,14 @@
     }
     }
 
-    @media (min-width:569px) AND (max-width: 865px) {
-            .background{
+    @media (min-width:750px) {
 
-
-        height: 1900px; 
-
-
-    }
         .lines {
-
-            height: 1900px;
-
+            height: 1000px !important;
         }
-    }
-        @media (min-width:866px) AND (max-width: 899px) {
-            .background{
+        .background{
 
-
-        height: 1450px; 
-
-
-        }
-        .lines {
-
-            height: 1450px;
-
-        }
-    }
-
-    @media (min-width:900px) AND (max-width: 1015px) {
-            .background{
-
-
-        height: 2000px; 
-
-
-        }
-        .lines {
-
-            height: 2000px;
-
-        }
-    }
-
-        @media (min-width:1500px) AND (max-width: 2000px) {
-            .background{
-
-
-        height: 1700px; 
-
-
-        }
-        .lines {
-
-            height: 1700px;
-
+            height: 1000px !important; 
         }
     }
     
