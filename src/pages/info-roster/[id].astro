@@ -20,6 +20,7 @@ import Atmoz2 from "../../assets/roster/atmoz2.jpg"
 import AtmozLogo from "../../assets/roster/atmozlogo.png"
 
 import BtnReturn from '../../components/roster/BtnReturn.astro';
+import { undefined } from 'astro:schema';
 
 export async function getStaticPaths() {
 
@@ -43,22 +44,7 @@ console.log(data)
 
 let imagen:any;
 let logoDj: any;
-let socialMedia: {
-
-    instagram: string | undefined,
-    youtube: string | undefined,
-    spotify: string | undefined,
-    soundcloud: string | undefined,
-    tiktok: string | undefined
-} = {
-
-    instagram: "",
-    youtube: "",
-    spotify: "",
-    soundcloud: "",
-    tiktok: ""
-    
-}
+let socialMedia:any;
 
 switch(infoRoster.slug) {
 
@@ -67,8 +53,8 @@ switch(infoRoster.slug) {
         logoDj = AliagaLogo;
         socialMedia = {
             instagram: data.instagram,
-            youtube: "",
-            spotify: "",
+            youtube: null,
+            spotify: null,
             soundcloud: data.soundcloud,
             tiktok: data.tiktok
         }
@@ -92,8 +78,8 @@ switch(infoRoster.slug) {
         socialMedia = {
             instagram: data.instagram,
             youtube: data.youtube,
-            spotify: "",
-            soundcloud: "",
+            spotify: null,
+            soundcloud: null,
             tiktok: data.tiktok
         }
         break;
@@ -103,10 +89,10 @@ switch(infoRoster.slug) {
         logoDj = HunchoLogo;
         socialMedia = {
             instagram: data.instagram,
-            youtube: "",
             spotify: data.spotify,
-            soundcloud: "",
-            tiktok: data.tiktok
+            tiktok: data.tiktok,
+            soundcloud: null,
+            youtube: null
         }
         break;
 
@@ -117,8 +103,8 @@ switch(infoRoster.slug) {
             instagram: data.instagram,
             youtube: data.youtube,
             spotify: data.instagram,
-            soundcloud: "",
-            tiktok: ""
+            soundcloud: null,
+            tiktok: null
         }
         break;
 
@@ -159,7 +145,23 @@ switch(infoRoster.slug) {
                         </p>
                     </div>
                     <div class="box-social-media">
-
+                        <div class="group-btns">
+                            {
+                                socialMedia.instagram != null && (<button>Insta</button>)
+                            }
+                            {
+                                socialMedia.spotify != null && (<button>Spoty</button>)
+                            }
+                            {
+                                socialMedia.youtube != null && (<button>Youtube</button>)
+                            }
+                            {
+                                socialMedia.soundcloud != null && (<button>Soundcloud</button>)
+                            }
+                            {
+                                socialMedia.tiktok != null && (<button>Tiktok</button>)
+                            }
+                        </div>
                     </div>
 
                 </div>
@@ -254,7 +256,14 @@ switch(infoRoster.slug) {
 
     .nazarvlogo {
         transform: scale(2);
-    } 
+    }
+
+    .box-social-media {
+        width: 100%;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+    }
 
 
     
