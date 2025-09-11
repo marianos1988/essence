@@ -7,9 +7,8 @@
     img1: huncho1
     img2: huncho2
     logo: hunchologo
-    instagram: https://www.instagram.com/facu.rapetti/
-    youtube: https://www.youtube.com/@facu.rapetti
-    tiktok: https://www.tiktok.com/@nazarv.dj?_t=ZM-8zB8DnIZg9w&_r=1
+    instagram: https://www.instagram.com/jayhuncho_us/
+    tiktok: https://www.tiktok.com/@jayhuncho.us?_t=ZM-8zB8FOP8Bmf&_r=1
     spotify: https://open.spotify.com/artist/52ItilJ5U2TUojSnM0esgR?si=IG2bzx0eRrWowleSLF6sPQ
 
 

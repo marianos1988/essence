@@ -43,32 +43,83 @@ console.log(data)
 
 let imagen:any;
 let logoDj: any;
+let socialMedia: {
+
+    instagram: string | undefined,
+    youtube: string | undefined,
+    spotify: string | undefined,
+    soundcloud: string | undefined,
+    tiktok: string | undefined
+} = {
+
+    instagram: "",
+    youtube: "",
+    spotify: "",
+    soundcloud: "",
+    tiktok: ""
+    
+}
 
 switch(infoRoster.slug) {
 
     case "roster-1": 
         imagen = Aliaga2;
         logoDj = AliagaLogo;
+        socialMedia = {
+            instagram: data.instagram,
+            youtube: "",
+            spotify: "",
+            soundcloud: data.soundcloud,
+            tiktok: data.tiktok
+        }
         break;
 
     case "roster-2": 
         imagen = NazaRv2; 
         logoDj = NazaRvLogo;
+        socialMedia = {
+            instagram: data.instagram,
+            youtube: data.youtube,
+            spotify: data.spotify,
+            soundcloud: data.soundcloud,
+            tiktok: data.tiktok
+        }
         break;
 
     case "roster-3": 
         imagen = Rapetti2; 
         logoDj = RapettiLogo;
+        socialMedia = {
+            instagram: data.instagram,
+            youtube: data.youtube,
+            spotify: "",
+            soundcloud: "",
+            tiktok: data.tiktok
+        }
         break;
 
     case "roster-4": 
         imagen = Huncho2;
-        logoDj = HunchoLogo
+        logoDj = HunchoLogo;
+        socialMedia = {
+            instagram: data.instagram,
+            youtube: "",
+            spotify: data.spotify,
+            soundcloud: "",
+            tiktok: data.tiktok
+        }
         break;
 
     case "roster-5": 
         imagen = Atmoz2; 
         logoDj = AtmozLogo;
+        socialMedia = {
+            instagram: data.instagram,
+            youtube: data.youtube,
+            spotify: data.instagram,
+            soundcloud: "",
+            tiktok: ""
+        }
         break;
 
 
