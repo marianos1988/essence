@@ -151,39 +151,40 @@ switch(infoRoster.slug) {
                                 socialMedia.instagram != null && (
                                 <BtnSocialMedia
                                     socialMedia="instagram"
-                                >Instagram
-                                </BtnSocialMedia>)
+                                    link={socialMedia.instagram}
+                                />
+                               )
                             }
                             {
                                 socialMedia.spotify != null && (
                                     <BtnSocialMedia
                                         socialMedia="youtube"
-                                    >Youtube
-                                    </BtnSocialMedia>
+                                        link={socialMedia.youtube}
+                                    />
                                 )
                             }
                             {
                                 socialMedia.youtube != null && (
                                     <BtnSocialMedia
                                         socialMedia="spotify"
-                                    >Spotify
-                                    </BtnSocialMedia>
+                                        link={socialMedia.spotify}
+                                    />
                                 )
                             }
                             {
                                 socialMedia.soundcloud != null && (
                                     <BtnSocialMedia
                                         socialMedia="soundcloud"
-                                    >Soundcloud
-                                    </BtnSocialMedia>
+                                        link={socialMedia.soundcloud}
+                                    />
                                 )
                             }
                             {
                                 socialMedia.tiktok != null && (
                                     <BtnSocialMedia
                                         socialMedia="tiktok"
-                                    >Tiktok
-                                    </BtnSocialMedia>
+                                        link={socialMedia.tiktok}
+                                    />
                                 )
                             }
                         </div>
@@ -538,7 +539,9 @@ switch(infoRoster.slug) {
             margin-left: 10px;
         }
         .box-social-media {
+            margin: 15px 0 15px 0;
             width: 100%;
+            flex-wrap: wrap;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -576,6 +579,7 @@ switch(infoRoster.slug) {
         }
 
         .box-social-media {
+            margin: 25px 0 15px 0;
             width: 100%;
             display: flex;
             justify-content: right;

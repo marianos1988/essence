@@ -1,13 +1,39 @@
 ---
 
 
-const { socialMedia } =  Astro.props
+const { socialMedia, link } =  Astro.props
 
 ---
 
 
-<a href="http://"><button class={`btn-media-social ${socialMedia}`}>
-    <slot />
+<a href={link} target="_blank"><button class={`btn-media-social ${socialMedia}`}>
+
+    {
+        (socialMedia === "instagram") && (
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg>
+        )
+    }
+    {
+        (socialMedia === "youtube") && (
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1 -5 5h-12a5 5 0 0 1 -5 -5v-8a5 5 0 0 1 5 -5zm-9 6v6a1 1 0 0 0 1.514 .857l5 -3a1 1 0 0 0 0 -1.714l-5 -3a1 1 0 0 0 -1.514 .857z" /></svg>
+        )
+    }
+    {
+        (socialMedia === "spotify") && (
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-brand-spotify"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 3.34a10 10 0 1 1 -15 8.66l.005 -.324a10 10 0 0 1 14.995 -8.336m-2.168 11.605c-1.285 -1.927 -4.354 -2.132 -6.387 -.777a1 1 0 0 0 1.11 1.664c1.195 -.797 3.014 -.675 3.613 .223a1 1 0 1 0 1.664 -1.11m1.268 -3.245c-2.469 -1.852 -5.895 -2.187 -8.608 -.589a1 1 0 0 0 1.016 1.724c1.986 -1.171 4.544 -.92 6.392 .465a1 1 0 0 0 1.2 -1.6m1.43 -3.048c-3.677 -2.298 -7.766 -2.152 -10.977 -.546a1 1 0 0 0 .894 1.788c2.635 -1.317 5.997 -1.437 9.023 .454a1 1 0 1 0 1.06 -1.696" /></svg>
+        )
+    }
+    {
+        (socialMedia === "soundcloud") && (
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-soundcloud"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 11h1c1.38 0 3 1.274 3 3c0 1.657 -1.5 3 -3 3l-6 0v-10c3 0 4.5 1.5 5 4z" /><path d="M9 8l0 9" /><path d="M6 17l0 -7" /><path d="M3 16l0 -2" /></svg>
+        )
+    }
+    {
+        (socialMedia === "tiktok") && (
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-tiktok"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" /></svg>
+        )
+    }
+    
 </button></a>
 
 <style>
@@ -15,7 +41,7 @@ const { socialMedia } =  Astro.props
         
         border: none;
         color: #ffffff;
-        width: 9em;
+        width: 5em;
         height: 3em;
         line-height: 2em;
         text-align: center;
@@ -31,7 +57,7 @@ const { socialMedia } =  Astro.props
         
         border: none;
         color: #ffffff;
-        width: 9em;
+        width: 5em;
         height: 3em;
         line-height: 2em;
         text-align: center;
@@ -47,7 +73,7 @@ const { socialMedia } =  Astro.props
         
         border: none;
         color: #ffffff;
-        width: 9em;
+        width: 5em;
         height: 3em;
         line-height: 2em;
         text-align: center;
@@ -63,7 +89,7 @@ const { socialMedia } =  Astro.props
         
         border: none;
         color: #ffffff;
-        width: 9em;
+        width: 5em;
         height: 3em;
         line-height: 2em;
         text-align: center;
@@ -79,7 +105,7 @@ const { socialMedia } =  Astro.props
         
         border: none;
         color: #ffffff;
-        width: 9em;
+        width: 5em;
         height: 3em;
         line-height: 2em;
         text-align: center;
@@ -119,5 +145,15 @@ const { socialMedia } =  Astro.props
     }
     button:hover::before {
         filter: blur(20px);
+    }
+
+    .icon {
+        transform: scale(1.4) translateY(3px);
+        
+    }
+
+    .icon:hover {
+        color: #0FF0FC;
+        transition: all .4s ease-in;
     }
 </style>
