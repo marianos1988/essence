@@ -1,0 +1,123 @@
+---
+
+
+const { socialMedia } =  Astro.props
+
+---
+
+
+<a href="http://"><button class={`btn-media-social ${socialMedia}`}>
+    <slot />
+</button></a>
+
+<style>
+    button.btn-media-social.instagram {
+        
+        border: none;
+        color: #ffffff;
+        width: 9em;
+        height: 3em;
+        line-height: 2em;
+        text-align: center;
+        background: linear-gradient(90deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040,#f77737, #fcaf45, #ffd);
+        background-size: 300%;
+        border-radius: 30px;
+        text-transform: uppercase;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    button.btn-media-social.spotify {
+        
+        border: none;
+        color: #ffffff;
+        width: 9em;
+        height: 3em;
+        line-height: 2em;
+        text-align: center;
+        background: linear-gradient(90deg, #1DB954, #12f060, #d4d4d4, #d4c5c5, #535353, #000000);
+        background-size: 300%;
+        border-radius: 30px;
+        text-transform: uppercase;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+        button.btn-media-social.youtube {
+        
+        border: none;
+        color: #ffffff;
+        width: 9em;
+        height: 3em;
+        line-height: 2em;
+        text-align: center;
+        background: linear-gradient(90deg, #FF0000, #dd0000, #d4d4d4, #d4c5c5, #535353, #000000);
+        background-size: 300%;
+        border-radius: 30px;
+        text-transform: uppercase;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+        button.btn-media-social.soundcloud {
+        
+        border: none;
+        color: #ffffff;
+        width: 9em;
+        height: 3em;
+        line-height: 2em;
+        text-align: center;
+        background: linear-gradient(90deg, #ff8800, #ff3300, #d4d4d4, #d4c5c5);
+        background-size: 300%;
+        border-radius: 30px;
+        text-transform: uppercase;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    button.btn-media-social.tiktok {
+        
+        border: none;
+        color: #ffffff;
+        width: 9em;
+        height: 3em;
+        line-height: 2em;
+        text-align: center;
+        background: linear-gradient(90deg, #ff0050, #ff1d64, #00f2ea,#00a7a1, #000000,#494949);
+        background-size: 300%;
+        border-radius: 30px;
+        text-transform: uppercase;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    button.btn-media-social:hover {
+        animation: animation 8s linear infinite;
+        border: none;
+    }
+
+    @keyframes animation {
+        0% {
+            background-position: 0%;
+        }
+        100% {
+            background-position: 400%;
+        }
+    }
+    button:before {
+
+        content: "";
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        z-index: -1;
+        background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+        background-size: 400%;
+        border-radius: 35px;
+        transition: 1s;
+    }
+    button:hover::before {
+        filter: blur(20px);
+    }
+</style>

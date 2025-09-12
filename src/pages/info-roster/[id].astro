@@ -20,7 +20,8 @@ import Atmoz2 from "../../assets/roster/atmoz2.jpg"
 import AtmozLogo from "../../assets/roster/atmozlogo.png"
 
 import BtnReturn from '../../components/roster/BtnReturn.astro';
-import { undefined } from 'astro:schema';
+
+import BtnSocialMedia from '../../components/roster/BtnSocialMedia.astro';
 
 export async function getStaticPaths() {
 
@@ -147,19 +148,43 @@ switch(infoRoster.slug) {
                     <div class="box-social-media">
                         <div class="group-btns">
                             {
-                                socialMedia.instagram != null && (<button>Insta</button>)
+                                socialMedia.instagram != null && (
+                                <BtnSocialMedia
+                                    socialMedia="instagram"
+                                >Instagram
+                                </BtnSocialMedia>)
                             }
                             {
-                                socialMedia.spotify != null && (<button>Spoty</button>)
+                                socialMedia.spotify != null && (
+                                    <BtnSocialMedia
+                                        socialMedia="youtube"
+                                    >Youtube
+                                    </BtnSocialMedia>
+                                )
                             }
                             {
-                                socialMedia.youtube != null && (<button>Youtube</button>)
+                                socialMedia.youtube != null && (
+                                    <BtnSocialMedia
+                                        socialMedia="spotify"
+                                    >Spotify
+                                    </BtnSocialMedia>
+                                )
                             }
                             {
-                                socialMedia.soundcloud != null && (<button>Soundcloud</button>)
+                                socialMedia.soundcloud != null && (
+                                    <BtnSocialMedia
+                                        socialMedia="soundcloud"
+                                    >Soundcloud
+                                    </BtnSocialMedia>
+                                )
                             }
                             {
-                                socialMedia.tiktok != null && (<button>Tiktok</button>)
+                                socialMedia.tiktok != null && (
+                                    <BtnSocialMedia
+                                        socialMedia="tiktok"
+                                    >Tiktok
+                                    </BtnSocialMedia>
+                                )
                             }
                         </div>
                     </div>
@@ -258,12 +283,7 @@ switch(infoRoster.slug) {
         transform: scale(2);
     }
 
-    .box-social-media {
-        width: 100%;
-        display: flex;
-        justify-content: right;
-        align-items: center;
-    }
+
 
 
     
@@ -517,10 +537,15 @@ switch(infoRoster.slug) {
         .info {
             margin-left: 10px;
         }
-
+        .box-social-media {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
-    @media (min-width: 750px) {
+    @media (min-width: 751px) {
         .box-info { 
             border: 4px solid #0FF0FC !important;
         }
@@ -548,6 +573,13 @@ switch(infoRoster.slug) {
         .atmozlogo {
             transform: scale(1.2, .8);
             width: 200px;
+        }
+
+        .box-social-media {
+            width: 100%;
+            display: flex;
+            justify-content: right;
+            align-items: center;
         }
     }
     @media (min-width: 750px) AND (max-width: 850px){
