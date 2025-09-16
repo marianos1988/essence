@@ -1,6 +1,6 @@
 ---
 import BorderEffectLogo from "./BorderEffectLogo.astro";
-import logoAnimado from "../../assets/header/logoAnimado.gif"
+import Logo from "../../assets/header/logoc.png"
 
 
 
@@ -10,12 +10,12 @@ import logoAnimado from "../../assets/header/logoAnimado.gif"
 <header>
     <a href="/">
         <div class="box-logo">
-            <img src={logoAnimado.src} alt="Logo">
+            <img src={Logo.src} alt="Logo">
         </div>
     </a>
-    <div>
+    <div class="eslogan">
         <BorderEffectLogo>
-            <h1>Somos una combinación de música, arte y energía.</h1>
+            <h1>Where music becomes essence, and every beat is an experience.</h1>
         </BorderEffectLogo>
 
     </div>
@@ -43,6 +43,7 @@ import logoAnimado from "../../assets/header/logoAnimado.gif"
     }
     
     
+    
 
 
     @media (min-width:769px) {
@@ -66,12 +67,14 @@ import logoAnimado from "../../assets/header/logoAnimado.gif"
             -5px -5px 20px #ffffff;
             transition: all .4s ease-in;
         }
+
+
         
         h1 {
             color: #ffffff;
-            font-size: 23px;
+            font-size: 22px;
             font-family: "Fira Sans", sans-serif;
-            width: 100%;
+            margin: 5px
 
         }
     }
@@ -106,7 +109,7 @@ import logoAnimado from "../../assets/header/logoAnimado.gif"
         }
         h1 {
             color: #ffffff;
-            transform: translateY(-10%);
+            transform: scale(.75) translateY(10%);
             font-size: larger;
             text-align: center;
             font-family: "Fira Sans", sans-serif;
@@ -116,10 +119,21 @@ import logoAnimado from "../../assets/header/logoAnimado.gif"
 
 
     }
+
+    @media (min-width:300px) AND (max-width:399px) {
+        .box-logo img{
+            transform: scale(.8);
+        } 
+    }
     
     @media (min-width:400px) AND (max-width:769px) {
         .box-logo {
             max-width: 420px;
+            margin-bottom: 15px;;
+        } 
+        .box-logo img {
+            transform: scale(.8);
+
         } 
     }
 
