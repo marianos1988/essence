@@ -1,9 +1,12 @@
 ---
 
+const roster = Astro.params
+const { id } = roster
+console.log(id)
 
 ---
-<div class="background">
-    <div class="lines">
+<div class={`background ${id}`}>
+    <div class={`lines ${id}`}>
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
@@ -110,81 +113,332 @@
             top: 110%;
         }
     }
-    @media (min-width:300px) AND (max-width: 400px) {
+    @media (min-width:300px) AND (max-width: 350px) {
 
-        .lines {
-            height: 2200px !important;
+        .lines.roster-1 {
+            height: 1950px !important;
         }
-        .background{
+        .background.roster-1{
 
-            height: 2200px !important; 
+            height: 1950px !important; 
         }
+        .lines.roster-2 {
+            height: 2230px !important;
+        }
+        .background.roster-2{
+
+            height: 2230px !important; 
+        }        
+        .lines.roster-3 {
+            height: 1920px !important;
+        }
+        .background.roster-3{
+
+            height: 1920px !important; 
+        }
+        .lines.roster-4 {
+            height: 2000px !important;
+        }
+        .background.roster-4{
+
+            height: 2000px !important; 
+        }        
+        .lines.roster-5 {
+            height: 1680px !important;
+        }
+        .background.roster-5{
+
+            height: 1680px !important; 
+        }
+    }
+
+    @media (min-width:351px) AND (max-width: 400px) {
+
+        .lines.roster-1 {
+            height: 1770px !important;
+        }
+        .background.roster-1{
+
+            height: 1770px !important; 
+        }
+
+        .lines.roster-2 {
+            height: 1950px !important;
+        }
+        .background.roster-2{
+
+            height: 1950px !important; 
+        }
+
+        .lines.roster-3 {
+            height: 1700px !important;
+        }
+        .background.roster-3 {
+
+            height: 1700px !important; 
+        }
+
+        .lines.roster-4 {
+            height: 1750px !important;
+        }
+        .background.roster-4 {
+
+            height: 1750px !important; 
+        }
+
+        .lines.roster-5 {
+            height: 1500px !important;
+        }
+        .background.roster-5 {
+
+            height: 1500px !important; 
+        }
+
+        
     }
 
     @media (min-width:401px) AND (max-width: 500px) {
-        .lines {
-            height: 1520px !important;
-        }
-        .background{
 
-            height: 1520px !important; 
+        .lines.roster-1 {
+            height: 1600px !important;
+        }
+        .background.roster-1{
+
+            height: 1600px !important; 
+        }
+
+        .lines.roster-2 {
+            height: 1820px !important;
+        }
+        .background.roster-2{
+
+            height: 1820px !important; 
+        }
+
+        .lines.roster-3 {
+            height: 1620px !important;
+        }
+        .background.roster-3 {
+
+            height: 1620px !important; 
+        }
+
+        .lines.roster-4 {
+            height: 1680px !important;
+        }
+        .background.roster-4 {
+
+            height: 1680px !important; 
+        }
+
+        .lines.roster-5 {
+            height: 1450px !important;
+        }
+        .background.roster-5 {
+
+            height: 1450px !important; 
         }
     }
 
-    @media (min-width:401px) AND (max-width: 500px) {
-        .lines {
-            height: 1520px !important;
-        }
-        .background{
 
-            height: 1520px !important; 
-        }
-    }
 
-        @media (min-width:501px) AND (max-width: 600px) {
-        .lines {
-            height: 1400px !important;
+    @media (min-width:501px) AND (max-width: 600px) {
+        .lines.roster-1 {
+            height: 1500px !important;
         }
-        .background{
+        .background.roster-1{
 
-            height: 1400px !important; 
+            height: 1500px !important; 
         }
-    }
 
-    @media (min-width:601px) AND (max-width: 750px) {
-        .lines {
+        .lines.roster-2 {
+            height: 1650px !important;
+        }
+        .background.roster-2{
+
+            height: 1650px !important; 
+        }
+
+        .lines.roster-3 {
+            height: 1450px !important;
+        }
+        .background.roster-3 {
+
+            height: 1450px !important; 
+        }
+
+        .lines.roster-4 {
+            height: 1500px !important;
+        }
+        .background.roster-4 {
+
+            height: 1500px !important; 
+        }
+
+        .lines.roster-5 {
             height: 1300px !important;
         }
-        .background{
+        .background.roster-5 {
 
             height: 1300px !important; 
         }
     }
 
+    @media (min-width:601px) AND (max-width: 750px) {
 
-    @media (max-width:568px) {
-            .background{
+        .lines.roster-1 {
+            height: 1400px !important;
+        }
+        .background.roster-1{
 
+            height: 1400px !important; 
+        }
 
-        height: 1850px; 
+        .lines.roster-2 {
+            height: 1480px !important;
+        }
+        .background.roster-2{
 
+            height: 1480px !important; 
+        }
 
+        .lines.roster-3 {
+
+            height: 1400px !important;
+        }
+        .background.roster-3 {
+
+            height: 1400px !important; 
+        }
+
+        .lines.roster-4 {
+            height: 1400px !important;
+        }
+        .background.roster-4 {
+
+            height: 1400px !important; 
+        }
+
+        .lines.roster-5 {
+            height: 1270px !important;
+        }
+        .background.roster-5 {
+
+            height: 1270px !important; 
+        }
     }
-    .lines {
 
-        height: 1850px;
 
+
+    @media (min-width:751px) AND (max-width:850px) {
+        .lines.roster-1 {
+            height: 1100px !important;
+        }
+        .background.roster-1{
+
+            height: 1100px !important; 
+        }
+
+        .lines.roster-2 {
+            height: 1200px !important;
+        }
+        .background.roster-2{
+
+            height: 1200px !important; 
+        }
+
+        .lines.roster-3 {
+
+            height: 1050px !important;
+        }
+        .background.roster-3 {
+
+            height: 1050px !important; 
+        }
+
+        .lines.roster-4 {
+            height: 1100px !important;
+        }
+        .background.roster-4 {
+
+            height: 1100px !important; 
+        }
+
+        .lines.roster-5 {
+            height: 900px !important;
+        }
+        .background.roster-5 {
+
+            height: 900px !important; 
+        }
     }
-    }
 
-    @media (min-width:750px) {
-
-        .lines {
+        @media (min-width:851px) AND (max-width:1000px) {
+        .lines.roster-1 {
             height: 1000px !important;
         }
-        .background{
+        .background.roster-1{
 
             height: 1000px !important; 
+        }
+
+        .lines.roster-2 {
+            height: 1100px !important;
+        }
+        .background.roster-2{
+
+            height: 1100px !important; 
+        }
+
+        .lines.roster-3 {
+
+            height: 1000px !important;
+        }
+        .background.roster-3 {
+
+            height: 1000px !important; 
+        }
+
+        .lines.roster-4 {
+            height: 1000px !important;
+        }
+        .background.roster-4 {
+
+            height: 1000px !important; 
+        }
+
+        .lines.roster-5 {
+            height: 900px !important;
+        }
+        .background.roster-5 {
+
+            height: 900px !important; 
+        }
+    }
+
+    @media (min-width:1001px) AND (max-width: 1200px) {
+        .lines {
+            height: 950px !important;
+        }
+        .background {
+
+            height: 950px !important;
+        }
+        .box-info {
+            height: 665px;
+        }
+    }
+
+        @media (min-width:1201px) {
+        .lines {
+            height: 100vh !important;
+        }
+        .background {
+
+            height: 100vh !important;
+        }
+        .box-info {
+            height: 665px;
         }
     }
     

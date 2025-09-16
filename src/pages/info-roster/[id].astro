@@ -40,7 +40,7 @@ export async function getStaticPaths() {
 const infoRoster = Astro.props
 const { data } = infoRoster;
 
-console.log(data)
+
 // console.log(infoRoster.slug)
 
 let imagen:any;
@@ -529,7 +529,7 @@ switch(infoRoster.slug) {
 
         .img-flyer {
             display: flex;
-            width: 100%;
+            width: 92%;
             justify-content: center;
             align-items: center;
         }
@@ -561,6 +561,7 @@ switch(infoRoster.slug) {
     @media (min-width: 751px) {
         .box-info { 
             border: 4px solid #0FF0FC !important;
+            margin: 20px;
         }
         
         .logo-dj {
