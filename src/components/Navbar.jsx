@@ -31,7 +31,7 @@ export default function Navbar() {
                         <a id="sets-nav">Sets</a>
                         <a href="/roster" id="rosters-nav">Roster</a>
                         <a id="merch-nav">Merch</a>
-                        <a id="works-nav">Trabaja con nosotros</a>
+                        <a id="works-nav">Unite al Staff</a>
                         <a id="contacto-nav">Contacto</a>
                     </nav>
                 </div>
