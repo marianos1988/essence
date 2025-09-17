@@ -91,7 +91,7 @@ import logo from "../assets/footer/logo.png";
       </div>
 
       <div class="group-text">
-        <p class="legal">© 2025 Essence Crew All rights reserved</p>
+        <p class="legal">© <strong>2025</strong> Essence Crew All rights reserved</p>
 
       </div>
   </section>
@@ -100,11 +100,22 @@ import logo from "../assets/footer/logo.png";
 
 <style>
 
-    @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+  @font-face {
+  font-family: "Neo-Latina";
+  src: url("../../fonts/Neo-latina.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cocogoose";
+  src: url("../../fonts/Cocogoose.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
   footer {
     height: 370px;
-    font-family: "Fira Sans", sans-serif;
     position: relative;
     width: 100%;
     margin-top: 50px;
@@ -177,6 +188,7 @@ import logo from "../assets/footer/logo.png";
 
   ul li a,
   ul li {
+    font-family: "Neo-latina" ,sans-serif;
     text-decoration: none;
     font-weight: 600;
     line-height: 2;
@@ -232,7 +244,13 @@ import logo from "../assets/footer/logo.png";
 
   .legal {
     margin-right: 23px;
+    font-family: "Cocogoose" ,sans-serif;
 
+  }
+
+  .legal strong {
+    font-weight: 100;
+    font-family: sans-serif;
   }
 
   

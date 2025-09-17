@@ -1,10 +1,5 @@
 ---
-import carousel1 from "../../assets/carousel/carousel-1.jpg"
-import carousel2 from "../../assets/carousel/carousel-2.jpg"
-import carousel3 from "../../assets/carousel/carousel-3.jpg"
-import carousel4 from "../../assets/carousel/carousel-4.jpg"
-import carousel5 from "../../assets/carousel/carousel-5.jpg"
-import carousel6 from "../../assets/carousel/carousel-6.jpg"
+
 ---
 
 <div class="container-carousel carousel-active">
@@ -69,6 +64,21 @@ import carousel6 from "../../assets/carousel/carousel-6.jpg"
 
 
 <style>
+
+      /* Importar la fuente */
+    @font-face {
+      font-family: "Neo-Latina";
+      src: url("../../fonts/Neo-latina.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Cocogoose";
+      src: url("../../fonts/Cocogoose.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
     
   .container-carousel {
     width: 100%;
@@ -171,11 +181,12 @@ import carousel6 from "../../assets/carousel/carousel-6.jpg"
     display: none;
   
     & .title {
-      font-family: 'arial-black';
+      font-family: "Neo-Latina",sans-serif;
       text-transform: uppercase;
     }
   
     & .description {
+      font-family: "Cocogoose", sans-serif;
       line-height: 1.7;
       margin: 1rem 0 1.5rem;
       font-size: 0.8rem;
