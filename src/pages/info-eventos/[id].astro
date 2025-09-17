@@ -102,7 +102,7 @@ const { data } = infoEvent;
                     <h1>{data.titulo}</h1>
                     <dir class="box-place-date">
                         <h5>Lugar: {data.lugar}</h5>
-                        <h5>Fecha: {data.fecha}</h5>
+                        <h5>Fecha: <strong>{data.fecha}</strong></h5>
                     </dir>
                     <div class="box-description">
                         <p>
@@ -122,7 +122,14 @@ const { data } = infoEvent;
 
 <style>
 
+    p {
+        font-family: "Cocogoose" ,sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+    }
+
     h1 {
+        font-family: "Neo-latina" ,sans-serif;
         color: #fff;
         font-size: 60px;
         background-color: transparent;
@@ -185,18 +192,24 @@ const { data } = infoEvent;
     }
 
     .box-place-date {
+        font-family: "Neo-latina" ,sans-serif;
         display: flex;
         justify-content: space-between;
         color: #fff;
         font-size: larger;
     }
+    .box-place-date strong {
+     font-family: sans-serif;
+        font-weight: 100;
+        font-style: italic;
+        font-size: small;
+     }
 
     .box-description {
         color: #fff;
 
         text-align: justify;
     }
-
 
     .box-btn-buy {
         margin-top: 20px;

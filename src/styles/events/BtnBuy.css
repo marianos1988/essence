@@ -1,9 +1,4 @@
-@font-face {
-  font-family: "Neo-Latina";
-  src: url("../../fonts/Neo-latina.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 .btn-buy {
 font-family: "Neo-latina" ,sans-serif;
