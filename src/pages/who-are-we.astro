@@ -1,0 +1,140 @@
+---
+import BackgroundEffects5 from "../components/who-are-we/BackgroundEffects5.astro";
+import Layout from "../layouts/Layout.astro";
+import LogoC from "../assets/who-are-we/LogoC.png";
+import BtnSocialMedia from "../components/who-are-we/BtnSocialMedia.astro";
+
+---
+
+
+
+<Layout>
+    <BackgroundEffects5>
+        <div class="container-who-are-we">
+            <h1>Quienes somos</h1>
+            <section class="box-info">
+                <div class="img-subtitle">
+                    <img src={LogoC.src} alt="Logo">
+                    <h2>Somos una combinación de música, arte y energía</h3>
+                </div>
+                <div>
+                    <p> 
+                        ESSENCE, más que una fiesta es una experiencia que te invita a compartir la introspección profunda de su intensa y vibrante energía que proyectan sus artista través de sus sets cargados de melodías, texturas, momentos oscuros y líneas de bajo llenas de Groove; combinando así arte, música y energía entre nuestros DJs y el público.
+                        ESSENCE nació con la idea de realizar fiestas de amigos para amigos, en base a la experiencia obtenida como organizadores, RRPPs, productores y DJs por distintos clubes de CABA y la costa argentina. Actualmente, contamos con producciones realizadas en diversos clubes de Buenos Aires como Crobar Main y Studio, Club Araoz, Lignee, Auditorio Recoleta, Roomie en Mar del Plata, entre otros. Además, hemos realizado coproducciones y convocado a artistas de alto nivel musical a nivel internacional como Alex Stein y ZAC; y nacionales como lo son Mazzeo, DubFormat, Tomas Otero, Emi de Marco, entre otros. Por otra parte, nuestros artistas han compartido cabina en clubes de gran relevancia junto a artistas reconocidos, tal y cómo se detalla en la sección de cada DJ.
+                        Desde ESSENCE nuestra impronta radica en perfeccionar los efectos audiovisuales, llevando a las personas a otro plano en el cual pueden abstraerse con la música y el arte temático que insertamos en cada evento realizado.
+                    </p>
+                    <div class="group-btns">
+                        <div class="sector-btn">
+                            <BtnSocialMedia></BtnSocialMedia>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </BackgroundEffects5>
+</Layout>
+
+<style>
+
+    h1 {
+        font-family: "Neo-latina" ,sans-serif;
+        color: #fff;
+        text-align: center;
+        font-size: 40px;
+    }
+    .container-who-are-we {
+        width: 100%;
+        margin: 25px 15px 
+    }
+    .box-info {
+        position: relative;
+        margin: 30px 15px;
+        border: 4px solid #0FF0FC;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .img-subtitle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    h2 {
+        font-family: "Neo-latina" ,sans-serif;
+        color: #fff;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    p { padding: 30px;
+        font-family: "Cocogoose" ,sans-serif;
+        font-size: 16px;
+        text-align: justify;
+        color: #fff;
+    }
+
+
+    .box-float {
+        display: flex;
+        flex-wrap: wrap;
+        float: right;
+        color: #fff;
+        width: 100%;
+        margin: 25px;
+
+    }
+    .box-float img {
+        max-width: 500px;
+        height: 350px;
+    } 
+
+    .group-btns {
+        display: flex;
+        width: 100%;
+
+    }
+    .sector-btn {
+        width: 100%;
+        justify-content: right;
+    }
+
+    @media (min-width: 300px) AND (max-width:700px) {
+        img {
+            margin-top: 50px;
+            width: 270px !important;
+        }
+
+        h2 {
+            transform: scale(.9);
+        }
+
+        p {
+            font-size: 15px;
+        }
+    }
+    @media (max-width:1100px) {
+
+    img {
+        margin-top: 50px;
+        width: 500px;
+    }
+    .subtitle {
+
+    }
+    .box-info {
+        margin: 30px 15px;
+        border: 4px solid #0FF0FC;
+        border-radius: 15px;
+        flex-direction: column;
+    }
+    }
+
+    @media (min-width:1100px) {
+        .sector-btn {
+            margin-top: -25px;
+        }
+    }
+</style>

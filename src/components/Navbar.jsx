@@ -26,7 +26,7 @@ export default function Navbar() {
                 <div className="menu">
 
                     <nav>
-                        <a id="inicio-nav">Quienes Somos</a>
+                        <a href="/who-are-we" id="inicio-nav">Quienes Somos</a>
                         <a href="/events" id="eventos-nav">Eventos</a>
                         <a id="sets-nav">Sets</a>
                         <a href="/roster" id="rosters-nav">Roster</a>
