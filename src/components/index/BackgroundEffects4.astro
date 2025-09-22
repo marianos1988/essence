@@ -5,11 +5,9 @@
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
     </div>
-    <main class="container-section">
-        <slot />
-    </main>
-
 </div>
 
 
@@ -17,16 +15,16 @@
 <style>
 
     .background{
-        position: relative;
+
+        display: table;
         width: 100%;
-        height: fit-content;
-        overflow:visible;
+        height: 200%;
         background-color: #171717;
         color: #000;
         line-height: 1.6;
+        position: relative;
         font-family: sans-serif;
         overflow: hidden;
-        padding-bottom: 120px;
 
     }
     .lines {
@@ -34,23 +32,10 @@
         top: 0;
         left: 0;
         right: 0;
-        z-index: 2;
         height: 100%;
         margin: auto;
         width: 90vw;
-    
-
-    }
-    .container-section {
-
-        background-color: transparent;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-        z-index: 10;
-    }
+    }   
     .lines .line {
         position: absolute;
         width: 1px;
@@ -110,8 +95,17 @@
         }
     }
 
+    @media (min-width:300px) AND (max-width:440px) {
+        .background {
+            height: 350%;
+        }
+    }
 
-
-
+    @media (min-width:441px) AND (max-width:599px) {
+        
+        .background {
+            height: 330%;
+        }
+    }
     
 </style>

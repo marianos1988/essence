@@ -7,7 +7,7 @@ import ServiceCards from "./ServiceCards.astro";
 ---
 
 
-<main class="container-main">
+<!-- <main class="container-main">
     <Carousel></Carousel> 
     <section class="image">
       <BackgroundEffects></BackgroundEffects>
@@ -22,8 +22,19 @@ import ServiceCards from "./ServiceCards.astro";
       <ServiceCards></ServiceCards>
     </section>
 
+</main> -->
 
-</main>
+<>
+  <BackgroundEffects>
+    <Carousel></Carousel>
+    <section class="text block-1">
+      <PrincipalCard></PrincipalCard>
+    </section>
+    <!-- <section class="text block-2">
+      <ServiceCards></ServiceCards>
+    </section> -->
+  </BackgroundEffects>
+</>
 
 <style>
   
@@ -43,14 +54,14 @@ p {
 }
 
 
-.image {
+/* .image {
   background-color: black;
   height: 750px;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
 
-}
+} */
 
 .text {
   display: flex;
@@ -93,55 +104,69 @@ p {
 
 @media (max-width:440px) {
 
-  .image {
+  /* .image {
     background-color: black;
     height: 500px;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
 
-  }
+  } */
 
   .text::before {
+    margin: 100px 0 0 0;
     rotate: 0deg;
     width: 100%;
   }
 
 
   .text.block-1 {
-  height: 600px !important;
-  margin: 0 0 250px 0;
+    width: 90%;
+    height: 750px;
+    margin: 400px 0 0 0;
 
   }
 
-  .text.block-2 {
+  /* .text.block-2 {
     
     transform: translateY(-50px);
     height: 600px !important;
-    margin: 0 0 350px 0;
+    margin: 0 0 0 0;
 
-  }
+  } */
 
 }
 
 @media (min-width:441px) AND (max-width:599px) {
-  .image {
+  /* .image {
     background-color: black;
     height: 450px;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
 
-  }
+  } */
 
 
   .text::before {
 
-    width: 106% !important;
-    height: 1050px;
+    margin: 100px 0px 100px 0px;
+    width: 100% !important;
+    height: 1300px;
+    rotate: -2deg;
+
+  } 
+
+  .text.block-1 {
+
+    margin: 500px auto 100px auto !important; 
+    width: 90% !important;
+    height: 550px !important;
+
+
   }
 
-   .text:last-child::before {
+   /* .text:last-child::before {
 
     width: 106% !important;
     height: 1000px;
@@ -149,10 +174,10 @@ p {
 
   .text.block-1 {
 
-  margin: 30px auto 250px auto; 
+  margin: 350px auto 100px auto; 
   width: 80% !important;
   height: 550px !important;
-  margin-bottom: 300px;
+
 
 }
 
@@ -170,38 +195,52 @@ p {
   }
 
 
-}
 
+*/
+}
 @media (min-width:600px) {
 
-    .image {
+    /* .image {
     background-color: black;
     height: 800px;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
 
-  }
-  .text::before {
+  } 
+  /* .text::before {
 
     width: 90% !important;
     height: 800px;
-  }
+  } */
+
+  .text::before {
+
+    margin: 100px 0px 100px 0px;
+    width: 100% !important;
+    height: 1300px;
+    rotate: -3deg;
+
+  } 
 
   .text.block-1 {
 
-    transform: translateY(-300px);
+    margin: 500px auto 100px auto !important; 
+    width: 90% !important;
+    height: 550px !important;
+
+
   }
 
-    .text.block-2 {
+    /* .text.block-2 {
 
     margin: 0px 0 100px 0; 
   transform: translateY(-300px);
-  }
+  } */
 
 }
 
-
+/* 
 @media (min-width:800px) {
 
       .text.block-2 {
@@ -221,7 +260,7 @@ p {
   .text::before {
     width: 1150px !important;
   }
-}
+} */
 
 
 </style>
