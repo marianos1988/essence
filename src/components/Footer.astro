@@ -116,6 +116,11 @@ import logo from "../assets/footer/logo.png";
     background-color: transparent;
   }
 
+  footer.who-are-we {
+    margin-top: -100px;
+    background-color: transparent;
+  }
+
 
   .box-waves {
 
@@ -148,14 +153,9 @@ import logo from "../assets/footer/logo.png";
         transform: translateY(35px);
   }
 
-    section.events {
+  section.events {
         transform: translateY(0px);
   }
-
-  section.roster {
-       
-  }
-
 
 
   .group-links {
@@ -262,12 +262,18 @@ import logo from "../assets/footer/logo.png";
     transform: translate(85px, 0%);
   }
 }
-  
+
+    .box-waves svg.who-are-we {
+      width: 100%;
+      height: 130px;
+      transform: translateY(-36px);
+    }
   @media (min-width:300px) AND (max-width:360px) {
 
     footer.events {
       margin-top: 100px;
     }
+    
 
     section {
 
@@ -280,6 +286,7 @@ import logo from "../assets/footer/logo.png";
       height: 157%;
 
     }
+
     .box-logo img {
       width: 130px;
       height: 65px;
@@ -303,8 +310,10 @@ import logo from "../assets/footer/logo.png";
 
  
     .legal {
-      margin-right:0;
-      margin: 30px auto;
+      width: 100%;
+      text-align: center;
+      margin-top: 25px;
+ 
     } 
 
     .box-waves svg.index {
@@ -325,6 +334,17 @@ import logo from "../assets/footer/logo.png";
 
     }
 
+    section.who-are-we {
+
+      height: 160%;
+
+    }
+    .box-waves svg.who-are-we {
+      width: 100%;
+      height: 130px;
+      transform: translateY(-36px);
+    }
+
 
   }
   @media (min-width:361px) AND (max-width: 440px) {
@@ -333,7 +353,7 @@ import logo from "../assets/footer/logo.png";
       margin-top: 100px;
     }
 
-        section.roster {
+    section.roster {
 
       height: 119%;
 
@@ -376,6 +396,12 @@ import logo from "../assets/footer/logo.png";
       transform: translateY(-36px);
 
   }
+
+    .box-waves svg.who-are-we {
+      width: 100%;
+      height: 130px;
+      transform: translateY(-36px);
+    }
   }
 
     @media (min-width: 441px) AND (max-width:550px) {
@@ -417,12 +443,18 @@ import logo from "../assets/footer/logo.png";
       height: 130px;
     }
 
-      .box-waves svg.roster {
+    .box-waves svg.roster {
       width: 100%;
       height: 130px;
       transform: translateY(-36px);
 
-  }
+    }
+
+    .box-waves svg.who-are-we {
+      width: 100%;
+      height: 130px;
+      transform: translateY(-36px);
+    }
 
     }
 

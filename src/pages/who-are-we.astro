@@ -3,6 +3,7 @@ import BackgroundEffects5 from "../components/who-are-we/BackgroundEffects5.astr
 import Layout from "../layouts/Layout.astro";
 import LogoC from "../assets/who-are-we/LogoC.png";
 import BtnSocialMedia from "../components/who-are-we/BtnSocialMedia.astro";
+import Footer from "../components/Footer.astro";
 
 ---
 
@@ -10,14 +11,14 @@ import BtnSocialMedia from "../components/who-are-we/BtnSocialMedia.astro";
 
 <Layout>
     <BackgroundEffects5>
-        <div class="container-who-are-we">
+        <div class="container-who-are-we"> 
             <h1>Quienes somos</h1>
             <section class="box-info">
                 <div class="img-subtitle">
                     <img src={LogoC.src} alt="Logo">
                     <h2>Somos una combinación de música, arte y energía</h3>
                 </div>
-                <div class="box-info-2">
+                <div>
                     <p> 
                         ESSENCE, más que una fiesta es una experiencia que te invita a compartir la introspección profunda de su intensa y vibrante energía que proyectan sus artista través de sus sets cargados de melodías, texturas, momentos oscuros y líneas de bajo llenas de Groove; combinando así arte, música y energía entre nuestros DJs y el público.
                         ESSENCE nació con la idea de realizar fiestas de amigos para amigos, en base a la experiencia obtenida como organizadores, RRPPs, productores y DJs por distintos clubes de CABA y la costa argentina. Actualmente, contamos con producciones realizadas en diversos clubes de Buenos Aires como Crobar Main y Studio, Club Araoz, Lignee, Auditorio Recoleta, Roomie en Mar del Plata, entre otros. Además, hemos realizado coproducciones y convocado a artistas de alto nivel musical a nivel internacional como Alex Stein y ZAC; y nacionales como lo son Mazzeo, DubFormat, Tomas Otero, Emi de Marco, entre otros. Por otra parte, nuestros artistas han compartido cabina en clubes de gran relevancia junto a artistas reconocidos, tal y cómo se detalla en la sección de cada DJ.
@@ -33,7 +34,10 @@ import BtnSocialMedia from "../components/who-are-we/BtnSocialMedia.astro";
             </section>
         </div>
     </BackgroundEffects5>
-</Layout>
+    <Footer
+        page="who-are-we"
+    />
+</Layout> 
 
 <style>
 
@@ -117,7 +121,6 @@ import BtnSocialMedia from "../components/who-are-we/BtnSocialMedia.astro";
         .group-btns {
 
             justify-content: center;
-
 
     }
 
