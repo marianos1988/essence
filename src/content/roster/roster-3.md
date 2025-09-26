@@ -15,7 +15,7 @@
 ---
 
 
-Nacido en 1998 y criado en la provincia de Corrientes. Inició su carrera en 2022 después de
+Nacido en <strong style="font-family: sans-serif; font-weight: 500; font-size:16px">1998</strong> y criado en la provincia de Corrientes. Inició su carrera en <strong style="font-family: sans-serif; font-weight: 500; font-size:16px">2022</strong> después de
 una experiencia viviendo varios meses en California. Su sonido se mueve entre el minimal
 deep y el tech house, con una línea clara de groove, criterio y alegría en la selección musical.
 También cuenta un lado más enérgico que explora en sets de Melódico e Indie Dance.

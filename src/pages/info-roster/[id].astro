@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import BackgroundEfects4 from "../../components/roster/BackgroundEffects4.astro"
 import logo from "../../assets/events/logo.png";
 
@@ -38,7 +38,10 @@ export async function getStaticPaths() {
 }
 
 const infoRoster = Astro.props
+
+const { Content } = await render(Astro.props); // REnderiza el contenido de los archivos Markdown
 const { data } = infoRoster;
+
 
 
 
@@ -141,9 +144,7 @@ switch(infoRoster.slug) {
                         <h5>Genero: {data.genero}</h5>
                     </dir>
                     <div class="box-description">
-                        <p>
-                            {infoRoster.body}
-                        </p>
+                        <Content></Content>
                     </div>
                     <div class="box-social-media">
                         <div class="group-btns">
@@ -280,12 +281,17 @@ switch(infoRoster.slug) {
         display: block;
     }
 
-    .box-description p {
+    .box-description {
         color: #fff;
-        width: 80%;
+        width: 100%;
         text-align: justify;
         font-family: "Cocogoose" ,sans-serif;
         font-size: 15px;
+
+    }
+    
+    p strong {
+        font-family: sans-serif !important;
     }
 
     .nazarvlogo {
@@ -322,18 +328,22 @@ switch(infoRoster.slug) {
 
         width: 200px;
         padding: 0;
-        margin-left: -15px;
+
     }
     .box-profesion {
         flex-direction: column;
-        justify-content: left;
+        justify-content: center;
         align-items: left;
+        transform: translateX(-20px);
     }
 
-    
+    .box-description {
+        margin-left: -8px;
+    } 
+
     .aliagalogo {
-        width: 215px;
-        height: 84px;
+        width: 220px;
+        height: 70px;
         transform: scale(.8);
     }
 
@@ -379,6 +389,10 @@ switch(infoRoster.slug) {
         justify-content: center;
         align-items: center;
 
+    }
+    .box-profesion h5 {
+        width: 100%;
+        text-align: center;
     }
     .aliagalogo {
         width: 255px;
