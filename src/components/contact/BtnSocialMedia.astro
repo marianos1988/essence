@@ -1,0 +1,130 @@
+---
+---
+
+
+
+    <div class="share">
+            <a href="https://www.instagram.com/essencee.crew/" target="_blank">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg>
+            </a>
+            <a href="https://www.tiktok.com/@essencee.crew?_t=ZM-8wDfiHTtKLd&_r=1" target="_blank">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-tiktok"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" /></svg>
+            </a>
+
+    </div>
+
+
+
+<style>
+
+
+    a {
+        color: #000000;
+    }
+
+    .share {
+        position: absolute;
+        left: 38px;
+        width: 200px;
+        margin: auto;
+        border-radius: 80px;
+        transform: scale(.6);
+        display: flex;
+        justify-content: space-around;
+
+    }
+
+
+    .share a {
+        position: relative;
+        line-height: 80px;
+        width: 80px;
+        text-align: center;
+        display: inline-block;
+        background-color: #ffffff;
+        color: #ffffff;
+        overflow: hidden;
+        opacity: 1;
+        transition: all 0.3s ease-in-out;
+        margin: 0 -20px;
+        box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .share a svg {
+        width: 50%;
+        height: 50%;
+        transform: translateY(14px);
+         color: #fff;
+    }
+    .share a svg:hover {
+        transition: all .4s ease-in;
+        color: #fff;
+    }
+
+    .share a:nth-child(1) {
+        border-top-left-radius: 40px;
+        border-bottom-left-radius: 40px;
+        margin-left: 0;
+                color:#fff;
+        background: #833ab4;
+        background: linear-gradient(
+            to right,
+            #833ab4,#fd1d1d,#fcb045
+    );
+
+    }
+    .share a:nth-child(1):hover {
+
+
+    }
+    .share a:nth-child(2) {
+        border-top-right-radius: 40px;
+        border-bottom-right-radius: 40px;
+        margin-right: 0;
+                color:#fff;
+        background: #000;
+
+    }
+        .share a:nth-child(2):hover {
+
+    }
+    .share:hover span, .share.hover span {
+        opacity: 0;
+    }
+    .share:hover a, .share.hover a {
+        border-radius: 50%;
+        margin: 0 10px;
+        color: #000000;
+        font-size: 28px;
+    }
+    .share:hover a:hover, .share.hover a:hover {
+        color: #fff;
+    }
+
+    @media (max-width:440px) {
+        .share {
+            transform: translateY(-25px) scale(.5);
+        }
+    }
+
+    @media (max-width:991px) {
+         .share {
+
+            left: 50%;
+            transform: scale(.6) translateX(-70%);
+         }
+    }
+
+</style>
+
+<script>
+    const share:any = document.querySelector('.share');
+
+    setTimeout(() => {
+    share.classList.add("hover");
+    }, 1000);
+
+    setTimeout(() => {
+    share.classList.remove("hover");
+    }, 3000);
+</script>
