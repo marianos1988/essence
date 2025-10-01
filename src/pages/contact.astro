@@ -1,6 +1,7 @@
 ---
 import BackgroundEffects6 from "../components/contact/BackgroundEffects6.astro";
 import BtnSocialMedia from "../components/contact/BtnSocialMedia.astro";
+import Form from "../components/contact/Form";
 import Layout from "../layouts/Layout.astro";
 
 ---
@@ -56,30 +57,7 @@ import Layout from "../layouts/Layout.astro";
 					</div>
 				</div>
 
-				<div class="contactForm">
-					<form>
-						<h2>Envianos tu mensaje</h2>
-						<div class="inputBox">
-							<input type="text" name="" required="required">
-							<span>Nombre</span>
-						</div>
-						<div class="inputBox">
-							<input type="text" name="" required="required">
-							<span>Correo</span>
-						</div>
-						<div class="inputBox">
-							<input type="text" name="" required="required">
-							<span>Telefono</span>
-						</div>
-						<div class="inputBox">
-							<textarea required="required"></textarea>
-							<span>Escribe su Mansaje</span>
-						</div>
-						<div class="inputBox">
-							<input type="submit" value="Send">
-						</div>
-					</form>
-				</div>
+				<Form />
 			</div>
 		</section>
 	</BackgroundEffects6>
@@ -152,12 +130,15 @@ import Layout from "../layouts/Layout.astro";
 
 }
 
+.container .contactInfo .box .icon {
+
+}
 
 .container .contactInfo .box .icon svg {
 	transform: translateY(20px);
-	min-width: 60px;
+	min-width: 50px;
 	color: #0FF0FC;
-	height: 60px;
+	height: 50px;
 	background: #616060;
 	display: flex;
 	justify-content: center;
@@ -166,6 +147,7 @@ import Layout from "../layouts/Layout.astro";
 	transition: 0.5s;
 	border-radius: 15px;
 	border: 2px solid;
+	
 }
 
 
@@ -222,7 +204,7 @@ position: relative;
 }
 
 
-.container .contactForm
+/* .container .contactForm
 {
 	position: relative;
 	width: 40%;
@@ -284,7 +266,7 @@ position: relative;
 	padding: 10px;
 	font-size: 1.1em;
 	font-weight: 500;
-}
+} */
 
 /* lets make it responsive */
 @media (max-width: 991px)
@@ -297,8 +279,15 @@ position: relative;
 	{
 		flex-direction: column;
 	}
-	.container .contactInfo,
-	.container .contactForm
+	.container .contactInfo {
+		{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		}
+	}
+	/* .container .contactForm
 	{
 		width: 100%;
 		display: flex;
@@ -308,7 +297,7 @@ position: relative;
 	.container .contactForm
 	{
 		padding: 50px 30px;
-	}
+	} */
 	.sci 
 	{
 		width:100%;
