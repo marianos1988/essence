@@ -7,13 +7,29 @@
         padding: 60px;
         border: #0FF0FC 4px solid;
         border-radius: 15px;
-    } 
+
+    }
+    .background-form {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #989999;
+        left: 0;
+        top: 0;
+        border-radius: 15px;
+        opacity: .3;
+        z-index: -1;
+
+    }
+
     .contactForm h2 
     {
         font-family: "Neo-latina" ,sans-serif;
         font-size: 2em;
         color: #fff;
         font-weight: 500;
+        text-align: center;
+
     }
     .contactForm .inputBox 
     {
@@ -42,6 +58,7 @@
     .contactForm .inputBox input::placeholder{
 
         font-family: "Cocogoose" ,sans-serif;
+        font-size: 10px;
     }
 
         
@@ -53,15 +70,15 @@ box-shadow: 0px 0px 12px -2px #0FF0FC;
 transition: all .4s ease-in;
     }
 
-    .contactForm .inputBox span 
+    .contactForm .inputBox .form-span
     {
         position: absolute;
          font-family: "Cocogoose" ,sans-serif;
         left: 0;
         pointer-events: none;
         padding: 5px 0;
-        margin: 10px 0;
-        font-size: 1.1em;
+        margin: 10px 0 10px 5px;
+        font-size: 1.0em;
         color: #666;
         transition: 0.5s;
     }
@@ -74,18 +91,12 @@ transition: all .4s ease-in;
         font-size: 0.9em;
         transform: translateY(-30px);
     }
-    .contactForm .inputBox input[type="submit"]
-    {
-        width: 100px;
-        background: #0FF0FC;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-        padding: 10px;
-        font-size: 1.1em;
-        font-weight: 500;
-    }
 
+    .box-btn-send {
+       display: flex;
+       width: 100%;
+       justify-content: center;
+    }
     @media (max-width: 991px) {
     .contactForm
         {
