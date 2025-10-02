@@ -32,7 +32,7 @@ export default function Navbar() {
                         <a href="/roster" id="rosters-nav">Roster</a>
                         <a id="merch-nav">Merch</a>
                         <a id="works-nav">Unite al Staff</a>
-                        <a id="contacto-nav">Contacto</a>
+                        <a href="/contact" id="contacto-nav">Contacto</a>
                     </nav>
                 </div>
             </div> 
