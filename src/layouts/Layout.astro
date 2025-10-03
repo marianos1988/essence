@@ -2,7 +2,7 @@
 import { ClientRouter } from "astro:transitions"
 import Navbar from "../components/Navbar.jsx"
 import favicon from "../assets/favicon.svg"
-import BtnWhatsapp from "../components/BtnWhatsapp.astro"
+
 
 
 ---
@@ -21,7 +21,6 @@ import BtnWhatsapp from "../components/BtnWhatsapp.astro"
 	</head>
 	<body>
 		<Navbar client:load></Navbar>
-		<BtnWhatsapp></BtnWhatsapp>
 		<slot />
 	</body>
 </html>
@@ -46,6 +45,7 @@ import BtnWhatsapp from "../components/BtnWhatsapp.astro"
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
+
 	}
 
 

@@ -22,6 +22,7 @@ import AtmozLogo from "../../assets/roster/atmozlogo.png"
 import BtnReturn from '../../components/roster/BtnReturn.astro';
 
 import BtnSocialMedia from '../../components/roster/BtnSocialMedia.astro';
+import BtnWhatsapp from '../../components/BtnWhatsapp.astro';
 
 export async function getStaticPaths() {
 
@@ -118,6 +119,7 @@ switch(infoRoster.slug) {
 ---
 
 <Layout>
+    <BtnWhatsapp />
     <BackgroundEfects4>
         <div class="container-info-roster">
             <BtnReturn></BtnReturn>

@@ -1,5 +1,6 @@
 ---
 
+import BtnWhatsapp from "../components/BtnWhatsapp.astro";
 import Footer from "../components/Footer.astro";
 import BackgroundEffects3 from "../components/roster/BackgroundEffects3.astro";
 import TresdeCard from "../components/roster/TresdeCard.astro";
@@ -18,7 +19,7 @@ const sortedBySlug = roster.sort((a, b) => a.slug.localeCompare(b.slug));
 
 
 <Layout>
-
+    <BtnWhatsapp />
     <BackgroundEffects3>
         <main class="container-roster">
 

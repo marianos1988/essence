@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import EventsR from "../services/events/EventsR";
 import Footer from "../components/Footer.astro";
+import BtnWhatsapp from "../components/BtnWhatsapp.astro";
 
 //ESta pagina se tiene que prerenderizar
 export const prerender = true;
@@ -16,6 +17,7 @@ const sortedBySlug = events.sort((a, b) => a.slug.localeCompare(b.slug));
 ---
  
 <Layout>
+    <BtnWhatsapp />
     <EventsR 
         client:load
         events={sortedBySlug}
