@@ -1,6 +1,9 @@
-import { use, useState } from "react";
+import { useState } from "react";
 import "../../styles/contact/Form.css";
 import BtnSend from "./BtnSend";
+import Spinner from "./Spinner";
+
+
 
 
 export default function Form() {
@@ -12,10 +15,16 @@ export default function Form() {
         mensaje:""
     }
     const [form, setForm] = useState(initialForm);
-    const [message, setMessage] = useState({
+
+    const initialMessage = {
         message: "",
         color: ""
-    });
+    }
+    const [message, setMessage] = useState(initialMessage);
+
+    const initialSpinner = false
+
+    const [stateSpinner, setStateSpinner] = useState(initialSpinner)
 
     const onInputChange = ( {target} )=> {
 
@@ -40,8 +49,10 @@ export default function Form() {
                         } 
                     }
 
+                    setStateSpinner(true)
                     const JSONSubmit = await fetch("https://formsubmit.co/ajax/essencecrew.bookings@gmail.com",objectSubmit);
                     const data = await JSONSubmit.json();
+                    setStateSpinner(false)
 
                     if(data.success) {
                         setForm(initialForm)
@@ -91,11 +102,17 @@ export default function Form() {
                         <div className="box-message ">
                             <h3 className={message.color}>{message.message}</h3>
                         </div>
+                        <div className="box-spinner">
+                            <Spinner 
+                                state= {stateSpinner}
+                            />
+                        </div>
                         <div className="inputBox box-btn-send">
                             <BtnSend
                                 tipo="submit"
                                 func = {submit}
                             >Enviar</BtnSend>
+
                         </div>
                     </form>
                 </div>
