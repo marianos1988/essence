@@ -28,7 +28,7 @@ export default function Navbar() {
                     <nav>
                         <a href="/who-are-we" id="inicio-nav">Quienes Somos</a>
                         <a href="/events" id="eventos-nav">Eventos</a>
-                        <a id="sets-nav">Sets</a>
+                        <a href="/sets" id="sets-nav">Sets</a>
                         <a href="/roster" id="rosters-nav">Roster</a>
                         <a id="merch-nav">Merch</a>
                         <a id="works-nav">Unite al Staff</a>

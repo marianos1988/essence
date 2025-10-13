@@ -76,7 +76,7 @@ export default function Form() {
         else if(form.mensaje.length < 5) {
             
             setMessage({
-                message: "Ingrese un nombre mayor a 5 letras",
+                message: "Ingrese un texto mayor a 5 digitos",
                 color: "red"
             });
 
