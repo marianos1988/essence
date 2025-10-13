@@ -103,7 +103,9 @@ transition: all .4s ease-in;
 
     .contactForm .box-message h3{
         display: none;
-        font-family: "Cocogoose" ,sans-serif;
+        font-family:sans-serif;
+        font-size: 25px;
+        text-align: center;
     }
 
     .contactForm .box-message h3.green{

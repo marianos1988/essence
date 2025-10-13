@@ -26,6 +26,10 @@ export default function Form() {
 
     const [stateSpinner, setStateSpinner] = useState(initialSpinner)
 
+    const cleanFields = () => {
+        setForm(initialForm)
+    }
+
     const onInputChange = ( {target} )=> {
 
         const {name, value} = target;
@@ -34,41 +38,99 @@ export default function Form() {
             [name]: value,
         })
 
+        setMessage(initialMessage)
+    }
+
+    const validateFields = () => {
+
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (form.nombre.length < 4) {
+
+            setMessage({
+
+                message: "Ingrese un nombre mayor a 4 letras",
+                color: "red"
+            });
+
+            return false
+        }
+        else if(!(regex.test(form.email))) {
+            setMessage({
+
+                message: "Ingresa un correo electronico valido",
+                color: "red"
+            });
+            return false;
+        }
+        else if(!/^[0-9]+$/.test(form.telefono)) {
+
+            setMessage({
+
+                message: "Ingresa solo numeros en el telefono",
+                color: "red"
+            });
+
+            return false
+        }
+        else if(form.mensaje.length < 5) {
+            
+            setMessage({
+                message: "Ingrese un nombre mayor a 5 letras",
+                color: "red"
+            });
+
+        }
+        else {
+
+            return true
+        }
     }
 
     const submit = async (e) => {
+
             e.preventDefault();
-            try {
-                    let objectSubmit = {
-                
-                        method : "POST",
-                        body : JSON.stringify(form),
-                        headers : {
-                            "Content-type" : "application/json",
-                            "Accept": "aplication/json"
-                        } 
-                    }
+            try {   
 
-                    setStateSpinner(true)
-                    const JSONSubmit = await fetch("https://formsubmit.co/ajax/essencecrew.bookings@gmail.com",objectSubmit);
-                    const data = await JSONSubmit.json();
-                    setStateSpinner(false)
+                    const isOk = validateFields(form)
 
-                    if(data.success) {
-                        setForm(initialForm)
+                    if(isOk) {
 
-                        setMessage({
-                            message: "Mensaje Enviado",
-                            color: "green"
-                        })
-                    } else {
+                        let objectSubmit = {
+        
+                            method : "POST",
+                            body : JSON.stringify(form),
+                            headers : {
+                                "Content-type" : "application/json",
+                                "Accept": "aplication/json"
+                            } 
+                        }
+
+                        setStateSpinner(true)
+
+                        const JSONSubmit = await fetch("https://formsubmit.co/ajax/essencecrew.bookings@gmail.com",objectSubmit);
+                        const data = await JSONSubmit.json();
+                        setStateSpinner(false)
+
+                        if(data.success) {
+
+
                             setMessage({
-                            message: "Mensaje no enviado",
-                            color: "red"
-                        })
-                    }
+                                message: "Mensaje Enviado",
+                                color: "green"
+                            })
+                            cleanFields();
+
+
+                        } else {
+                                setMessage({
+                                message: "Mensaje no enviado",
+                                color: "red"
+                            })
+                        }
+                    } 
+
             } catch {
-                
                         setMessage({
                             message: "Error de coenxion",
                             color: "red"
@@ -84,7 +146,7 @@ export default function Form() {
                     <form>
                         <h2>Envianos tu mensaje</h2>
                         <div className="inputBox">
-                            <input type="text" name="nombre" required="required" onChange={onInputChange} value={form.name}/>
+                            <input type="text" name="nombre" required="required" onChange={onInputChange} value={form.nombre}/>
                             <span className="form-span">Nombre</span>
                         </div>
                         <div className="inputBox">
@@ -92,11 +154,11 @@ export default function Form() {
                             <span className="form-span">Correo</span>
                         </div>
                         <div className="inputBox">
-                            <input type="text" name="telefono" required="required" onChange={onInputChange} value={form.phone}/>
+                            <input type="number" name="telefono" required="required" onChange={onInputChange} value={form.telefono}/>
                             <span className="form-span">Telefono</span>
                         </div>
                         <div className="inputBox">
-                            <textarea required="required" name="mensaje" onChange={onInputChange} value={form.text}></textarea>
+                            <textarea required="required" name="mensaje" onChange={onInputChange} value={form.mensaje}></textarea>
                             <span className="form-span">Escribe su Mansaje</span>
                         </div>
                         <div className="box-message ">
