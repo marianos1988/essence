@@ -4,14 +4,122 @@ import BackgroundEffects from "../components/sets/BackgroundEffects7.astro";
 import Layout from "../layouts/Layout.astro";
 
 ---
-
+ 
 <Layout>
     <BtnWhatsapp />
     <BackgroundEffects>
         <section class="container-sets">
             <div class="box-tittle">
-                <h2>Sets</h2>
+                <h1>Sets</h1>
+            </div>
+            <div class="container">
+                <div class="card">
+                    <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/ef19280b-4fd3-4fdd-9798-1ec22d8ab4b8" alt="image" />
+
+                    <div class="card-content">
+                        <p>Blue Sky</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/cd21ab5f-c7c2-4d9a-a0e7-ad17a88df444" alt="image" />
+
+                    <div class="card-content">
+                        <p>Blue in Foods</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/1beae2b7-eea5-4f05-8bb8-cd7a6a85d3e2" alt="image" />
+
+                    <div class="card-content">
+                        <p>Blue is Calming</p>
+                    </div>
+                </div>
             </div>
         </section>
     </BackgroundEffects>
 </Layout>
+
+
+<style>
+    .box-tittle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box-tittle h1 {
+        font-family: "Neo-latina" ,sans-serif;
+        color: #fff;
+    }
+
+    .container {
+        
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        padding: 80px 40px 40px 80px;
+    }
+
+    .card {
+        width: min(100%, 500px);
+        background: rgba(255, 255, 255);
+        border-radius: 16px;
+        font-family: "Poppins", sans-serif;
+        z-index: 5;
+    }
+
+.card > img {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border-radius: 16px 16px 0 0;
+  filter: contrast(70%);
+  transition: all 0.6s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.card > img:hover {
+  filter: contrast(100%);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px 20px;
+}
+
+.card-content > p {
+  margin-bottom: 10px;
+}
+
+.card-content > p:nth-child(1) {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #1e40af;
+}
+
+.card-content > p:nth-child(2) {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #6b7280;
+}
+
+@media (max-width: 900px) {
+  .container {
+     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+     grid-template-columns: repeat(1, 1fr);
+  }
+}
+    
+</style>
