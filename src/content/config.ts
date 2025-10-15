@@ -31,8 +31,17 @@ const roster =  defineCollection({
     })
 })
 
+const sets = defineCollection({
+    schema: z.object({
+        link: z.string(),
+        nombre: z.string(),
+        fecha: z.string()
+    })
+})
+
 export const collections = { 
     
     events: events,
-    roster: roster
+    roster: roster,
+    sets: sets
  } 
