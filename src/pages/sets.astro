@@ -1,4 +1,5 @@
 ---
+
 import BtnWhatsapp from "../components/BtnWhatsapp.astro";
 import BackgroundEffects from "../components/sets/BackgroundEffects7.astro";
 import Layout from "../layouts/Layout.astro";
@@ -6,14 +7,22 @@ import { getCollection, render } from "astro:content";
 
 
 
-const sets = await getCollection("sets");
 
-// ordenar por slug del numero mas alto al numero 1
-const sortedBySlug = sets.sort((a, b) => b.slug.localeCompare(a.slug));
-const { Content } = await render(sets[0]);
+const collection = await getCollection("sets");
 
-console.log(Content)
 
+const entries = await Promise.all(
+  collection.map(async (post) => {
+    const { Content } = await post.render();
+    return {
+      slug: post.slug,
+      data: post.data,   // metadatos del schema
+      Content,           // body renderizable
+    };
+  })
+);
+
+const sortedBySlug = entries.sort((a, b) => b.slug.localeCompare(a.slug));
 ---
  
 <Layout>
@@ -27,14 +36,14 @@ console.log(Content)
                 
                 {   
                     sortedBySlug.map(
-                        (element) => (
+                        ({data, Content}) => (
                             <div class="card">
                                 <div class="box-video">
                                         <iframe 
                                             width="100%" 
                                             height="100%" 
-                                            src={`https://www.youtube.com/embed/${element.data.link}`} 
-                                            title={element.data.nombre} 
+                                            src={`https://www.youtube.com/embed/${data.link}`} 
+                                            title={data.nombre} 
                                             frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                             allowfullscreen>
@@ -42,7 +51,7 @@ console.log(Content)
                                 </div>
                                 
                                 <div class="card-content">
-                                    <Content></Content>
+                                        <h3><Content /></h3>
                                 </div>
                             </div>
                         )
@@ -85,7 +94,12 @@ console.log(Content)
         z-index: 5;
         border: 3px solid #0FF0FC ;
         font-family: "Cocogoose" ,sans-serif;
-        height: 533px;
+        height: 633px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0px 0 20px 0;
     }
  
     .card > .box-video {
@@ -109,47 +123,71 @@ console.log(Content)
 
 } 
 .card-content {
+
     background: transparent;
-    display: flex;
-    flex-direction: column;
-    padding: 20px 0px;
+    display: flex !important;
     justify-content: center;
     align-items:center ;
-
-      font-size: 1rem !important;
-  text-align: center !important;
-  font-weight: 600 !important;
-  margin-bottom: 10px !important;
-  max-width: 450px !important;
-  color: #0FF0FC !important;
-  background-color: #000 !important;
-  padding: 6px !important;
-  border-radius: 10px !important;
-  border: #fff 1px solid !important;
+    font-size: 1rem !important;
+    text-align: center !important;
+    font-weight: 600 !important;
+    margin: 55px 0!important;
+    max-width: 450px !important;
+    color: #0FF0FC !important;
+    background-color: #000 !important;
+    padding: 6px !important;
+    border-radius: 10px !important;
+    border: #fff 1px solid !important;
     
 }
-strong {
-    font-family: sans-serif !important;
-    font-size: medium !important;
+
+
+@media (min-width:300px) AND (max-width:400px) {
+
+    .container {
+        width: 98%;
+        gap: 40px;
+        padding: 0;
+        margin: auto;
+    };
+    .card {
+
+        width: 100%;
+        margin-bottom: 30px;
+
+    }
+    .box-video  {
+        width: 100% !important;
+
+    }
+    .card-content {
+        font-size: .5rem;
+        max-width: 90% !important;
+    }
 }
 
-.card-content > p {
-  margin-bottom: 10px;
+@media (min-width:400px) AND (max-width:570px) {
+
+    .container {
+        width: 98%;
+        gap: 40px;
+        padding: 0;
+        margin: auto;
+    };
+    .card {
+
+        width: 100%;
+        margin-bottom: 30px;
+
+    }
+    .box-video  {
+        width: 100% !important;
+
+    }
+    .card-content {
+        font-size: .7rem;
+        max-width: 90% !important;
+    }
 }
-
-.card-content p {
-  font-size: 1rem !important;
-  text-align: center !important;
-  font-weight: 600 !important;
-  margin-bottom: 10px !important;
-  max-width: 450px !important;
-  color: #0FF0FC !important;
-  background-color: #000 !important;
-  padding: 6px !important;
-  border-radius: 10px !important;
-  border: #fff 1px solid !important;
-}
-
-
     
 </style>
