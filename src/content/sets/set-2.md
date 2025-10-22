@@ -1,6 +1,6 @@
 ---
 
-link: "10S-VeU4KKE&t=2s"
+link: "10S-VeU4KKE?si=h-KD01as-PXcSMO0"
 nombre: "ESSENCE - VITA Naza RV b2b Juani Ross"
 fecha: 10-04-2024
 

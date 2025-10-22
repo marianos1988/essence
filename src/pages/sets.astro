@@ -94,7 +94,7 @@ const sortedBySlug = entries.sort((a, b) => b.slug.localeCompare(a.slug));
         z-index: 5;
         border: 3px solid #0FF0FC ;
         font-family: "Cocogoose" ,sans-serif;
-        height: 633px;
+        /* height: 633px; */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -149,11 +149,12 @@ const sortedBySlug = entries.sort((a, b) => b.slug.localeCompare(a.slug));
         gap: 40px;
         padding: 0;
         margin: auto;
-    };
+    }
     .card {
 
         width: 100%;
         margin-bottom: 30px;
+        height: inherit !important;
 
     }
     .box-video  {
