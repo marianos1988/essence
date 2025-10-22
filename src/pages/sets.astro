@@ -1,6 +1,7 @@
 ---
 
 import BtnWhatsapp from "../components/BtnWhatsapp.astro";
+import Footer from "../components/Footer.astro";
 import BackgroundEffects from "../components/sets/BackgroundEffects7.astro";
 import Layout from "../layouts/Layout.astro";
 import { getCollection, render } from "astro:content";
@@ -62,6 +63,9 @@ const sortedBySlug = entries.sort((a, b) => b.slug.localeCompare(a.slug));
             </div>
         </section>
     </BackgroundEffects>
+    <Footer
+        page="sets"
+    />
 </Layout>
 
 
