@@ -5,50 +5,51 @@
 <div class="container-carousel carousel-active">
     <article class="box-images">
       <ul class='slider'>
+        <!-- <li class="empty"></li> -->
         <li class='item item-1'>
           <div class='content'>
-            <h2 class='title'>"Essence Crew"</h2>
+            <h2 class='title'>"Proximos Eventos"</h2>
             <p class='description'>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet eveniet, doloribus vel veritatis nam commodi vero quod praesentium non ad obcaecati atque et sint in illo autem, animi porro corporis!
+              Descubrí donde vas a poder disfrutar de nuestra música y energía...
             </p>      
         </li>
         <li class='item item-2'>
           <div class='content'>
-            <h2 class='title'>"Proximos Eventos"</h2>
+            <h2 class='title'>"Sets"</h2>
             <p class='description'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque culpa cupiditate laudantium possimus beatae accusamus praesentium voluptas quisquam odio eveniet assumenda architecto rerum, repellendus quis. Optio quae accusantium ducimus aut.
-            </p>                
+              Mirá nuestros sets en alrededor de Buenos Aires y Argentina.
+            </p>               
           </div>
         </li>
         <li class='item item-3'>
           <div class='content'>
-            <h2 class='title'>"Nuestro Staff"</h2>
+            <h2 class='title'>"Roster"</h2>
             <p class='description'>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero eius nihil quas laudantium reprehenderit. Veritatis nemo perferendis iusto quisquam aut ipsa itaque voluptatum porro mollitia laboriosam fugiat, omnis distinctio reiciendis.
+              Conoce nuestros DJs y sus distintos géneros musicales.
             </p>      
           </div>
         </li>
         <li class='item item-4'>
           <div class='content'>
-            <h2 class='title'>"Contactanos"</h2>
+            <h2 class='title'>"Merch"</h2>
             <p class='description'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit illum hic optio dolor doloremque ut accusantium perspiciatis at, tempore dolorum quis sapiente, unde repellendus nesciunt possimus accusamus neque. Doloremque, accusamus!
+              No te quedes sin el merchadasing oficial de ESSENCE CREW.
             </p>      
           </div>
         </li>
         <li class='item item-5'>
           <div class='content'>
-            <h2 class='title'>"Organizacion de eventos"</h2>
+            <h2 class='title'>"Community"</h2>
             <p class='description'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, molestias. Officiis, a. Eius, repellat. Corrupti quae quasi, nesciunt, aliquam quo cum necessitatibus explicabo consectetur, obcaecati est tempora eum pariatur libero.
+              Unite a nuestra comunidad y disfrutá de todos los beneficios que tenemos para vos.
             </p>      
           </div>
         </li>
         <li class='item item-6'>
           <div class='content'>
-            <h2 class='title'>"Set de nuestros Dj"</h2>
+            <h2 class='title'>"Contacto"</h2>
             <p class='description'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolorem sunt assumenda magni. Voluptas porro maxime est assumenda, quam dolor inventore illo fugiat, voluptatem accusantium autem quis distinctio quo amet.
+              Contactate con nosotros para bookings, organización de Eventos, cumpleaños y mucho más!
             </p>      
         </li>
       </ul>
@@ -135,9 +136,11 @@
   }
   .box-images .slider .item-3 {
     background-image: url(../../assets/carousel/carousel-3.jpg);
+    background-position-y: 45%;
   }
   .box-images .slider .item-4 {
     background-image: url(../../assets/carousel/carousel-4.jpg);
+    background-position-y: 40%;
   }
   .box-images .slider .item-5 {
     background-image: url(../../assets/carousel/carousel-5.jpg);
@@ -145,14 +148,23 @@
   .box-images .slider .item-6 {
     background-image: url(../../assets/carousel/carousel-6.jpg);
   }
+  .empty {
+    display: hidden;
+  }
+  .item .content {
+        display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   .box-images .slider .content {
- 
+    
     border-radius: 20px;
     padding: 8px;
     & .title        { font-size: 1.4rem; }
     & .description  { font-size: 1.1rem; }
     & button        { font-size: 1.1rem; }
+    
   }
 
   
@@ -171,13 +183,26 @@
     & .title {
       font-family: "Neo-Latina",sans-serif;
       text-transform: uppercase;
+      font-size: 2.4rem;
+
+      border-radius: 15px;
+text-shadow: 0 0 15px rgba(68, 67, 67, 0.5), 0 0 10px rgba(68, 67, 67, 0.5);
+      width: 100%;
+
+      text-align: center;
     }
   
     & .description {
       font-family: "Cocogoose", sans-serif;
       line-height: 1.7;
       margin: 1rem 0 1.5rem;
-      font-size: 0.8rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-shadow: 0 0 15px rgba(68, 67, 67, 0.5), 0 0 10px rgba(68, 67, 67, 0.5);
+      border-radius: 15px;
+
+      width: fit-content;
+      text-align: center;
     }
   
     & button {
@@ -231,8 +256,8 @@
   }
   @media (width > 899px) and (width < 1200px) {
     .box-images .slider .content {
-      & .title        { font-size: 1.4rem; }
-      & .description  { font-size: 1.1rem; }
+      & .title        { font-size: 2rem; }
+      & .description  { font-size: 1.5rem; }
       & button        { font-size: 1.1rem; }
     }
     .box-images .slider .item {
@@ -253,8 +278,8 @@
   }
   @media (width > 650px) and (width < 900px) {
     .box-images .slider .content {
-      & .title        { font-size: 1.4rem; }
-      & .description  { font-size: 1.1rem; }
+      & .title        { font-size: 1.8rem; }
+      & .description  { font-size: 1.2rem; }
       & button        { font-size: 1.1rem; }
     }
     .box-images .slider .item {
@@ -272,8 +297,8 @@
   @media (width <= 650px) {
     .box-images .slider .content {
       transform: translate(30px,-70%);
-      & .title        { font-size: 0.9rem; }
-      & .description  { font-size: 0.65rem; }
+      & .title        { font-size: 1.4rem; }
+      & .description  { font-size: 1rem; }
       & button        { font-size: 0.7rem; }
     }
     .box-images .slider .item {
