@@ -1,24 +1,28 @@
 ---
+import BtnGo from "./BtnGo.astro";
+
 
 ---
 
 <div class="container-carousel carousel-active">
     <article class="box-images">
       <ul class='slider'>
-        <!-- <li class="empty"></li> -->
+        <li class="empty"></li>
         <li class='item item-1'>
           <div class='content'>
             <h2 class='title'>"Proximos Eventos"</h2>
             <p class='description'>
-              Descubrí donde vas a poder disfrutar de nuestra música y energía...
-            </p>      
+              Descubrí donde vas a poder disfrutar de nuestra música y energía... 
+            </p>
+            <a href="/events"><BtnGo>Ver</BtnGo></a>
         </li>
         <li class='item item-2'>
           <div class='content'>
             <h2 class='title'>"Sets"</h2>
             <p class='description'>
-              Mirá nuestros sets en alrededor de Buenos Aires y Argentina.
-            </p>               
+              Mirá nuestros sets alrededor de Buenos Aires y Argentina.
+            </p>
+            <a href="/sets"><BtnGo>Ver</BtnGo></a>                
           </div>
         </li>
         <li class='item item-3'>
@@ -26,7 +30,8 @@
             <h2 class='title'>"Roster"</h2>
             <p class='description'>
               Conoce nuestros DJs y sus distintos géneros musicales.
-            </p>      
+            </p>
+            <a href="/roster"><BtnGo>Ver</BtnGo></a>      
           </div>
         </li>
         <li class='item item-4'>
@@ -34,7 +39,8 @@
             <h2 class='title'>"Merch"</h2>
             <p class='description'>
               No te quedes sin el merchadasing oficial de ESSENCE CREW.
-            </p>      
+            </p>
+            <a href="#"><BtnGo>Ver</BtnGo></a>       
           </div>
         </li>
         <li class='item item-5'>
@@ -42,15 +48,17 @@
             <h2 class='title'>"Community"</h2>
             <p class='description'>
               Unite a nuestra comunidad y disfrutá de todos los beneficios que tenemos para vos.
-            </p>      
+            </p>
+            <a href="#"><BtnGo>Ver</BtnGo></a>       
           </div>
         </li>
         <li class='item item-6'>
           <div class='content'>
             <h2 class='title'>"Contacto"</h2>
             <p class='description'>
-              Contactate con nosotros para bookings, organización de Eventos, cumpleaños y mucho más!
-            </p>      
+              Contactate con nosotros para sumarte a nuestro staff, realizar bookings, organizar eventos, festejos de cumpleaños y mucho más.
+            </p>
+            <a href="/contact"><BtnGo>Ver</BtnGo></a>       
         </li>
       </ul>
       <nav class='nav'>
@@ -262,13 +270,13 @@ text-shadow: 0 0 15px rgba(68, 67, 67, 0.5), 0 0 10px rgba(68, 67, 67, 0.5);
     }
     .box-images .slider .item {
         
-        transform: translate(-81px,130px);
+        transform: translate(-90px,130px);
         width: 50px;
         height: 50px;
   
-        &:nth-child(3) { left: 49%; }
-        &:nth-child(4) { left: calc(51% + 50px); }
-        &:nth-child(5) { left: calc(53% + 100px); }
+        &:nth-child(3) { left: 50%; }
+        &:nth-child(4) { left: calc(52% + 50px); }
+        &:nth-child(5) { left: calc(54% + 100px); }
         &:nth-child(6) { left: calc(50% + 80px); opacity: 0; }
     }
 
@@ -283,13 +291,13 @@ text-shadow: 0 0 15px rgba(68, 67, 67, 0.5), 0 0 10px rgba(68, 67, 67, 0.5);
       & button        { font-size: 1.1rem; }
     }
     .box-images .slider .item {
-    transform: translate(-71px,140px);
+    transform: translate(-85px,130px);
       width: 45px;
       height: 45px;
   
       &:nth-child(3) { left: 50%; }
-      &:nth-child(4) { left: calc(50% + 50px); }
-      &:nth-child(5) { left: calc(50% + 100px); }
+      &:nth-child(4) { left: calc(52% + 50px); }
+      &:nth-child(5) { left: calc(54% + 100px); }
       &:nth-child(6) { left: calc(50% + 80px); opacity: 0; }
     }
   }
@@ -302,13 +310,13 @@ text-shadow: 0 0 15px rgba(68, 67, 67, 0.5), 0 0 10px rgba(68, 67, 67, 0.5);
       & button        { font-size: 0.7rem; }
     }
     .box-images .slider .item {
-    transform: translate(-71px,140px);
+    transform: translate(-80px,140px);
       width: 40px;
       height: 40px;
   
       &:nth-child(3) { left: 50%; }
-      &:nth-child(4) { left: calc(50% + 50px); }
-      &:nth-child(5) { left: calc(50% + 100px); }
+      &:nth-child(4) { left: calc(52% + 50px); }
+      &:nth-child(5) { left: calc(54% + 100px); }
       &:nth-child(6) { left: calc(50% + 80px); opacity: 0; }
     }
 
@@ -316,6 +324,12 @@ text-shadow: 0 0 15px rgba(68, 67, 67, 0.5), 0 0 10px rgba(68, 67, 67, 0.5);
         transform: scale(.8);
     }
   }
+
+
+
+  /* BOTONES */
+
+
 </style>
 
 <script>
