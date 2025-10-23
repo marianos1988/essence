@@ -112,6 +112,7 @@ import BtnGo from "./BtnGo.astro";
     list-style-type: none;
     position: absolute;
     top: 50%;
+    left:-50%;
     z-index: 1;
     background-position: center;
     background-size: cover;
@@ -129,7 +130,7 @@ import BtnGo from "./BtnGo.astro";
       box-shadow: none;
       opacity: 1;
     }
-    
+    &:nth-child(1) { left: -90px;}
     &:nth-child(3) { left: 48%; }
     &:nth-child(4) { left: calc(46% + 100px); }
     &:nth-child(5) { left: calc(44% + 200px); }
@@ -159,14 +160,9 @@ import BtnGo from "./BtnGo.astro";
   .empty {
     display: hidden;
   }
-  .item .content {
-        display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
   .box-images .slider .content {
-    
+
     border-radius: 20px;
     padding: 8px;
     & .title        { font-size: 1.4rem; }
@@ -187,6 +183,7 @@ import BtnGo from "./BtnGo.astro";
     text-shadow: 0 3px 8px rgba(0,0,0,0.5);
     opacity: 0;
     display: none;
+    
   
     & .title {
       font-family: "Neo-Latina",sans-serif;
@@ -227,6 +224,10 @@ text-shadow: 0 0 15px rgba(68, 67, 67, 0.5), 0 0 10px rgba(68, 67, 67, 0.5);
   .box-images .slider .item:nth-of-type(2) .content {
     display: block;
     animation: show 0.75s ease-in-out 0.3s forwards;
+        display: flex;
+        flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   @keyframes show {
