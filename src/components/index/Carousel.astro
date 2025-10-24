@@ -1,5 +1,5 @@
 ---
-import BtnGo from "./BtnGo.astro";
+
 
 
 ---
@@ -14,7 +14,6 @@ import BtnGo from "./BtnGo.astro";
             <p class='description'>
               Descubrí donde vas a poder disfrutar de nuestra música y energía... 
             </p>
-            <a href="/events"><BtnGo>Ver</BtnGo></a>
         </li>
         <li class='item item-2'>
           <div class='content'>
@@ -22,7 +21,6 @@ import BtnGo from "./BtnGo.astro";
             <p class='description'>
               Mirá nuestros sets alrededor de Buenos Aires y Argentina.
             </p>
-            <a href="/sets"><BtnGo>Ver</BtnGo></a>                
           </div>
         </li>
         <li class='item item-3'>
@@ -31,7 +29,6 @@ import BtnGo from "./BtnGo.astro";
             <p class='description'>
               Conoce nuestros DJs y sus distintos géneros musicales.
             </p>
-            <a href="/roster"><BtnGo>Ver</BtnGo></a>      
           </div>
         </li>
         <li class='item item-4'>
@@ -40,7 +37,6 @@ import BtnGo from "./BtnGo.astro";
             <p class='description'>
               No te quedes sin el merchadasing oficial de ESSENCE CREW.
             </p>
-            <a href="#"><BtnGo>Ver</BtnGo></a>       
           </div>
         </li>
         <li class='item item-5'>
@@ -49,7 +45,6 @@ import BtnGo from "./BtnGo.astro";
             <p class='description'>
               Unite a nuestra comunidad y disfrutá de todos los beneficios que tenemos para vos.
             </p>
-            <a href="#"><BtnGo>Ver</BtnGo></a>       
           </div>
         </li>
         <li class='item item-6'>
@@ -58,7 +53,6 @@ import BtnGo from "./BtnGo.astro";
             <p class='description'>
               Contactate con nosotros para sumarte a nuestro staff, realizar bookings, organizar eventos, festejos de cumpleaños y mucho más.
             </p>
-            <a href="/contact"><BtnGo>Ver</BtnGo></a>       
         </li>
       </ul>
       <nav class='nav'>
@@ -104,6 +98,7 @@ import BtnGo from "./BtnGo.astro";
   }
   
   .box-images .slider .item {
+    position:relative;
     transform: translate(-76px,122px);
     filter: brightness(90%);
     filter: drop-shadow(50%);
@@ -161,13 +156,13 @@ import BtnGo from "./BtnGo.astro";
     display: hidden;
   }
 
-  .box-images .slider .content {
 
-    border-radius: 20px;
-    padding: 8px;
+  .box-images .slider .content {
+    width: 100%;
+    /* padding: 8px; */
     & .title        { font-size: 1.4rem; }
     & .description  { font-size: 1.1rem; }
-    & button        { font-size: 1.1rem; }
+
     
   }
 
@@ -175,8 +170,7 @@ import BtnGo from "./BtnGo.astro";
   .box-images .slider .content {
     width: min(30vw,2500px);
     position: absolute;
-    top: 50%;
-    left: 3rem;
+    top: 25%;
     transform: translate(30px,-50%);
     font: 400 0.85rem helvetica,sans-serif;
     color: white;
@@ -223,6 +217,7 @@ text-shadow: 0 0 15px rgba(68, 67, 67, 0.5), 0 0 10px rgba(68, 67, 67, 0.5);
   
   .box-images .slider .item:nth-of-type(2) .content {
     display: block;
+    width: 100%;
     animation: show 0.75s ease-in-out 0.3s forwards;
         display: flex;
         flex-direction: column;
@@ -253,7 +248,7 @@ text-shadow: 0 0 15px rgba(68, 67, 67, 0.5), 0 0 10px rgba(68, 67, 67, 0.5);
       background-color: rgba(255,255,255,0.5);
       color: rgba(0,0,0,0.7);
       border: 2px solid rgba(0,0,0,0.6);
-      margin: 0 0.25rem;
+      margin: 0 .25rem;
       padding: 0.75rem;
       border-radius: 50%;
       cursor: pointer;
@@ -264,9 +259,12 @@ text-shadow: 0 0 15px rgba(68, 67, 67, 0.5), 0 0 10px rgba(68, 67, 67, 0.5);
     }
   }
   @media (width > 899px) and (width < 1200px) {
+
     .box-images .slider .content {
+      top: 25%;
+      left: -5%;
       & .title        { font-size: 2rem; }
-      & .description  { font-size: 1.5rem; }
+      & .description  { font-size: 1.5rem; width: 800px !important; margin-top: -10px; }
       & button        { font-size: 1.1rem; }
     }
     .box-images .slider .item {
@@ -287,12 +285,14 @@ text-shadow: 0 0 15px rgba(68, 67, 67, 0.5), 0 0 10px rgba(68, 67, 67, 0.5);
   }
   @media (width > 650px) and (width < 900px) {
     .box-images .slider .content {
+      top: 25%;
+      left: -5%;
       & .title        { font-size: 1.8rem; }
-      & .description  { font-size: 1.2rem; }
+      & .description  { font-size: 1.2rem; width: 500px !important; margin-top: -10px;}
       & button        { font-size: 1.1rem; }
     }
     .box-images .slider .item {
-    transform: translate(-85px,130px);
+      transform: translate(-85px,130px);
       width: 45px;
       height: 45px;
   
@@ -305,9 +305,10 @@ text-shadow: 0 0 15px rgba(68, 67, 67, 0.5), 0 0 10px rgba(68, 67, 67, 0.5);
   
   @media (width <= 650px) {
     .box-images .slider .content {
-      transform: translate(30px,-70%);
-      & .title        { font-size: 1.4rem; }
-      & .description  { font-size: 1rem; }
+      left: -5%;
+      /* transform: translate(30px,-70%); */
+      & .title        { font-size: 1.4rem; margin-top: 4%; }
+      & .description  { font-size: 1rem; width: 300px !important; margin-top: -10px;}
       & button        { font-size: 0.7rem; }
     }
     .box-images .slider .item {
@@ -328,7 +329,6 @@ text-shadow: 0 0 15px rgba(68, 67, 67, 0.5), 0 0 10px rgba(68, 67, 67, 0.5);
 
 
 
-  /* BOTONES */
 
 
 </style>
@@ -349,4 +349,6 @@ const runCarousel = () => {
   document.addEventListener('click',activate,false);
 
 }
+runCarousel();
+
 </script>
