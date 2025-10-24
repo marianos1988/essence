@@ -30,8 +30,8 @@ export default function Navbar() {
                         <a href="/events" id="eventos-nav">Eventos</a>
                         <a href="/sets" id="sets-nav">Sets</a>
                         <a href="/roster" id="rosters-nav">Roster</a>
-                        <a id="merch-nav">Merch</a>
-                        <a id="community-nav">Community</a>
+                        <a href="/construction" id="merch-nav">Merch</a>
+                        <a href="/construction" id="community-nav">Community</a>
                         <a href="/contact" id="contacto-nav">Contacto</a>
                     </nav>
                 </div>

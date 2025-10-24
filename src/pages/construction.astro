@@ -1,0 +1,79 @@
+---
+import BackgroundEffects8 from "../components/construction/BackgroundEffects8.astro";
+import Layout from "../layouts/Layout.astro";
+import Logo from "../assets/construction/essence-06.png"
+import BtnBack from "../components/construction/BtnBack.astro";
+
+
+---
+
+
+<Layout>
+    <BackgroundEffects8>
+        <div class="content">
+            <h1>🚧 Página en construcción 🚧</h1>
+            <img src={Logo.src} alt="">
+            <p>Estamos trabajando para traerte algo increíble. ¡Volvé pronto!</p>
+            <BtnBack>Volver al inicio</BtnBack>
+      </div>
+    </BackgroundEffects8>
+</Layout>
+
+
+<style>
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        z-index: 15;
+    }
+
+    h1 {
+
+        color: #fff;
+        font-family: "Neo-Latina";
+    }
+
+    p {
+        
+        font-family: "Cocogoose";
+        color: #fff;
+        width: 300px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    img {
+        margin: 25px 0;
+        width: 200px;
+        border-radius: 15px;
+    }
+
+    @media (max-width: 450px) {
+        
+
+        h1 {
+            font-size: larger;
+        }
+
+        p {
+            font-size: small;
+        }
+
+        img {
+            width: 150px;
+        }
+
+    }
+
+    @media (min-width: 451px) AND (max-width: 550px) {
+        
+
+        h1 {
+            font-size: 30px;
+        }
+
+    }
+</style>
+
