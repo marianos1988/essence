@@ -33,7 +33,7 @@ export default function Carousel() {
                         </li>
                         <li className='item item-2'>
                             <div className='content'>
-                                <h2 className='title'>"Sets"</h2>
+                                <h2 className='title'>Sets</h2>
                                 <p className='description'>
                                 Mirá nuestros sets alrededor de Buenos Aires y Argentina.
                                 </p>
@@ -41,7 +41,7 @@ export default function Carousel() {
                         </li>
                         <li className='item item-3'>
                             <div className='content'>
-                                <h2 className='title'>"Roster"</h2>
+                                <h2 className='title'>Roster</h2>
                                 <p className='description'>
                                 Conoce nuestros DJs y sus distintos géneros musicales.
                                 </p>
@@ -49,7 +49,7 @@ export default function Carousel() {
                         </li>
                         <li className='item item-4'>
                             <div className='content'>
-                                <h2 className='title'>"Merch"</h2>
+                                <h2 className='title'>Merch</h2>
                                 <p className='description'>
                                 No te quedes sin el merchadasing oficial de ESSENCE CREW.
                                 </p>
@@ -57,7 +57,7 @@ export default function Carousel() {
                         </li>
                         <li className='item item-5'>
                             <div className='content'>
-                                <h2 className='title'>"Community"</h2>
+                                <h2 className='title'>Community</h2>
                                 <p className='description'>
                                 Unite a nuestra comunidad y disfrutá de todos los beneficios que tenemos para vos.
                                 </p>
@@ -65,7 +65,7 @@ export default function Carousel() {
                         </li>
                         <li className='item item-6'>
                             <div className='content'>
-                                <h2 className='title'>"Contacto"</h2>
+                                <h2 className='title'>Contacto</h2>
                                 <p className='description'>
                                 Contactate con nosotros para sumarte a nuestro staff, realizar bookings, organizar eventos, festejos de cumpleaños y mucho más.
                                 </p>
