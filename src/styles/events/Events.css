@@ -128,9 +128,9 @@ z-index: 16;
 }
 
 .content .date {
-    font-size: 17px;
-  font-family: sans-serif;
-  font-style: italic;
+    font-size: 19px;
+  font-family: "cursive";
+  font-weight: 600;
 }
 
 .content .description {

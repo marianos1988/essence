@@ -2,6 +2,7 @@
 
 font-family: "Neo-latina" ,sans-serif;
 font-family: "Cocogoose" ,sans-serif;
+font-family: "Bebas-neue" ,sans-serif;
 
 
 @font-face {

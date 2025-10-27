@@ -7,4 +7,4 @@ fecha: 03/08/2025
 ---
 
 
-ESSENCE | Olympo Rooftop: Facu Rapetti b<strong style="font-family: Arial, sans-serif;">2</strong>b Jay Huncho - House Set
+ESSENCE | Olympo Rooftop: Facu Rapetti b<strong style="font-family: cursive; font-weight: 600; font-size:20px">2</strong>b Jay Huncho - House Set

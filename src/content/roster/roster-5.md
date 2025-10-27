@@ -18,6 +18,5 @@
 ATMØZ es un DJ y productor de Techno oriundo de Lisboa, Portugal. Sus tracks ocupan
 puestos importantes en sellos como Made in Brussels, de Spartaque, y Reload Records,
 del duo The YellowHeads.
-Se distingue por su destreza con los vinilos aunque también puede tocar con consolas
-electrónicas. En su estadía por Argentina ha tocado clubes como Club Araoz junto a Alex
-Stein y Tomas Otero, VITA junto a Brian Gross y otras fiestas privadas.
+Se distingue por su destreza con los vinilos aunque también puede tocar con reproductores de música digital. En su estadía por Argentina ha tocado clubes como Club Aráoz junto a Alex
+Stein y Tomás Otero, VITA junto a Brian Gros y otras fiestas privadas.

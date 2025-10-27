@@ -21,7 +21,7 @@ se deja llevar por un solo género. Van desde sonidos muy melódicos y bajos muy
 hasta excelentes vocales y mucha percusión, derivando así en una perfecta
 homogeneidad.
 Se presento en diferentes venues, como Crobar Main y Studio, Club Bahrein, La Biblioteca,
-Carnal, Club Araoz, Lignee, entre otros. Su oído musical es exquisito y su forma de mezclar
+Carnal, Club Aráoz, Lignee, entre otros. Su oído musical es exquisito y su forma de mezclar
 hacen que puedas escuchar una sesión con tracks épicos y bailarlos hasta el cansancio. Ha
 compartido cabina con grandes DJs: Belu Clavero, Binaryh, Emiliano Demarco, DubFormat,
 Mai Lawson, Tomy Wahl, Space Motion, The Yellowheads, Tomas Otero y ZAC, entre otros.

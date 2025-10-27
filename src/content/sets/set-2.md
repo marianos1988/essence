@@ -7,4 +7,4 @@ fecha: 10-04-2024
 ---
 
 
-ESSENCE - VITA Naza RV b<strong style="font-family: Arial, sans-serif;">2</strong>b Juani Ross
+ESSENCE - VITA Naza RV b<strong style="font-family: cursive; font-weight: 600; font-size:20px">2</strong>b Juani Ross
