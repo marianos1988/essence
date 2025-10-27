@@ -99,7 +99,7 @@
   .box-images .slider .content {
     width: min(30vw,2500px);
     position: absolute;
-    top: 25%;
+    top: 18%;
     transform: translate(30px,-50%);
     font: 400 0.85rem helvetica,sans-serif;
     color: white;
@@ -122,7 +122,7 @@
     & .description {
       font-family: "Cocogoose", sans-serif;
       line-height: 1.7;
-      margin: 0rem 1.5rem;
+      margin: -2rem 1.5rem;
       font-size: 1.3rem !important;
       font-weight: 600;
       text-shadow: 0 0 15px rgba(68, 67, 67, 0.5), 0 0 10px rgba(68, 67, 67, 0.5);
@@ -224,7 +224,7 @@
       left: -5%;
       /* transform: translate(30px,-70%); */
       & .title        { font-size: 1.7rem !important; margin-top: 10% !important; }
-      & .description  { font-size: .9rem !important; width: 280px !important; margin-top: -10px;}
+      & .description  { font-size: .9rem !important; width: 290px !important; margin-top: -10px;}
 
     }
     .box-images .slider .item {

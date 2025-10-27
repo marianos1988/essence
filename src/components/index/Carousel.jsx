@@ -35,7 +35,7 @@ export default function Carousel() {
                             <div className='content'>
                                 <h2 className='title'>Sets</h2>
                                 <p className='description'>
-                                Mirá nuestros sets alrededor de Buenos Aires y Argentina.
+                                Mirá nuestros sets exclusivos en Youtube.
                                 </p>
                             </div>
                         </li>
@@ -43,7 +43,7 @@ export default function Carousel() {
                             <div className='content'>
                                 <h2 className='title'>Roster</h2>
                                 <p className='description'>
-                                Conoce nuestros DJs y sus distintos géneros musicales.
+                                Conocé nuestros artistas y sus distintos géneros musicales.
                                 </p>
                             </div>
                         </li>
@@ -51,7 +51,7 @@ export default function Carousel() {
                             <div className='content'>
                                 <h2 className='title'>Merch</h2>
                                 <p className='description'>
-                                No te quedes sin el merchadasing oficial de ESSENCE CREW.
+                                No te quedes sin el merchandasing oficial de ESSENCE CREW.
                                 </p>
                             </div>
                         </li>
