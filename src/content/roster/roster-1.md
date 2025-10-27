@@ -3,7 +3,7 @@
     nombre: Gaston Aliaga
     artistico: Gaston Aliaga
     profesion: DJ / Productor Musical
-    genero: Progresive / Deep House
+    genero: Progressive / Deep House
     img1: aliaga1
     img2: aliaga2
     logo: aliagalogo
