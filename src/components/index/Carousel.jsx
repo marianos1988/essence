@@ -25,9 +25,9 @@ export default function Carousel() {
                         <li className="empty"></li>
                         <li className='item item-1'>
                             <div className='content'>
-                                <h2 className='title'>"Proximos Eventos"</h2>
+                                <h2 className='title'>Proximos Eventos</h2>
                                 <p className='description'>
-                                Descubrí donde vas a poder disfrutar de nuestra música y energía... 
+                                Descubrí donde vas a poder disfrutar de nuestra música... 
                                 </p>
                             </div>
                         </li>
