@@ -7,4 +7,4 @@ fecha: 08/08/2024
 ---
 
 
-SET LIVE VILTON B<strong style="font-family: cursive; font-weight: 600; font-size:20px">2</strong>B NAZA RV - ESSENCE X BDR BOILER EDITION
+SET LIVE VILTON B<strong style="font-family: badcomic; font-weight: 700; font-size:20px">2</strong>B NAZA RV - ESSENCE X BDR BOILER EDITION

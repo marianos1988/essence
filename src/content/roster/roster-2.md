@@ -22,8 +22,9 @@ musical encontró su pasión en el Techno. Influenciado por artistas como Enrico
 Pavel Petrov, Boris Brejcha, NoNameLeft, Popof, sus producciones destacan por su dinamismo y texturas,
 por momentos muy melódicas y minimalistas, con un LowEnd profundo, las cuales además incorporan
 elementos del House y Progressive House.
-Su carrera como productor y DJ comenzó en el año <strong style="font-family: cursive; font-weight: 300; font-size:16px">2022</strong>, creciendo rápidamente y logrando tocar en
+Su carrera como productor y DJ comenzó en el año <strong style="font-family: badcomic; font-weight: 400; font-size:17px">2022</strong>, creciendo rápidamente y logrando tocar en
 destacados clubes de Buenos Aires como Crobar, Club Araoz, Dune Park y Frida. Sus tracks ya han sido
 sellados por Space Kraft Recording, Kashla Records y Spektra. Además, ha compartido cabina con grandes
 artistas de la escena como Alex Stein, Nico Taboada, Emiliano Demarco, Mazzeo, Brian Gros, Martino
 Stefano, Rodrigo Vhans, Ailén DC y D'Losantos.
+

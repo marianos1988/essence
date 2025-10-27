@@ -241,4 +241,10 @@
     .box-images .nav svg {
         transform: scale(.8);
     }
+
+            .box-images .slider .item-6 .content {
+              left: 5%;
+       transform: translateY(-60px);
+    }
   }
+
