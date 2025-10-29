@@ -39,9 +39,21 @@ const sets = defineCollection({
     })
 })
 
+const products = defineCollection({
+    schema: z.object({
+        nombre: z.string(),
+        precio: z.number(),
+        img1: z.string(),
+        img2: z.string().optional(), 
+        categoria: z.string(),
+
+    })
+})
+
 export const collections = { 
     
     events: events,
     roster: roster,
-    sets: sets
+    sets: sets,
+    products: products
  } 
