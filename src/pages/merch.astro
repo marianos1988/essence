@@ -1,7 +1,32 @@
 ---
+import { getCollection } from "astro:content";
 import BackgroundEffects10 from "../components/merch/BackgroundEffects10.astro";
 import Filters from "../components/merch/filters";
 import Layout from "../layouts/Layout.astro";
+
+
+
+const getProducts = await getCollection("products");
+
+let arrCategories:any = [];
+let arrProducts:any = [];
+
+
+getProducts.map(
+    (product) => {
+
+        //Selecciona categorias y precios
+        arrCategories.push(product.data.categoria)
+        arrProducts.push(product.data)
+
+        
+    }
+);
+const listCategories = [...new Set(arrCategories)]; //Eliminar repetidos
+
+console.log(listCategories)
+
+
 
 ---
 
