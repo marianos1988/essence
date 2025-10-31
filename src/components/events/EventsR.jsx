@@ -1,7 +1,7 @@
 import { useState } from "react"
 import "../../styles/events/Events.css"
-import BtnBuy from "../../components/events/BtnBuy";
-import BtnInfo from "../../components/events/BtnInfo";
+import BtnBuy from "./BtnBuy";
+import BtnInfo from "./BtnInfo";
 
 
 import Evento1 from "../../assets/Events/PreEvents/evento-1.png"

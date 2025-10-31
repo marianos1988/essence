@@ -1,0 +1,20 @@
+.container-merch {
+    z-index: 10;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-column-gap: 10px;
+}
+
+.sec-filters {
+    position: relative;
+    background-color: aqua;
+    grid-column: 1/ span 2;/* Empuja celdas para hacer lugar*/
+    grid-row: 1/3;
+}
+
+.sec-products {
+    background-color: aqua;
+    grid-column: 2/ span 3;/* Empuja celdas para hacer lugar*/
+    grid-row: 1/3;
+}
