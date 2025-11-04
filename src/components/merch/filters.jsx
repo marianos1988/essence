@@ -5,7 +5,7 @@ export default function Filters({ categories }) {
 
     const listCategories = categories.sort();
     
-    const checkCantCategories = (number) => {
+    const checkCantCategories = (number) => { 
 
         if(number == 4) return "four";
         else if(number == 3) return "three";
