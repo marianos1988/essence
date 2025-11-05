@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import "../../styles/merch/Dropdown.css"; // Importa los estilos
+import "../../styles/merch/Dropdown.css";
 
 export default function Dropdown({ label = "Seleccionar", options = [], onSelect }) {
   const [open, setOpen] = useState(false);
@@ -9,7 +9,7 @@ export default function Dropdown({ label = "Seleccionar", options = [], onSelect
   const handleSelect = (option) => {
     setSelected(option);
     setOpen(false);
-    if (onSelect) onSelect(option);
+    if (onSelect) onSelect(option); 
   };
 
   // Cerrar si se hace clic fuera
@@ -27,22 +27,20 @@ export default function Dropdown({ label = "Seleccionar", options = [], onSelect
     <div className="dropdown" ref={dropdownRef}>
       <button className="dropdown-button" onClick={() => setOpen(!open)}>
         {selected ? selected.label : label}
-        <span className="arrow">{open ? "▲" : "▼"}</span>
+        <span className={`arrow ${open ? "open" : ""}`}>▼</span>
       </button>
 
-      {open && (
-        <ul className="dropdown-menu">
-          {options.map((option) => (
-            <li
-              key={option.value}
-              className="dropdown-item"
-              onClick={() => handleSelect(option)}
-            >
-              {option.label}
-            </li>
-          ))}
-        </ul>
-      )}
+      <ul className={`dropdown-menu ${open ? "open" : ""}`}>
+        {options.map((option) => (
+          <li
+            key={option.value}
+            className="dropdown-item"
+            onClick={() => handleSelect(option)}
+          >
+            {option.label}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

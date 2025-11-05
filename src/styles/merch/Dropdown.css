@@ -1,17 +1,20 @@
 .dropdown {
-     z-index: 10;
   position: relative;
   display: inline-block;
   font-family: Arial, sans-serif;
+  z-index: 10;
+  right: 5%;
+  top: 15%;
 }
 
+/* Botón */
 .dropdown-button {
+  color: #fff;
   width: 180px;
   padding: 10px 14px;
-  background-color: transparent;
-  color: #fff;
-  border: 3px solid #0FF0FC;
-  border-radius: 10px;
+  background-color: transparent; 
+    border-radius: 10px;
+    border: 3px solid #0FF0FC;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -20,38 +23,62 @@
 }
 
 .dropdown-button:hover {
-    color: #0FF0FC;
-    transition: all .4s ease-in;
-
+  color: #0FF0FC;
+  transition: all .4s ease-in;
 }
 
+/* Menú desplegable con fade + slide suave */
 .dropdown-menu {
   position: absolute;
   top: 110%;
   left: 0;
   width: 100%;
-  color: #fff;
-border: 3px solid #0FF0FC;
-  border-radius: 10px;
+    border-radius: 10px;
+    color: #fff;
+    border: 3px solid #0FF0FC;
+  border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 4px;
   list-style: none;
   padding: 0;
+  margin-top: 4px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+  transition:
+    max-height 0.3s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease;
   z-index: 10;
 }
 
+.dropdown-menu.open {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Ítems */
 .dropdown-item {
   padding: 10px 14px;
   cursor: pointer;
-  color: #fff;
   transition: background-color 0.2s ease;
 }
 
 .dropdown-item:hover {
-      color: #0FF0FC;
-    transition: all .4s ease-in;
+  color: #0FF0FC;
+  transition: all .4s ease-in;
 }
 
+/* Flecha animada */
 .arrow {
   font-size: 0.8rem;
+  margin-left: 6px;
+  transition: transform 0.25s ease;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
 }

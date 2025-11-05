@@ -1,8 +1,9 @@
 
 import Dropdown from "./Dropdown";
 import Filters from "./Filters";
+import "../../styles/merch/MerchGeneral.css";
 
-export default function Merch( { categories }) {
+export default function MerchGeneral( { categories }) {
     
 
 
