@@ -130,15 +130,15 @@ export default function EventsR( data ) {
 
                                         <div className="content"> 
                                             <div className="group-btns">
-                                                <a href={`${event.data.link_comprar}`} target="_blank">
-                                                    <BtnBuy>Comprar Ticket</BtnBuy>
-                                                </a>
+
                                                 <a href={`/info-eventos/${event.slug}`}>
                                                     <BtnInfo />
                                                 </a>
+                                                <a href={`${event.data.link_comprar}`} target="_blank">
+                                                    <BtnBuy>Comprar</BtnBuy>
+                                                </a>
                                             </div>
                                         </div>
- 
                                 </div>
 
 
