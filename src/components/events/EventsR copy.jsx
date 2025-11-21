@@ -121,24 +121,23 @@ export default function EventsR( data ) {
                             dataEvents.map( (event) => (
                                 
                                 
-                                <div key={event.id} className={`item ${event.slug}`} style={{ 
-                                    backgroundImage: `url(${selectIMG(event.id)})`,
-                                    backgroundPositionY: `0`,
-                                    backgroundSize: "contain",
-                                    
-                                    }}>
+                                <div key={event.id} className={`item ${event.slug}`} style={{ backgroundImage: `url(${selectIMG(event.id)})` }}>
 
                                         <div className="content"> 
-                                            <div className="group-btns">
-                                                <a href={`${event.data.link_comprar}`} target="_blank">
-                                                    <BtnBuy>Comprar Ticket</BtnBuy>
-                                                </a>
-                                                <a href={`/info-eventos/${event.slug}`}>
-                                                    <BtnInfo />
-                                                </a>
-                                            </div>
+                                        <div className="name">{event.data.titulo}</div>
+                                        <div className="site">{event.data.lugar}</div>
+                                        <div className="date">{event.data.fecha}</div>
+                                        <div className="description">{event.description}</div>
+                                        <div className="group-btns">
+                                            <a href={`${event.data.link_comprar}`} target="_blank">
+                                                <BtnBuy>Comprar Ticket</BtnBuy>
+                                            </a>
+                                            <a href={`/info-eventos/${event.slug}`}>
+                                                <BtnInfo />
+                                            </a>
                                         </div>
- 
+                                    </div>
+
                                 </div>
 
 

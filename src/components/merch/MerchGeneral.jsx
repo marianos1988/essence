@@ -19,6 +19,7 @@ export default function MerchGeneral( { categories }) {
 
     return(
         <div className="container-merch">
+            <h1>Merch</h1>
             <section className="sec-filters">
                 <Filters
                     categories = {categories}
@@ -26,7 +27,7 @@ export default function MerchGeneral( { categories }) {
             </section>
             <section className="sec-products">
                 <Dropdown 
-                    label="Elegí una opción" options={options} onSelect={handleSelect}
+                    label="Ordenar por:" options={options} onSelect={handleSelect}
                 />
             </section>
         </div>
