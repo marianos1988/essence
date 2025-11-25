@@ -63,7 +63,7 @@ export default function EventsR( data ) {
     const getEvents = (allEvents) => {
 
         let numEvents = allEvents.length;
-        let arrEvents = [];
+        let arrEvents = []; 
 
         
         

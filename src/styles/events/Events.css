@@ -192,9 +192,6 @@ z-index: 16;
 
 @media (max-width:350px) {
 
-.container {
-
-}
 
 .container .slide .item { 
 
@@ -269,33 +266,27 @@ z-index: 16;
   }
 
     .button button {
-     width: 35px;
-     height: 25px;
-     bottom: 10px;
+      width: 35px;
+      height: 25px;
+      transform: translateY(15px);
   }
 
   .slide .item:nth-child(3) {
-      top: 86dvh;
-      left: 19%;
-      width: 50px;
-      height: 50px;
+
+      top: 85dvh;
+      left: 10%;
+      width: 35px;
+      height: 35px;
       z-index: 15;
   }
 
-  .slide .item:nth-child(4) {
-      top: 86dvh;
-      left: 43%;
-      width: 50px;
-      height: 50px;
-      z-index: 15;
-  }
+  .slide .item:nth-child(n + 4) {
 
-  .slide .item:nth-child(n + 5) {
-    top: 86dvh;
-    left: 67%;
-    width: 50px;
-    height: 50px;
-    z-index: 13;
+      top: 85dvh;
+      left: 80%;
+      width: 35px;
+      height: 35px;
+      z-index: 14;
   }
 
 
@@ -309,15 +300,22 @@ z-index: 16;
 
 
       margin: 0;
-      left: 43%;
-      top: 68%;
-      transform: scale(.8) translate(-50%, -50%);
+    width: 100%;
+    margin: auto;
+    left:0%;
+      transform: scale(.8);
 
     }
 
-      .group-btns {
-    margin: auto;
-    transform: translateY(54px);
+
+
+    .btn-buy {
+    left: 145%;
+  }
+
+  .btn-info {
+    left: 408% !important;
+    top: 352%;
   }
 
 }
@@ -333,39 +331,51 @@ z-index: 16;
 
   }
 
-    .slide .item:nth-child(3) {
-      top: 13%;
-      left: 19%;
-      width: 100px;
-      height: 100px;
+  .slide .item:nth-child(3) {
+
+      top: 65dvh;
+      left: 86%;
+      width: 50px;
+      height: 50px;
       z-index: 15;
   }
 
-  .slide .item:nth-child(4) {
-      top: 13%;
-      left: 45.5%;
-      width: 100px;
-      height: 100px;
+  .slide .item:nth-child(n + 4) {
+
+      top: 50dvh;
+      left: 86%;
+      width: 50px;
+      height: 50px;
       z-index: 14;
   }
 
   .slide .item:nth-child(n + 5) {
-    top: 13%;
-    left: 72%;
-    width: 100px;
-    height: 100px;
+    top: 35dvh;
+    left: 86%;
+    width: 50px;
+    height: 50px;
     z-index: 13;
   }
 
   .item .content {
 
 
-    left: 43%;
-    top: 50%;
-    transform: scale(.9) translate(-50%, -50%);
 
+      margin: 0;
+    width: 100%;
+    margin: auto;
+    left:0%;
+      transform: scale(.8);
   }
 
+    .btn-buy {
+    left: 40vw;
+  }
+
+  .btn-info {
+    left: 63vw !important;
+    top: 352%;
+  }
 }
 
 @media (min-width:551px) AND (max-width: 600px) {
