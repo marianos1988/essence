@@ -387,38 +387,51 @@ z-index: 16;
 
   }
 
-      .slide .item:nth-child(3) {
-      top: 19%;
-      left: 19%;
-      width: 120px;
-      height: 150px;
+  .slide .item:nth-child(3) {
+
+      top: 75dvh;
+      left: 86%;
+      width: 70px;
+      height: 70px;
       z-index: 15;
   }
 
-  .slide .item:nth-child(4) {
-      top: 19%;
-      left: 45.5%;
-      width: 120px;
-      height: 150px;
+  .slide .item:nth-child(n + 4) {
+
+      top: 50dvh;
+      left: 86%;
+      width: 70px;
+      height: 70px;
       z-index: 14;
   }
 
   .slide .item:nth-child(n + 5) {
-    
-    top: 19%;
-    left: 72%;
-    width: 120px;
-    height: 150px;
+    top: 25dvh;
+    left: 86%;
+    width: 70px;
+    height: 70px;
     z-index: 13;
   }
 
   .item .content {
+    width: 100%;
 
-    width: 400px;
-    height: 100dvh;
-    left: 0%;
-    top: 0%;
-    transform: scale(1) translate(29%, 32%);
+  }
+
+  .content .group-btns {
+
+    display: flex;
+    justify-content: end;
+  }
+
+    .btn-buy {
+        
+    transform: translate(-16dvw,3dvw);
+ 
+  }
+
+  .btn-info {
+    transform: translate(-8dvw,3dvw);
 
   }
 
@@ -436,27 +449,58 @@ z-index: 16;
   .slide .item:nth-child(1) .content {
     display: block;
     position: absolute;
-    top: 50%;
-    transform: translate(-25%, -50%);
+
   
 }
 
-      .item .content .name {
-        font-size:  25px;
-      }
 
-.slide .item:nth-child(3) {
-  
-  left: 54%;
-  width: 120px;
-}
+  .slide .item:nth-child(3) {
 
-.slide .item:nth-child( n+ 4) {
-  width: 120px;
-  left: calc(42% + 220px);
-  z-index: 15;
-}
+      top: 75dvh;
+      left: 86%;
+      width: 70px;
+      height: 70px;
+      z-index: 15;
+  }
 
+  .slide .item:nth-child(n + 4) {
+
+      top: 50dvh;
+      left: 86%;
+      width: 70px;
+      height: 70px;
+      z-index: 14;
+  }
+
+  .slide .item:nth-child(n + 5) {
+    top: 25dvh;
+    left: 86%;
+    width: 70px;
+    height: 70px;
+    z-index: 13;
+  }
+
+  .item .content {
+    width: 100%;
+
+  }
+
+  .content .group-btns {
+
+    display: flex;
+    justify-content: end;
+  }
+
+    .btn-buy {
+        
+    transform: translate(-16dvw,3dvw);
+ 
+  }
+
+  .btn-info {
+    transform: translate(-10dvw,3dvw);
+
+  }
 
 }
 
@@ -475,9 +519,8 @@ z-index: 16;
     transform: scale(.9) translate(-39%, -56%)
   
 }
-  .content .name {
-    font-size: 30px;
-  }
+
+
 .slide .item:nth-child(3) {
   
   left: 41%;
@@ -495,6 +538,8 @@ z-index: 16;
   width: 120px;
   z-index: 14;
 }
+
+
 }
 
 @media (min-width:731px) AND (max-width: 760px) {
