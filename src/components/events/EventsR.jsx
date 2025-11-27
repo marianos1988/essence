@@ -4,16 +4,16 @@ import BtnBuy from "./BtnBuy";
 import BtnInfo from "./BtnInfo";
 
 
-import Evento1 from "../../assets/Events/PreEvents/evento-1.png"
-import Evento2 from "../../assets/Events/PreEvents/evento-2.png"
-import Evento3 from "../../assets/Events/PreEvents/evento-3.png"
-import Evento4 from "../../assets/Events/PreEvents/evento-4.png"
-import Evento5 from "../../assets/Events/PreEvents/evento-5.png"
-import Evento6 from "../../assets/Events/PreEvents/evento-6.png"
-// import Evento7 from "../../assets/Events/PreEvents/evento-7.png"
-// import Evento8 from "../../assets/Events/PreEvents/evento-8.png"
-// import Evento9 from "../../assets/Events/PreEvents/evento-9.png"
-// import Evento10 from "../../assets/Events/PreEvents/evento-10.png"
+import Evento1 from "../../assets/Events/evento-1.png"
+import Evento2 from "../../assets/Events/evento-2.png"
+import Evento3 from "../../assets/Events/evento-3.png"
+import Evento4 from "../../assets/Events/evento-4.png"
+import Evento5 from "../../assets/Events/evento-5.png"
+import Evento6 from "../../assets/Events/evento-6.png"
+// import Evento7 from "../../assets/Events/evento-7.png"
+// import Evento8 from "../../assets/Events/evento-8.png"
+// import Evento9 from "../../assets/Events/evento-9.png"
+// import Evento10 from "../../assets/Events/evento-10.png"
 
 
 
