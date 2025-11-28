@@ -7,9 +7,9 @@ import BtnInfo from "./BtnInfo";
 import Evento1 from "../../assets/Events/evento-1.png"
 import Evento2 from "../../assets/Events/evento-2.png"
 import Evento3 from "../../assets/Events/evento-3.png"
-import Evento4 from "../../assets/Events/evento-4.png"
-import Evento5 from "../../assets/Events/evento-5.png"
-import Evento6 from "../../assets/Events/evento-6.png"
+// import Evento4 from "../../assets/Events/evento-4.png"
+// import Evento5 from "../../assets/Events/evento-5.png"
+// import Evento6 from "../../assets/Events/evento-6.png"
 // import Evento7 from "../../assets/Events/evento-7.png"
 // import Evento8 from "../../assets/Events/evento-8.png"
 // import Evento9 from "../../assets/Events/evento-9.png"
@@ -22,7 +22,7 @@ export default function EventsR( data ) {
 
     const { events } = data;
 
-
+ 
         const selectIMG = (id) =>{
 
             switch(id) {
@@ -35,26 +35,26 @@ export default function EventsR( data ) {
                 case 3: 
                     return Evento3.src;
 
-                case 4: 
-                    return Evento4.src;
+                // case 4: 
+                //     return Evento4.src;
 
-                case 5: 
-                    return Evento5.src;
+                // case 5: 
+                //     return Evento5.src;
 
-                case 6: 
-                    return Evento6.src;
+                // case 6: 
+                //     return Evento6.src;
 
-                case 7: 
-                    return Evento7.src;
+                // case 7: 
+                //     return Evento7.src;
 
-                case 8: 
-                    return Evento8.src;
+                // case 8: 
+                //     return Evento8.src;
 
-                case 9: 
-                    return Evento9.src;
+                // case 9: 
+                //     return Evento9.src;
 
-                case 10: 
-                    return Evento10.src;
+                // case 10: 
+                //     return Evento10.src;
 
             }
 
