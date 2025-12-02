@@ -1,0 +1,7 @@
+PAra agregar un evento:
+
+1- Agregar evento-x.md como archivo en content>events
+
+2 - Agregar la imagen con el nombre en Carpeta assets>events
+
+Tambien se repite agregandolo en info-eventos
