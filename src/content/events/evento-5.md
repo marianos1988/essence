@@ -1,10 +1,10 @@
 ---
 
-    titulo: Poolparty Essence
-    fecha: 15-12-2025
-    lugar: Quinta Olivos
+    titulo: Essence
+    fecha: 12-09-2025
+    lugar: Vita
     img: evento5
-    link_comprar: https://www.google.com.ar
+    link_comprar:
 
 ---
 

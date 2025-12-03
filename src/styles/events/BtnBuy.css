@@ -1,7 +1,7 @@
 
 
 .btn-buy {
-font-family: "Neo-latina" ,sans-serif;
+ font-family: "Neo-latina" ,sans-serif;
   position: relative;
   background: #444;
   color: #fff;
@@ -13,6 +13,12 @@ font-family: "Neo-latina" ,sans-serif;
   font-size: .8rem;
   transition: 0.2s;
   border-radius: 10px;
+}
+
+.btn-buy.disabled {
+  opacity: .5;
+  pointer-events: none;
+
 }
 
 .btn-buy:hover {

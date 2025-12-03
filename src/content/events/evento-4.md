@@ -1,10 +1,10 @@
 ---
 
-    titulo: Armin Only
-    fecha: 19-01-2026
-    lugar: Mandarine Park
+    titulo: Synthetyca - Essence
+    fecha: 03-10-2025
+    lugar: Palermo chico
     img: evento4
-    link_comprar: https://www.google.com.ar
+    link_comprar:
 
 ---
 

@@ -9,7 +9,7 @@ import Evento2 from "../../assets/Events/evento-2.png"
 import Evento3 from "../../assets/Events/evento-3.png"
 import Evento4 from "../../assets/Events/evento-4.png"
 import Evento5 from "../../assets/Events/evento-5.png"
-// import Evento6 from "../../assets/Events/evento-6.png"
+import Evento6 from "../../assets/Events/evento-6.png"
 // import Evento7 from "../../assets/Events/evento-7.png"
 // import Evento8 from "../../assets/Events/evento-8.png"
 // import Evento9 from "../../assets/Events/evento-9.png"
@@ -21,6 +21,8 @@ import Evento5 from "../../assets/Events/evento-5.png"
 export default function EventsR( data ) {
 
     const { events } = data;
+
+
 
  
         const selectIMG = (id) =>{
@@ -41,8 +43,8 @@ export default function EventsR( data ) {
                 case 5: 
                     return Evento5.src;
 
-                // case 6: 
-                //     return Evento6.src;
+                case 6: 
+                    return Evento6.src;
 
                 // case 7: 
                 //     return Evento7.src;
@@ -94,12 +96,22 @@ export default function EventsR( data ) {
     const [ dataEvents, setDataEvents ] = useState(allData.arrEvents);
     
 
-    const handleNext = () => {
-        setDataEvents((prev) => {
-        const [first, ...rest] = prev;
-        return [...rest, first];
-        });
-    };
+    // const handleNext = () => {
+    //     setDataEvents((prev) => {
+    //     const [first, ...rest] = prev;
+    //     return [...rest, first];
+    //     });
+    // };
+
+
+        const handleNext = () => {
+            setDataEvents(prev => {
+                const first = prev[0];
+                const rest = prev.slice(1);
+                return [...rest, first];
+            });
+        };
+
 
     const handlePrev = () => {
         setDataEvents((prev) => {
@@ -108,6 +120,7 @@ export default function EventsR( data ) {
         return [last, ...rest];
         });
     };
+    
     
 
 
@@ -135,7 +148,9 @@ export default function EventsR( data ) {
                                                     <BtnInfo />
                                                 </a>
                                                 <a href={`${event.data.link_comprar}`} target="_blank">
-                                                    <BtnBuy>Comprar</BtnBuy>
+                                                    <BtnBuy
+                                                        isThereLink = {event.data.link_comprar}
+                                                    >Comprar</BtnBuy>
                                                 </a>
                                             </div>
                                         </div>

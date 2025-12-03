@@ -1,12 +1,11 @@
 ---
 
-    titulo: Ultra Music Festival
-    fecha: 21-11-2025
-    lugar: Autodromo
+    titulo: XMAS Beat
+    fecha: 25-12-2025
+    lugar: Costanera
     img: evento2
-    link_comprar: https://www.infobae.com
+    link_comprar: 
 
 ---
 
 
-Texto de descripcion Texto de descripcion Texto de descripcion Texto de descripcion Texto de descripcion Texto de descripcion Texto de descripcion Texto de descripcion Texto de descripcion Texto de descripcion Texto de descripcion

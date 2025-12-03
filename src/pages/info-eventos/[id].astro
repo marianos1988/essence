@@ -9,9 +9,9 @@ import logo from "../../assets/events/logo.png";
 import Evento1 from "../../assets/Events/evento-1.png"
 import Evento2 from "../../assets/Events/evento-2.png"
 import Evento3 from "../../assets/Events/evento-3.png"
-// import Evento4 from "../../assets/Events/evento-4.png"
-// import Evento5 from "../../assets/Events/evento-5.png"
-// import Evento6 from "../../assets/Events/evento-6.png"
+import Evento4 from "../../assets/Events/evento-4.png"
+import Evento5 from "../../assets/Events/evento-5.png"
+import Evento6 from "../../assets/Events/evento-6.png"
 
 // import Evento7 from "../../assets/Events/evento-7.png"
 // import Evento8 from "../../assets/Events/evento-8.png"
@@ -37,17 +37,17 @@ switch(id) {
         imagen = Evento3; 
         break;
 
-    // case "evento-4": 
-    //     imagen = Evento4; 
-    //     break;
+    case "evento-4": 
+        imagen = Evento4; 
+        break;
 
-    // case "evento-5": 
-    //     imagen = Evento5; 
-    //     break;
+    case "evento-5": 
+        imagen = Evento5; 
+        break;
 
-    // case "evento-6": 
-    //     imagen = Evento6; 
-    //     break;
+    case "evento-6": 
+        imagen = Evento6; 
+        break;
 
     // case "evento-7": 
     //     imagen = Evento7; 
@@ -83,8 +83,11 @@ export async function getStaticPaths() {
 
 }
 
-const infoEvent = Astro.props
+const infoEvent = Astro.props;
 const { data } = infoEvent;
+
+const description = `Prepárate para nuestro evento de música electrónica sin límites. ${data.titulo} llega a ${data.lugar} con un lineup de DJs y productores. Disfruta de un ambiente único y una pista de baile que te hará perder la noción del tiempo. ¡No te pierdas la oportunidad de vivir una experiencia inolvidable!`;
+
 
 
 ---
@@ -110,11 +113,11 @@ const { data } = infoEvent;
                     </dir>
                     <div class="box-description">
                         <p>
-                            {infoEvent.body}
+                            {description}
                         </p>
                     </div>
                     <div class="box-btn-buy">
-                        <a href={data.link_comprar} target="_blank"><BtnBuy>Comprar Ticket</BtnBuy></a>
+                        <a href={data.link_comprar} target="_blank"><BtnBuy isThereLink={data.link_comprar}>Comprar Ticket</BtnBuy></a>
                     </div>
 
                 </div>

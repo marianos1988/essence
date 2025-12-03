@@ -9,7 +9,7 @@ const events = defineCollection({
         lugar: z.string(),
         fecha: z.string(),
         img: z.string(),
-        link_comprar: z.string().url(),
+        link_comprar: z.string().url().nullable().optional(),
 
     })
 })

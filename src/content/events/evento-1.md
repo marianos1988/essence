@@ -1,10 +1,10 @@
 ---
 
-    titulo: Tomorrowland
-    fecha: 16-12-2025
-    lugar: Crobar
+    titulo: Sunset to Sunrise
+    fecha: 07-12-2025
+    lugar: Bosquecito - Protrerillos - Mendoza
     img: evento1
-    link_comprar: https://www.google.com.ar
+    link_comprar: 
 
 ---
 
