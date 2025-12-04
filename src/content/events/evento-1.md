@@ -4,7 +4,7 @@
     fecha: 07-12-2025
     lugar: Bosquecito - Protrerillos - Mendoza
     img: evento1
-    link_comprar: 
+    link_comprar: https://venti.com.ar/evento/emi-galv-n-potrerillos-mendoza
 
 ---
 
