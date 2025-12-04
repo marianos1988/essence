@@ -12,7 +12,7 @@ const stateOpenGrid = false;
 
  const handleOpenGrid = ( data ) => {
     setOpenGrid(data)
-    console.log(openGrid)
+
  }
 
   const options = [
@@ -26,7 +26,7 @@ const stateOpenGrid = false;
   };
 
     return(
-        <div className="container-merch">
+        <div className={(openGrid) ? `container-merch active` : `container-merch`}>
             <section className="sec-tittles">
                 <h1>Merch</h1>
 
@@ -37,13 +37,14 @@ const stateOpenGrid = false;
                 <Filters
                     categories = {categories}
                     handleOpenGrid = { handleOpenGrid }
+                    openGrid={ openGrid }
                 />
             </section>
             
             <section className="sec-products">
                 <div className="box-dropdown">
                     <Dropdown 
-                        label="Ordenar por:" options={options} onSelect={handleSelect}
+                        label="Ordenar por:" options={options} onSelect={ handleSelect }
                     />
                 </div>
                 <h3>Prueba</h3>

@@ -1,7 +1,7 @@
 import { useState } from "react"
 import "../../styles/merch/Filters.css"
 
-export default function Filters({ categories, handleOpenGrid }) {
+export default function Filters({ categories, handleOpenGrid, openGrid }) {
 
     const listCategories = categories.sort();
     
@@ -16,15 +16,18 @@ export default function Filters({ categories, handleOpenGrid }) {
     const numberCategories = checkCantCategories(listCategories.length);
 
 
-   const [stateToggle, setStateToggle] = useState(true);
 
-    const toggleSidebar = () => {
-        setStateToggle(!stateToggle);
 
-        if(stateToggle) {
-            handleOpenGrid(true)
-        } else {
+    const toggleSidebar = (  ) => {
+
+
+        if(openGrid) {
+
             handleOpenGrid(false)
+
+        } else {
+
+            handleOpenGrid(true)
         }
         
 
@@ -33,7 +36,7 @@ export default function Filters({ categories, handleOpenGrid }) {
  
     return(
         <>  
-            <div className={(stateToggle) ? `container-filters ${numberCategories}-categories open` : `container-filters ${numberCategories}-categories`}>
+            <div className={(openGrid) ? `container-filters ${numberCategories}-categories open` : `container-filters ${numberCategories}-categories`}>
                 <nav className="sidebar">
                     <div className="sidebar-inner">
 

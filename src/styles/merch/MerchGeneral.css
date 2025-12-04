@@ -4,14 +4,14 @@
     display: grid;
     grid-template-columns: minmax(0,84px) 3fr;
     grid-template-rows: 200px 1fr;
+    transition: all .4s ease-in;
 
 }
 
 .container-merch.active {
-    z-index: 10;
-    width: 100%;
-    display: grid;
+
     grid-template-columns: minmax(0,248px) 3fr;
+    transition: all .4s ease-in;
 
 }
 
@@ -50,9 +50,6 @@
 
 }
 
-/* .sec-filters.active {
-    width: 240px;
-} */
 
 .sec-products {
     grid-column: 2 / span 3; 
