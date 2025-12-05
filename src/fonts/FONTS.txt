@@ -2,7 +2,7 @@
 
 font-family: "Neo-latina" ,sans-serif;
 font-family: "Cocogoose" ,sans-serif;
-font-family: "Bebas-neue" ,sans-serif;
+font-family: "Badcomic", sans-serif;
 
 
 @font-face {
@@ -18,3 +18,11 @@ font-family: "Bebas-neue" ,sans-serif;
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+    font-family: "Badcomic";
+    src: url("../fonts/BadComic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+
+  }

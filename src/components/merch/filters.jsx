@@ -1,4 +1,4 @@
-import { useState } from "react"
+
 import "../../styles/merch/Filters.css"
 
 export default function Filters({ categories, handleOpenGrid, openGrid }) {

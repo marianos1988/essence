@@ -1,20 +1,23 @@
 .dropdown {
   position: relative;
   display: inline-block;
-  font-family: Arial, sans-serif;
+  font-family: "Cocogoose" ,sans-serif;
+  font-size: 13px;
+  font-size: small;
   z-index: 10;
-  right: 5%;
+  right: 1%;
 
 }
 
 /* Botón */
 .dropdown-button {
   color: #fff;
+  font-family: "Neo-latina", sans-serif;
   width: 180px;
   padding: 10px 14px;
   background-color: transparent; 
-    border-radius: 10px;
-    border: 3px solid #0FF0FC;
+  border-radius: 10px;
+  border: 3px solid #0FF0FC;
   cursor: pointer;
   display: flex;
   justify-content: space-between;

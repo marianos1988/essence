@@ -3,6 +3,9 @@ import Dropdown from "./Dropdown";
 import Filters from "./Filters";
 import "../../styles/merch/MerchGeneral.css";
 import { useState } from "react";
+import { Card } from "./Card";
+
+
 
 export default function MerchGeneral( { categories }) {
     
@@ -47,7 +50,19 @@ const stateOpenGrid = false;
                         label="Ordenar por:" options={options} onSelect={ handleSelect }
                     />
                 </div>
-                <h3>Prueba</h3>
+                <div className="list-products">
+                    <Card 
+                        name={"Abanico Essence"}
+                        price={15000}
+                        isThereStock={true}
+                    />
+                    <Card 
+                        name={"Gorra Essence"}
+                        price={15000}
+                        isThereStock={true}
+                    />
+                </div>
+
 
             </section>
         </div>
