@@ -8,6 +8,9 @@ import Layout from "../layouts/Layout.astro";
 
 const getProducts = await getCollection("products");
 
+
+// List of categories
+
 let arrCategories:any = [];
 let arrProducts:any = [];
 
@@ -26,7 +29,7 @@ const listCategories = [...new Set(arrCategories)]; //Eliminar repetidos
 
 console.log(listCategories)
 
-
+// 
 
 ---
 

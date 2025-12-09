@@ -37,7 +37,8 @@
 
 .sec-tittles h3 {
 
-    margin-left: 20px ;
+    margin-left: 20px;
+    transform: translateY(-35px);
     color: #fff;
     font-family: "Neo-latina" ,sans-serif;
 }

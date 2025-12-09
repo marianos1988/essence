@@ -4,6 +4,7 @@
   border-radius: 10px;
   border: 3px solid #0FF0FC;
   padding: 10px;
+  margin-bottom: 30px;
 }
 
 .container-card img {
@@ -37,4 +38,25 @@
 
 .desc-product button {
   color: #fff;
+}
+
+@media (min-width:300px) AND (max-width:350px) {
+
+  .container-card {
+    transform: scale(.8) translateX(-10%);
+  }
+}
+
+@media (min-width:351px) AND (max-width:450px) {
+
+  .container-card {
+    transform: scale(.85) translateX(-10%);
+  }
+}
+
+@media (min-width:451px) AND (max-width:510px) {
+
+  .container-card {
+    transform: scale(.9) translateX(-8%);
+  }
 }
