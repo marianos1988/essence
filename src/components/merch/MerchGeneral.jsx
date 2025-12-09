@@ -7,8 +7,8 @@ import { Card } from "./Card";
 
 
 
-export default function MerchGeneral( { categories }) {
-    
+export default function MerchGeneral( { categories, products }) {
+
 const stateOpenGrid = false;
 
  const [ openGrid, setOpenGrid ] = useState(stateOpenGrid);
@@ -51,16 +51,23 @@ const stateOpenGrid = false;
                     />
                 </div>
                 <div className="list-products">
-                    <Card 
-                        name={"Abanico Essence"}
-                        price={15000}
-                        isThereStock={true}
-                    />
-                    <Card 
-                        name={"Gorra Essence"}
-                        price={15000}
-                        isThereStock={true}
-                    />
+
+                    {
+                        products.map(
+                            (product, index) => (
+                                <Card 
+                                    key={index}
+                                    id={product.id}
+                                    name={product.name}
+                                    price={product.price}
+                                    img1={product.img1}
+                                    img2={product.img2}
+                                    description={product.description}
+                                    isThereStock={true} 
+                                />
+                            )
+                        )
+                    }
                 </div>
 
 

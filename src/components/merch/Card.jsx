@@ -1,14 +1,19 @@
 import "../../styles/merch/Card.css";
-import Product11 from "../../assets/merch/product-1-1.jpg";
+// import Product11 from "../../assets/merch/product-1-1.jpg";
 import BtnAddCart from "./BtnAddCart";
+import Image from "./Image";
 
-export const Card = ({ name, price, img, isThereStock }) => {
+export const Card = ({id, name, price, img1, img2, description, isThereStock }) => {
 
   return (
     <>
       <div className="container-card">
         <div className="box-image">
-          <img src={Product11.src} alt="" />
+          {/* <img src={Product11.src} alt="" /> */}
+          <Image 
+            id={id}
+            img={img1}
+          />
         </div>
         <div className="desc-product">
           <h3>{name}</h3>

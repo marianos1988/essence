@@ -9,27 +9,40 @@ import Layout from "../layouts/Layout.astro";
 const getProducts = await getCollection("products");
 
 
-// List of categories
-
+// Lista de categorias
 let arrCategories:any = [];
+
+// Lista de productos
 let arrProducts:any = [];
 
 
 getProducts.map(
     (product) => {
 
-        //Selecciona categorias y precios
+        // Selecciona nombres categorias
         arrCategories.push(product.data.categoria)
-        arrProducts.push(product.data)
+
+        arrProducts.push({
+
+            id: product.slug,
+            name: product.data.nombre,
+            price: product.data.precio,
+            img1: product.data.img1,
+            img2: product.data.img2,
+            category: product.data.categoria,
+            description: product.body
+        })
 
         
     }
 );
-const listCategories = [...new Set(arrCategories)]; //Eliminar repetidos
 
-console.log(listCategories)
+const listCategories = [...new Set(arrCategories)]; // Eliminar repetidos
 
-// 
+
+
+
+
 
 ---
 
@@ -38,6 +51,7 @@ console.log(listCategories)
         <MerchJSX 
             client:load 
             categories = {listCategories}
+            products = {arrProducts}
         />
 
 
