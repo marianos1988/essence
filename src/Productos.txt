@@ -1,0 +1,7 @@
+Para agregar el producto como un archivo md
+
+LAs fotos se cargar en la carpeta assets/products con los siguiente nombre
+
+producto-1-1.jpg 
+
+producto-1 es el slug y el 1.jpg es el atributo img1 o img2 dentro del archivo md

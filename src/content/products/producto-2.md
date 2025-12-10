@@ -2,8 +2,8 @@
 
         nombre: Abanico Negro
         precio: 4000
-        img1: producto-2/img1.jpg
-        img2: producto-2/img2.jpg
+        img1: 1.jpg
+        img2: 2.jpg
         categoria: Abanicos
 
 ---
