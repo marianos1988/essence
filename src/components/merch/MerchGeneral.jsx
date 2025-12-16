@@ -75,13 +75,13 @@ const stateProducts = products;
                         label="Ordenar por:" options={options} onSelect={ selectOrder }
                     />
                 </div>
-                <div className="list-products">
+                <div className="list-products" key={viewProducts.map(p => p.id).join("-")}>
 
                     {
                         viewProducts.map(
-                            (product, index) => (
+                            (product) => (
                                 <Card 
-                                    key={index}
+                                    key={product.id}
                                     id={product.id}
                                     name={product.name}
                                     price={product.price}

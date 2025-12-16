@@ -54,7 +54,7 @@
 
 
 .sec-products {
-            animation: aparecer .4s ease-in;
+
     grid-column: 2 / span 3; 
     grid-row: 2 / span 3;
     display: flex;
@@ -79,12 +79,3 @@
 
 }
 
-@keyframes aparecer {
-
-  0% {
-    opacity: 0
-  }
-  100% {
-    opacity: 1;
-  }
-}
