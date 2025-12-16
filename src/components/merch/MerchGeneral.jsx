@@ -10,8 +10,10 @@ import { Card } from "./Card";
 export default function MerchGeneral( { categories, products }) {
 
 const stateOpenGrid = false;
+const stateProducts = products;
 
  const [ openGrid, setOpenGrid ] = useState(stateOpenGrid);
+ const [viewProducts, setViewProducts ]= useState(stateProducts);
 
  const handleOpenGrid = ( data ) => {
     setOpenGrid(data)
@@ -24,9 +26,31 @@ const stateOpenGrid = false;
 
   ];
 
-  const handleSelect = (option) => {
-    console.log("Seleccionaste:", option);
+  const selectOrder = (option) => {
+    console.log("Seleccionaste: ", option);
+
   };
+
+  const selectCategory = ( category ) => {
+
+        if(category === "all") {
+
+                return setViewProducts(stateProducts)
+
+        } else {
+            let newViewProducts = [];
+
+            stateProducts.map(
+                (product) => {
+                    if(product.category === category) {
+                        newViewProducts.push(product)
+                    }
+
+                }
+            )
+            setViewProducts(newViewProducts)
+        }
+  }
 
     return(
         <div className={(openGrid) ? `container-merch active` : `container-merch`}>
@@ -41,19 +65,20 @@ const stateOpenGrid = false;
                     categories = {categories}
                     handleOpenGrid = { handleOpenGrid }
                     openGrid={ openGrid }
+                    handleSelectCategory={ (c)=> selectCategory(c) }
                 />
             </section>
             
             <section className="sec-products">
                 <div className="box-dropdown">
                     <Dropdown 
-                        label="Ordenar por:" options={options} onSelect={ handleSelect }
+                        label="Ordenar por:" options={options} onSelect={ selectOrder }
                     />
                 </div>
                 <div className="list-products">
 
                     {
-                        products.map(
+                        viewProducts.map(
                             (product, index) => (
                                 <Card 
                                     key={index}

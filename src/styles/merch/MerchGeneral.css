@@ -1,4 +1,5 @@
 .container-merch {
+
     z-index: 10;
     width: 100%;
     display: grid;
@@ -53,6 +54,7 @@
 
 
 .sec-products {
+            animation: aparecer .4s ease-in;
     grid-column: 2 / span 3; 
     grid-row: 2 / span 3;
     display: flex;
@@ -68,11 +70,21 @@
 }
 
 .sec-products .list-products {
+
     margin: 30px 20px; 
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    width: 100%
-    
-    
+    width: 100%;    
+
+}
+
+@keyframes aparecer {
+
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1;
+  }
 }

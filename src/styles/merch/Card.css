@@ -1,10 +1,14 @@
 .container-card {
 
+  
   width: 350px;
   border-radius: 10px;
   border: 3px solid #0FF0FC;
   padding: 10px;
   margin-bottom: 30px;
+  animation: all .4s ease-in;
+  transition: all .4s ease;
+
 }
 
 .container-card img {

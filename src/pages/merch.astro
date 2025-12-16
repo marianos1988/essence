@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BackgroundEffects10 from "../components/merch/BackgroundEffects10.astro";
-import MerchJSX from "../components/merch/MerchGeneral";
+import MerchGeneral from "../components/merch/MerchGeneral";
 import Layout from "../layouts/Layout.astro";
 
 
@@ -14,7 +14,7 @@ let arrCategories:any = [];
 
 // Lista de productos
 let arrProducts:any = [];
-
+ 
 
 getProducts.map(
     (product) => {
@@ -48,7 +48,7 @@ const listCategories = [...new Set(arrCategories)]; // Eliminar repetidos
 
 <Layout>
     <BackgroundEffects10>
-        <MerchJSX 
+        <MerchGeneral 
             client:load 
             categories = {listCategories}
             products = {arrProducts}
