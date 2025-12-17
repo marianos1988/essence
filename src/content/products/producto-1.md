@@ -1,6 +1,6 @@
 ---
         nombre: Anteojos de sol
-        precio: 5000
+        precio: 20000
         img1: 1.jpg
         img2: 2.jpg
         categoria: Lentes

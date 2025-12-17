@@ -11,9 +11,10 @@ export default function MerchGeneral( { categories, products }) {
 
 const stateOpenGrid = false;
 const stateProducts = products;
-
+const stateNameCategory = "Productos";
  const [ openGrid, setOpenGrid ] = useState(stateOpenGrid);
- const [viewProducts, setViewProducts ]= useState(stateProducts);
+ const [viewProducts, setViewProducts ] = useState(stateProducts);
+ const [ nameCategory, setNameCategory ] = useState(stateNameCategory);
 
  const handleOpenGrid = ( data ) => {
     setOpenGrid(data)
@@ -21,13 +22,49 @@ const stateProducts = products;
  }
 
   const options = [
-    { label: "Mayor precio", value: "1" },
-    { label: "Menor precio", value: "2" }
+    { label: "Mayor precio", value: 1 },
+    { label: "Menor precio", value: 2 },
+    { label: "Ordenar A - Z", value: 3 },
+    { label: "Ordenar Z - A", value: 4 }
 
   ];
 
   const selectOrder = (option) => {
-    console.log("Seleccionaste: ", option);
+    
+    switch(option.value) {
+
+        case 1: {
+
+                    const sortedProducts = [...viewProducts].sort((a, b) => b.price - a.price)
+                    setViewProducts(sortedProducts);
+                    break;
+        } 
+        case 2: {
+
+
+                    const sortedProducts = [...viewProducts].sort((a, b) => a.price - b.price)
+                    setViewProducts(sortedProducts);
+                    break;
+
+        } 
+        case 3: {
+
+                    const sortedProducts = [...viewProducts].sort((a, b) =>
+                        a.name.localeCompare(b.name)
+                    );
+                    setViewProducts(sortedProducts)
+                    break;
+        } 
+        case 4: {
+
+                    const sortedProducts = [...viewProducts].sort((a, b) =>
+                        b.name.localeCompare(a.name)
+                    );
+                    setViewProducts(sortedProducts)
+                    break;
+        } 
+    }
+
 
   };
 
@@ -35,7 +72,12 @@ const stateProducts = products;
 
         if(category === "all") {
 
-                return setViewProducts(stateProducts)
+                return (
+                    setViewProducts(stateProducts),
+                    setNameCategory(stateNameCategory)
+                )
+                    
+                
 
         } else {
             let newViewProducts = [];
@@ -49,6 +91,8 @@ const stateProducts = products;
                 }
             )
             setViewProducts(newViewProducts)
+            setNameCategory(category)
+
         }
   }
 
@@ -57,7 +101,7 @@ const stateProducts = products;
             <section className="sec-tittles">
                 <h1>Merch</h1>
 
-                <h3>Categoría / Gorros</h3>
+                <h3> {`Categoría / ${nameCategory}`} </h3>
             </section>
             
             <section className="sec-filters">
