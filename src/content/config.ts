@@ -1,6 +1,7 @@
 
 // DEfinir Colecciones
 import { defineCollection, z } from "astro:content"; // La zeta valida Esquemas
+import { Schema } from "astro:schema";
 
 
 const events = defineCollection({
@@ -43,8 +44,20 @@ const products = defineCollection({
     schema: z.object({
         nombre: z.string(),
         precio: z.number(),
-        img1: z.string(),
-        img2: z.string().optional(), 
+        images :  z.object({
+            img1: z.string(),
+            img2: z.string().optional(),
+            img3: z.string().optional(),
+            img4: z.string().optional(),
+            img5: z.string().optional(),
+            img6: z.string().optional(),
+            img7: z.string().optional(),
+            img8: z.string().optional(),
+            img9: z.string().optional(),
+            img10: z.string().optional(),
+            })
+
+        ,
         categoria: z.string(),
 
     })

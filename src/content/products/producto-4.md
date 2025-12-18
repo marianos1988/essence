@@ -2,8 +2,9 @@
 
         nombre: Remera Blanca
         precio: 15000
-        img1: 1.jpg
-        img2: 2.jpg
+        images:
+                img1: 1.jpg
+                img2: 2.jpg
         categoria: Remeras
 ---
 

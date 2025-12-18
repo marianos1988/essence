@@ -129,8 +129,7 @@ const stateNameCategory = "Productos";
                                     id={product.id}
                                     name={product.name}
                                     price={product.price}
-                                    img1={product.img1}
-                                    img2={product.img2}
+                                    images={product.images}
                                     description={product.description}
                                     isThereStock={true} 
                                 />

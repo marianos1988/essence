@@ -14,7 +14,8 @@ let arrCategories:any = [];
 
 // Lista de productos
 let arrProducts:any = [];
- 
+
+
 
 getProducts.map(
     (product) => {
@@ -22,13 +23,12 @@ getProducts.map(
         // Selecciona nombres categorias
         arrCategories.push(product.data.categoria)
 
+        //Agrega lista de productos
         arrProducts.push({
-
             id: product.slug,
             name: product.data.nombre,
             price: product.data.precio,
-            img1: product.data.img1,
-            img2: product.data.img2,
+            images: product.data.images,
             category: product.data.categoria,
             description: product.body
         })
@@ -36,6 +36,7 @@ getProducts.map(
         
     }
 );
+
 
 const listCategories = [...new Set(arrCategories)]; // Eliminar repetidos
 
