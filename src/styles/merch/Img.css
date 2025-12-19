@@ -1,0 +1,29 @@
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-img {
+  width: 100%;
+  max-width: 300px;
+  object-fit: cover;
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #0FF0FC;
+}

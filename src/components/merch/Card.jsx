@@ -2,7 +2,7 @@ import "../../styles/merch/Card.css";
 // import Product11 from "../../assets/merch/product-1-1.jpg";
 import BtnAddCart from "./BtnAddCart";
 import Img from "./Img";
-import Carousel from "./Carousel.jsx"
+
 
 export const Card = ({id, name, price, images, description, isThereStock }) => {
 
@@ -11,14 +11,10 @@ export const Card = ({id, name, price, images, description, isThereStock }) => {
       <div className="container-card">
         <div className="box-image">
 
-          {/* <Img 
+          <Img 
             path={id}
-            image={img1}
-          /> */}
-          <Carousel 
-            path={id}
-            images={images}
           />
+
         </div>
         <div className="desc-product">
           <h3>{name}</h3>
