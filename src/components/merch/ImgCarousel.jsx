@@ -47,16 +47,49 @@ export default function ImgCarousel({ path, autoplay = true, delay = 3000 }) {
     if (diff < -50) prev();
   };
 
+
+
+//Cambiar iamgen haciendo hover
+  const hovered = useRef(false);
+
+    const next = () => {
+    setCurrent((prev) => (prev + 1) % total);
+  };
+
+  const prev = () => {
+    setCurrent((prev) => (prev - 1 + total) % total);
+  };
+
+  const handleMouseEnter = () => {
+  if (window.innerWidth < 768 || hovered.current) return;
+  hovered.current = true;
+  next();
+  };
+
+const handleMouseLeave = () => {
+  if (window.innerWidth < 768) return; // evita mobile
+    hovered.current = false;
+    prev();
+  };
+
   return (
       <div
         className="carousel"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
+
       >
 
-        {/* Imagen */}
-        <div className="carousel-img-wrapper">
+
+        <div 
+          className="carousel-img-wrapper"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        
+        >
+          {/*Imagen*/}
           <img
+
             key={current}
             src={productImages[current]}
             alt={`${path}-${current}`}
@@ -81,3 +114,4 @@ export default function ImgCarousel({ path, autoplay = true, delay = 3000 }) {
 
 }
 
+ 
