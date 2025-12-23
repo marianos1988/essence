@@ -1,0 +1,115 @@
+
+
+.btn-cart {
+ font-family: "Neo-latina" ,sans-serif;
+  position: relative;
+  background: #444;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  height: 40px;
+  width: 45px;
+  font-size: .8rem;
+  transition: 0.2s;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+
+.btncart.disabled {
+  opacity: .5;
+  pointer-events: none;
+
+}
+
+.btn-cart:hover {
+
+  background: #0FF0FC;
+  color: #0FF0FC;
+  box-shadow: 0 0 35px #0FF0FC;
+  animation: box 3s infinite;
+  cursor: pointer;
+}
+
+.btn-cart::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #272822;
+  border-radius: 10px;
+}
+
+.btn-cart span {
+  position: relative;
+  z-index: 1;
+}
+.btn-cart i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.btn-cart i::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  left: 50%;
+  top: -2px;
+  border: 2px solid #0FF0FC;
+  background: #272822;
+  transition: 0.2s;
+}
+
+.btn-cart:hover i::before {
+  width: 15px;
+  left: 10%;
+  animation: move 3s infinite;
+}
+
+.btn-cart i::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  left: 15%;
+  bottom: -2px;
+  border: 2px solid #0FF0FC;
+  background: #272822;
+  transition: 0.2s;
+}
+
+.btn-cart:hover i::after {
+  width: 15px;
+  left: 35%;
+  animation: move 3s infinite;
+}
+
+.btn-cart i svg {
+  transform: translateY(6px);
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes box {
+  0% {
+    box-shadow: #27272c;
+  }
+  50% {
+    box-shadow: 0 0 25px #0FF0FC;
+  }
+  100% {
+    box-shadow: #27272c;
+  }
+}

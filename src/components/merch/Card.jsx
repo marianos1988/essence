@@ -21,6 +21,7 @@ export const Card = ({id, name, price, images, description, isThereStock }) => {
           <h4>${price}</h4>
           <BtnAddCart
             isThereStock={isThereStock}
+    
           />
         </div>
       </div>

@@ -98,7 +98,7 @@ const handleMouseLeave = () => {
         </div>
 
 
-        {/* Dots */}
+
         <div className="carousel-dots">
           {productImages.map((_, index) => (
             <span
@@ -110,7 +110,7 @@ const handleMouseLeave = () => {
         </div>
 
       </div>
-    );
+    )
 
 }
 

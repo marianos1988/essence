@@ -4,6 +4,7 @@ import Filters from "./Filters";
 import "../../styles/merch/MerchGeneral.css";
 import { useState } from "react";
 import { Card } from "./Card";
+import BtnCart from "./BtnCart";
 
 
 
@@ -118,6 +119,7 @@ const stateNameCategory = "Productos";
                     <Dropdown 
                         label="Ordenar por:" options={options} onSelect={ selectOrder }
                     />
+                    <BtnCart />
                 </div>
                 <div className="list-products" key={viewProducts.map(p => p.id).join("-")}>
 
