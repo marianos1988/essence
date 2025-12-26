@@ -17,6 +17,18 @@ const stateNameCategory = "Productos";
  const [viewProducts, setViewProducts ] = useState(stateProducts);
  const [ nameCategory, setNameCategory ] = useState(stateNameCategory);
 
+const stateOrdersList = []
+ const [ ordersList, setOrderList ] = useState(stateOrdersList);
+
+ const handleSetOrderList = (order) => {
+    setOrderList([...ordersList, order])
+ }
+
+ const handleUpToCart = (order) => {
+    handleSetOrderList(order)
+    console.log(ordersList)
+ }
+
  const handleOpenGrid = ( data ) => {
     setOpenGrid(data)
 
@@ -119,7 +131,9 @@ const stateNameCategory = "Productos";
                     <Dropdown 
                         label="Ordenar por:" options={options} onSelect={ selectOrder }
                     />
-                    <BtnCart />
+                    <BtnCart 
+                        ordersList = {ordersList}
+                    />
                 </div>
                 <div className="list-products" key={viewProducts.map(p => p.id).join("-")}>
 
@@ -134,6 +148,7 @@ const stateNameCategory = "Productos";
                                     images={product.images}
                                     description={product.description}
                                     isThereStock={true} 
+                                    upToCart2={ handleUpToCart }
                                 />
                             )
                         )

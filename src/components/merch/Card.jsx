@@ -4,7 +4,12 @@ import BtnAddCart from "./BtnAddCart";
 import ImgCarousel from "./ImgCarousel"; 
 
 
-export const Card = ({id, name, price, images, description, isThereStock }) => {
+export const Card = ({id, name, price, images, description, isThereStock, upToCart2 }) => {
+
+const handleUpToCart = (upToCart) => {
+
+upToCart2(upToCart)
+}
 
   return (
     <>
@@ -21,6 +26,13 @@ export const Card = ({id, name, price, images, description, isThereStock }) => {
           <h4>${price}</h4>
           <BtnAddCart
             isThereStock={isThereStock}
+            addToCart = {{
+              id: id,
+              name: name,
+              description: description,
+              price: price
+            }}
+            upToCart = { handleUpToCart }
     
           />
         </div>
