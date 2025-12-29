@@ -22,11 +22,12 @@ const stateOrdersList = []
 
  const handleSetOrderList = (order) => {
     setOrderList([...ordersList, order])
+
  }
 
  const handleUpToCart = (order) => {
     handleSetOrderList(order)
-    console.log(ordersList)
+
  }
 
  const handleOpenGrid = ( data ) => {
