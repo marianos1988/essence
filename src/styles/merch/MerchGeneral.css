@@ -6,6 +6,7 @@
     grid-template-columns: minmax(0,84px) 3fr;
     grid-template-rows: 200px 1fr;
     transition: all .4s ease-in;
+    padding-bottom: 100px;
 
 }
 

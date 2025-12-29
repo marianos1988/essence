@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import BackgroundEffects10 from "../components/merch/BackgroundEffects10.astro";
 import MerchGeneral from "../components/merch/MerchGeneral";
 import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
 
 
 
@@ -57,4 +58,8 @@ const listCategories = [...new Set(arrCategories)]; // Eliminar repetidos
 
 
     </BackgroundEffects10>
+    <Footer 
+        page="merch"
+    /> 
 </Layout>
+
