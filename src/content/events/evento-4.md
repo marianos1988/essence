@@ -1,8 +1,8 @@
 ---
 
-    titulo: Synthetyca - Essence
-    fecha: 03-10-2025
-    lugar: Palermo chico
+    titulo: Essence
+    fecha: 12-09-2025
+    lugar: Vita
     img: evento4
     link_comprar:
 

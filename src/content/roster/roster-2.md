@@ -1,30 +1,25 @@
 ---
 
-    nombre: Nazareno
-    artistico: Naza Rv
+    nombre: Facundo Rapetti
+    artistico: Facu Rapetti
     profesion: DJ / Productor Musical
-    genero: Techno
-    img1: nazarv1
-    img2: nazarv2
-    logo: nazarvlogo
-    instagram: https://www.instagram.com/nazarv.dj/
-    soundcloud: https://soundcloud.com/nazarv_dj
-    youtube:  https://www.youtube.com/@naza.ravesound
-    spotify: https://open.spotify.com/artist/4Fvl2zhtBe23HpA6l8N0mH?si=51mNz39xT7-AbquCni4Log
-    tiktok: https://www.tiktok.com/@nazarv.dj?_t=ZM-8zB8DnIZg9w&_r=1
+    genero: Minimal Deep / Tech House
+    img1: rapetti1
+    img2: rapetti2
+    logo: rapettilogo
+    instagram: https://www.instagram.com/facu.rapetti/
+    youtube: https://www.youtube.com/@facu.rapetti
+    tiktok: https://www.tiktok.com/@facu.rapetti?_t=ZM-8zB8C9Sqn60&_r=1
 
 
 ---
 
 
-NAZA RV es un talento en crecimiento proveniente de Buenos Aires. Impulsado por su entorno y criterio
-musical encontró su pasión en el Techno. Influenciado por artistas como Enrico Sangiuliano, Jay Lumen,
-Pavel Petrov, Boris Brejcha, NoNameLeft, Popof, sus producciones destacan por su dinamismo y texturas,
-por momentos muy melódicas y minimalistas, con un LowEnd profundo, las cuales además incorporan
-elementos del House y Progressive House.
-Su carrera como productor y DJ comenzó en el año <strong style="font-family: badcomic; font-weight: 400; font-size:17px">2022</strong>, creciendo rápidamente y logrando tocar en
-destacados clubes de Buenos Aires como Crobar, Club Araoz, Dune Park y Frida. Sus tracks ya han sido
-sellados por Space Kraft Recording, Kashla Records y Spektra. Además, ha compartido cabina con grandes
-artistas de la escena como Alex Stein, Nico Taboada, Emiliano Demarco, Mazzeo, Brian Gros, Martino
-Stefano, Rodrigo Vhans, Ailén DC y D'Losantos.
-
+Nacido en <strong style="font-family: badcomic; font-weight: 400; font-size:17px">1998</strong> y criado en la provincia de Corrientes. Inició su carrera en <strong style="font-family: badcomic; font-weight: 400; font-size:17px">2022</strong> después de
+una experiencia viviendo varios meses en California. Su sonido se mueve entre el minimal
+deep y el tech house, con una línea clara de groove, criterio y alegría en la selección musical.
+También cuenta un lado más enérgico que explora en sets de Melódico e Indie Dance.
+Entre sus influencias aparecen Beltran, Dennis Cruz, Solomun y Ruback. Este año se ha
+presentado venues como Olympo Skybar, <strong style="font-family: badcomic; font-weight: 400; font-size:17px">2</strong>GHTR, Zegre, The Gallery y La Biblioteca. Sus
+tracks han tenido Support de artistas de talla mundial como Westend Además de haber
+colaborado con marcas como Adidas y Redbull

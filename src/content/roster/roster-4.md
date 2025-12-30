@@ -1,25 +1,22 @@
 ---
 
-    nombre: Jay Huncho
-    artistico: Jay Huncho
+    nombre: ATMØZ
+    artistico: ATMØZ
     profesion: DJ / Productor Musical
-    genero: Tech House / Tech Deep / Minimal House 
-    img1: huncho1
-    img2: huncho2
-    logo: hunchologo
-    instagram: https://www.instagram.com/jayhuncho_us/
-    tiktok: https://www.tiktok.com/@jayhuncho.us?_t=ZM-8zB8FOP8Bmf&_r=1
-    spotify: https://open.spotify.com/artist/52ItilJ5U2TUojSnM0esgR?si=IG2bzx0eRrWowleSLF6sPQ
+    genero: Techno
+    img1: atmoz1
+    img2: atmoz2
+    logo: atmozlogo
+    instagram: https://www.instagram.com/atmoz_music/
+    youtube: https://www.youtube.com/@atmozmusic
+    spotify: https://open.spotify.com/artist/0bXfzKQfSQszDeCAqT9wfc?si=MJpIJOtETm-QYXfVJcAmcA
 
 
 ---
 
 
-Jay Huncho es un DJ y productor de Tech House y Deep/Minimal House de Nueva Jersey, EE.
-UU. El sonido de Jay se define por su cautivador estilo de mezcla, sus líneas de bajo potentes
-y contundentes, y su distintiva selección de samples con elementos de hip hop y latin house.
-Inspirado por artistas como Michael Bibi, Pawsa, Cloonee, Jamie Jones y Marco Carola.
-Se ha presentado en grandes venues a nivel mundial como Marquee, Paradise Club y Sony
-Hall, en Nueva York; Mia Beach Club, Buuts Ha Cenote Club, Nocturnal Nightclub y en official
-Zamna afterparties en Tulum. Además se ha presentado en grandes Festivales como
-WonderFront San Diego, SSBD Festival Los Angeles y Hearsay Nueva York.
+ATMØZ es un DJ y productor de Techno oriundo de Lisboa, Portugal. Sus tracks ocupan
+puestos importantes en sellos como Made in Brussels, de Spartaque, y Reload Records,
+del duo The YellowHeads.
+Se distingue por su destreza con los vinilos aunque también puede tocar con reproductores de música digital. En su estadía por Argentina ha tocado clubes como Club Aráoz junto a Alex
+Stein y Tomás Otero, VITA junto a Brian Gros y otras fiestas privadas.

@@ -7,9 +7,6 @@ import Aliaga1 from "../../assets/roster/aliaga1.jpg"
 import Aliaga2 from "../../assets/roster/aliaga2.jpg"
 import AliagaLogo from "../../assets/roster/aliagalogo.png"
 
-import NazaRv1 from "../../assets/roster/nazarv1.jpg"
-import NazaRv2 from "../../assets/roster/nazarv2.jpg"
-import NazaRvLogo from "../../assets/roster/nazarvlogo.png"
 
 import Huncho1 from "../../assets/roster/huncho1.jpg"
 import Huncho2 from "../../assets/roster/huncho2.jpg"
@@ -33,10 +30,6 @@ switch(img1) {
       finalImg1 = Aliaga1.src; 
     break;
 
-    case "nazarv1": 
-      finalImg1 = NazaRv1.src; 
-    break;
-
     case "rapetti1": 
       finalImg1 = Rapetti1.src; 
     break;
@@ -54,10 +47,6 @@ switch(img2) {
 
     case "aliaga2": 
         finalImg2 = Aliaga2.src; 
-    break;
-
-    case "nazarv2": 
-        finalImg2 = NazaRv2.src; 
     break;
     
     case "rapetti2": 
@@ -77,10 +66,6 @@ switch(logo) {
 
     case "aliagalogo": 
         finalLogo = AliagaLogo.src; 
-    break;
-
-    case "nazarvlogo": 
-      finalLogo = NazaRvLogo.src; 
     break;
 
     case "rapettilogo": 
@@ -213,14 +198,6 @@ switch(logo) {
 
     .card:hover .title.aliagalogo {
       transform: translate3d(0%, -100px, 100px) scale(1.2);
-    }
-
-    .title.nazarvlogo {
-      transform: translate(0px,-25px) scale(1.1) ;
-    }
-
-    .card:hover .title.nazarvlogo {
-      transform: translate3d(0%, -32px, 0px) scale(1.3);
     }
 
     .title.rapettilogo {

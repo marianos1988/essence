@@ -1,7 +1,7 @@
 
 // DEfinir Colecciones
 import { defineCollection, z } from "astro:content"; // La zeta valida Esquemas
-import { Schema } from "astro:schema";
+
 
 
 const events = defineCollection({

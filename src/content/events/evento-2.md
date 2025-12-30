@@ -1,11 +1,9 @@
 ---
 
-    titulo: XMAS Beat
-    fecha: 25-12-2025
-    lugar: Costanera
+    titulo: Essence
+    fecha: 24-10-2025
+    lugar: Bali Costanera
     img: evento2
-    link_comprar: https://www.passline.com/eventos/xmas-beat/fb-essence
-
+    link_comprar: 
 ---
-
 

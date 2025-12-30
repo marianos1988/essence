@@ -1,12 +1,10 @@
 ---
 
-    titulo: Essence
-    fecha: 12-09-2025
-    lugar: Vita
+    titulo: Olympo Sunset
+    fecha: 19-07-2025
+    lugar: Lex Tower
     img: evento5
-    link_comprar:
+    link_comprar: 
 
 ---
 
-
-Texto de descripcion Texto de descripcion Texto de descripcion Texto de descripcion Texto de descripcion Texto de descripcion Texto de descripcion Texto de descripcion Texto de descripcion Texto de descripcion Texto de descripcion

@@ -1,25 +1,25 @@
 ---
 
-    nombre: Facundo Rapetti
-    artistico: Facu Rapetti
+    nombre: Jay Huncho
+    artistico: Jay Huncho
     profesion: DJ / Productor Musical
-    genero: Minimal Deep / Tech House
-    img1: rapetti1
-    img2: rapetti2
-    logo: rapettilogo
-    instagram: https://www.instagram.com/facu.rapetti/
-    youtube: https://www.youtube.com/@facu.rapetti
-    tiktok: https://www.tiktok.com/@facu.rapetti?_t=ZM-8zB8C9Sqn60&_r=1
+    genero: Tech House / Tech Deep / Minimal House 
+    img1: huncho1
+    img2: huncho2
+    logo: hunchologo
+    instagram: https://www.instagram.com/jayhuncho_us/
+    tiktok: https://www.tiktok.com/@jayhuncho.us?_t=ZM-8zB8FOP8Bmf&_r=1
+    spotify: https://open.spotify.com/artist/52ItilJ5U2TUojSnM0esgR?si=IG2bzx0eRrWowleSLF6sPQ
 
 
 ---
 
 
-Nacido en <strong style="font-family: badcomic; font-weight: 400; font-size:17px">1998</strong> y criado en la provincia de Corrientes. Inició su carrera en <strong style="font-family: badcomic; font-weight: 400; font-size:17px">2022</strong> después de
-una experiencia viviendo varios meses en California. Su sonido se mueve entre el minimal
-deep y el tech house, con una línea clara de groove, criterio y alegría en la selección musical.
-También cuenta un lado más enérgico que explora en sets de Melódico e Indie Dance.
-Entre sus influencias aparecen Beltran, Dennis Cruz, Solomun y Ruback. Este año se ha
-presentado venues como Olympo Skybar, <strong style="font-family: badcomic; font-weight: 400; font-size:17px">2</strong>GHTR, Zegre, The Gallery y La Biblioteca. Sus
-tracks han tenido Support de artistas de talla mundial como Westend Además de haber
-colaborado con marcas como Adidas y Redbull
+Jay Huncho es un DJ y productor de Tech House y Deep/Minimal House de Nueva Jersey, EE.
+UU. El sonido de Jay se define por su cautivador estilo de mezcla, sus líneas de bajo potentes
+y contundentes, y su distintiva selección de samples con elementos de hip hop y latin house.
+Inspirado por artistas como Michael Bibi, Pawsa, Cloonee, Jamie Jones y Marco Carola.
+Se ha presentado en grandes venues a nivel mundial como Marquee, Paradise Club y Sony
+Hall, en Nueva York; Mia Beach Club, Buuts Ha Cenote Club, Nocturnal Nightclub y en official
+Zamna afterparties en Tulum. Además se ha presentado en grandes Festivales como
+WonderFront San Diego, SSBD Festival Los Angeles y Hearsay Nueva York.
