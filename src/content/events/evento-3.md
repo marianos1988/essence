@@ -1,12 +1,9 @@
 ---
 
-    titulo: Synthetyca - Essence
-    fecha: 03-10-2025
-    lugar: Palermo chico
+    titulo: Essence
+    fecha: 24-10-2025
+    lugar: Bali Costanera
     img: evento3
-    link_comprar:
-
+    link_comprar: 
 ---
 
-
-Texto de descripcion Texto de descripcion Texto de descripcion Texto de descripcion Texto de descripcion Texto de descripcion Texto de descripcion Texto de descripcion Texto de descripcion Texto de descripcion Texto de descripcion

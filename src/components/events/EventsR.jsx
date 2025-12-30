@@ -9,7 +9,7 @@ import Evento2 from "../../assets/Events/evento-2.png"
 import Evento3 from "../../assets/Events/evento-3.png"
 import Evento4 from "../../assets/Events/evento-4.png"
 import Evento5 from "../../assets/Events/evento-5.png"
-// import Evento6 from "../../assets/Events/evento-6.png"
+import Evento6 from "../../assets/Events/evento-6.png"
 // import Evento7 from "../../assets/Events/evento-7.png"
 // import Evento8 from "../../assets/Events/evento-8.png"
 // import Evento9 from "../../assets/Events/evento-9.png"
@@ -43,8 +43,8 @@ export default function EventsR( data ) {
                 case 5: 
                     return Evento5.src;
 
-                // case 6: 
-                //     return Evento6.src;
+                case 6: 
+                    return Evento6.src;
 
                 // case 7: 
                 //     return Evento7.src;
