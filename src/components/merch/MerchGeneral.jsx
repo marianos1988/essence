@@ -11,11 +11,13 @@ import BtnCart from "./BtnCart";
 export default function MerchGeneral( { categories, products }) {
 
 const stateOpenGrid = false;
+const stateViewCart = false;
 const stateProducts = products;
 const stateNameCategory = "Productos";
  const [ openGrid, setOpenGrid ] = useState(stateOpenGrid);
  const [viewProducts, setViewProducts ] = useState(stateProducts);
  const [ nameCategory, setNameCategory ] = useState(stateNameCategory);
+ const [viewCart, setViewCart] = useState(stateViewCart)
 
 const stateOrdersList = []
  const [ ordersList, setOrderList ] = useState(stateOrdersList);
@@ -33,6 +35,10 @@ const stateOrdersList = []
  const handleOpenGrid = ( data ) => {
     setOpenGrid(data)
 
+ }
+
+ const handleViewCart = () => {
+    setViewCart(!viewCart)
  }
 
   const options = [
@@ -134,6 +140,7 @@ const stateOrdersList = []
                     />
                     <BtnCart 
                         ordersList = {ordersList}
+                        handleViewCart = {() => handleViewCart()}
                     />
                 </div>
                 <div className="list-products" key={viewProducts.map(p => p.id).join("-")}>
@@ -155,7 +162,15 @@ const stateOrdersList = []
                         )
                     }
                 </div>
+            </section>
 
+            <section className={(viewCart) ? `sec-cart active` : `sec-cart`}>
+                <div className="box-close">
+                    <button onClick={()=>handleViewCart()} className="btn-close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
+                    </button>
+
+                </div>
 
             </section>
         </div>
