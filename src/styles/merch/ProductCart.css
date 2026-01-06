@@ -1,0 +1,42 @@
+
+.container-product-cart {
+display: flex;
+width: 100%;
+flex-wrap: nowrap;
+justify-content: space-between;
+
+}
+
+.container-product-cart .box-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-product-cart .box-right {
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-tittle h5,
+.box-price h5 {
+    color: #fff;
+    margin: 0 13px;
+}
+.box-tittle h5 {
+    font-family: "Cocogoose" ,sans-serif;
+}
+
+.box-price h5 {
+    font-family: "Badcomic", sans-serif;
+}
+
+
+.box-img img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    border: 2px solid #0FF0FC;
+    object-fit: cover;
+}

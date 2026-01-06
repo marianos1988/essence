@@ -5,6 +5,7 @@ import "../../styles/merch/MerchGeneral.css";
 import { useState } from "react";
 import { Card } from "./Card";
 import BtnCart from "./BtnCart";
+import ProductCart from "./ProductCart";
 
 
 
@@ -13,6 +14,8 @@ export default function MerchGeneral( { categories, products }) {
 const stateOpenGrid = false;
 const stateViewCart = false;
 const stateProducts = products;
+
+
 const stateNameCategory = "Productos";
  const [ openGrid, setOpenGrid ] = useState(stateOpenGrid);
  const [viewProducts, setViewProducts ] = useState(stateProducts);
@@ -21,10 +24,12 @@ const stateNameCategory = "Productos";
 
 const stateOrdersList = []
  const [ ordersList, setOrderList ] = useState(stateOrdersList);
+const [numBadge, setNumBadge] = useState(0)
 
  const handleSetOrderList = (order) => {
     setOrderList([...ordersList, order])
-
+    setNumBadge(ordersList.length)
+    console.log(ordersList)
  }
 
  const handleUpToCart = (order) => {
@@ -167,9 +172,21 @@ const stateOrdersList = []
             <section className={(viewCart) ? `sec-cart active` : `sec-cart`}>
                 <div className="box-close">
                     <button onClick={()=>handleViewCart()} className="btn-close">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
                     </button>
+                </div>
 
+                <div className="box-tittles">
+                    <h3>Producto</h3>
+                    <h3>Subtotal</h3>
+                </div>
+
+                <div className="list-cart">
+                    <ProductCart 
+                        name={`Remera Essence`}
+                        price={10000}
+                        image="producto-1-1"
+                    />
                 </div>
 
             </section>
