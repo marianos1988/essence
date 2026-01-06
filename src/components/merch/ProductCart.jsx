@@ -25,12 +25,20 @@ export default function ProductCart(name, price, image) {
                 <div className="box-tittle">
                     <h5>Remera essence</h5>
                 </div>
+                <div className="box-plus-less">
+                    <div className="plus-less">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-circle-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M9 12h6" /><path d="M12 9v6" /></svg>
+                        <input className="input-count" type="number"  value={1}/>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-circle-minus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M9 12l6 0" /></svg>
+                    </div>
+                </div>
             </div>
             <div className="box-right">
                 <div className="box-price">
                     <h5>3000</h5>
                 </div>
             </div>
+        
 
         </div>
     )

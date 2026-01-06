@@ -25,6 +25,7 @@ justify-content: space-between;
     margin: 0 13px;
 }
 .box-tittle h5 {
+    margin-top: 15px;
     font-family: "Cocogoose" ,sans-serif;
 }
 
@@ -32,11 +33,45 @@ justify-content: space-between;
     font-family: "Badcomic", sans-serif;
 }
 
-
 .box-img img {
     width: 80px;
     height: 80px;
     border-radius: 10px;
     border: 2px solid #0FF0FC;
     object-fit: cover;
+}
+
+
+.plus-less svg {
+    color: #fff;
+    width: 35px;
+    height: 35px;
+}
+
+.plus-less svg:hover {
+    color: #0FF0FC;
+    cursor: pointer;
+    transition: all .4s ease-in;
+}
+
+.plus-less .icon-tabler-circle-plus {
+    transform: translate(-5px, 13px);
+}
+
+.plus-less .icon-tabler-circle-minus {
+    transform: translate(5px, 13px);
+}
+
+.plus-less .input-count {
+    font-family: "Badcomic", sans-serif;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+}
+
+.plus-less .input-count::-webkit-inner-spin-button,
+.plus-less .input-count::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+-moz-appearance: textfield;
 }
