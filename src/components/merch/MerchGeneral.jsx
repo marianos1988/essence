@@ -167,7 +167,7 @@ const [numBadge, setNumBadge] = useState(0)
                         )
                     }
                 </div>
-            </section>
+            </section> 
 
             <section className={(viewCart) ? `sec-cart active` : `sec-cart`}>
                 <div className="box-close">
@@ -178,7 +178,7 @@ const [numBadge, setNumBadge] = useState(0)
 
                 <div className="box-tittles">
                     <h3>Producto</h3>
-                    <h3>Subtotal</h3>
+                    <h3 className="subtotal">Subtotal</h3>
                 </div>
 
                 <div className="list-cart">

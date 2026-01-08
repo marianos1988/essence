@@ -88,6 +88,7 @@
     width: 0px;
     display: relative;
 
+
 }
 
 .sec-cart.active{
@@ -136,6 +137,10 @@
 .box-tittles {
     margin: 60px 15px 30px 15px;
 
+}
+
+.box-tittles .subtotal {
+    transform: translateX(-25px);
 }
 
 
