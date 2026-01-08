@@ -191,5 +191,5 @@ const [numBadge, setNumBadge] = useState(0)
 
             </section>
         </div>
-    ) 
+    )  
 }

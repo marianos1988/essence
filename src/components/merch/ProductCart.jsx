@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "../../styles/merch/ProductCart.css"
 
 export default function ProductCart(name, price, image) {
@@ -14,7 +15,20 @@ export default function ProductCart(name, price, image) {
     .filter(([key]) => key.includes(`/producto-4-1`))
     .map(([, value]) => value.src);
 
+    const [units, setUnits] = useState(1);
 
+    const plusUnits = (unit) => {
+        const plusUnit = unit + 1;
+        setUnits(plusUnit)
+    } 
+
+    const lessUnits = (unit) => {
+        if(!(unit == 0)) {
+            const lessUnits = unit - 1
+            setUnits(lessUnits)
+        }
+        
+    }
 
     return(
         <div className="container-product-cart">
@@ -27,9 +41,15 @@ export default function ProductCart(name, price, image) {
                 </div>
                 <div className="box-plus-less">
                     <div className="plus-less">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-circle-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M9 12h6" /><path d="M12 9v6" /></svg>
-                        <input className="input-count" type="number"  value={1}/>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-circle-minus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M9 12l6 0" /></svg>
+                        <button onClick={()=>plusUnits(units)}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-circle-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M9 12h6" /><path d="M12 9v6" /></svg>
+                        </button>
+
+                        <input className="input-count" type="number"  value={units}/>
+                        
+                        <button onClick={()=>lessUnits(units)}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-circle-minus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M9 12l6 0" /></svg>
+                        </button>
                     </div>
                 </div>
             </div>
