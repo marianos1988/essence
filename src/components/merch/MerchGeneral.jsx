@@ -182,11 +182,23 @@ const [numBadge, setNumBadge] = useState(0)
                 </div>
 
                 <div className="list-cart">
-                    <ProductCart 
+                    {
+                        ordersList.map(
+                            (order) => (
+                                <ProductCart
+                                    key={order.id}
+                                    name={order.name}
+                                    price={order.price}
+                                    image={`${order.id}-1`}
+                                />
+                            )
+                        )
+                    }
+                    {/* <ProductCart 
                         name={`Remera Essence`}
                         price={10000}
                         image="producto-1-1"
-                    />
+                    /> */}
                 </div>
 
             </section>
