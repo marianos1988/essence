@@ -1,8 +1,10 @@
 import { useState } from "react";
 import "../../styles/merch/ProductCart.css"
-import { set } from "astro/zod";
 
-export default function ProductCart(name, price, image) {
+
+export default function ProductCart({name, price, image}) {
+
+
 
       // Carga todas las imágenes de la carpeta correcta
   const images = import.meta.glob(`../../assets/merch/products/*`, {
@@ -13,7 +15,7 @@ export default function ProductCart(name, price, image) {
 
   // Filtra solo las imágenes del producto que estan en la carpeta y mapea todas las fotos de la carpeta
   const productImage = Object.entries(images)
-    .filter(([key]) => key.includes(`/producto-4-1`))
+    .filter(([key]) => key.includes(`/${image}`))
     .map(([, value]) => value.src);
 
     const [units, setUnits] = useState(1);
@@ -49,7 +51,7 @@ export default function ProductCart(name, price, image) {
                     <img src={productImage} alt="" />
                 </div>
                 <div className="box-tittle">
-                    <h5>Remera essence</h5>
+                    <h5>{name}</h5>
                 </div>
                 <div className="box-plus-less">
                     <div className="plus-less">
@@ -67,7 +69,7 @@ export default function ProductCart(name, price, image) {
             </div>
             <div className="box-right">
                 <div className="box-price">
-                    <h5>3000</h5>
+                    <h5>{price}</h5>
                 </div>
                 <div className="box-trash">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-trash"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 7l16 0" /><path d="M10 11l0 6" /><path d="M14 11l0 6" /><path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" /><path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" /></svg>

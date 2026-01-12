@@ -194,11 +194,11 @@ const [numBadge, setNumBadge] = useState(0)
                             )
                         )
                     }
-                    {/* <ProductCart 
-                        name={`Remera Essence`}
-                        price={10000}
-                        image="producto-1-1"
-                    /> */}
+                </div>
+
+                <div className="box-total">
+                    <h3>Total</h3>
+                    <h3 className="total">10000</h3>
                 </div>
 
             </section>

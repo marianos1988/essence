@@ -127,14 +127,21 @@
 }
 
 
-.sec-cart .box-tittles {
+.sec-cart .box-tittles,
+.sec-cart .box-total  {
     display: flex;
     justify-content: space-between;
     font-family: "Neo-latina" ,sans-serif;
     color: #fff;
 }
 
-.box-tittles {
+.box-total .total {
+    font-family: "Badcomic", sans-serif;
+     transform: translateX(-25px);
+}
+
+.box-tittles,
+.box-total {
     margin: 60px 15px 30px 15px;
 
 }
@@ -144,17 +151,20 @@
 }
 
 
+
+
     
 @media (max-width:480px) {
 
     .sec-cart.active{
 
         background-color: #000;
+        position: absolute;
         z-index: 25;
-        height: 100dvh;
+        height: 100%;
         width: 100dvw;
-        position: fixed;
         transition: all .4s ease-in;
+        overflow-y: visible;
     }
 
     .box-tittles {
