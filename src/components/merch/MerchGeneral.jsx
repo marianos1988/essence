@@ -24,12 +24,27 @@ const stateNameCategory = "Productos";
 
 const stateOrdersList = []
  const [ ordersList, setOrderList ] = useState(stateOrdersList);
-const [numBadge, setNumBadge] = useState(0)
+const [numBadge, setNumBadge] = useState(0);
+
+const [ totalPrice, setTotalPrice ] = useState(0);
+
+const handleTotalPrice = (newPrice, lessPlus) => {
+
+    if(lessPlus == "plus")
+        setTotalPrice(totalPrice + newPrice)
+    else if(lessPlus == "less") {
+       setTotalPrice(totalPrice - newPrice)
+    }
+}
+
+
 
  const handleSetOrderList = (order) => {
+
+    handleTotalPrice(order.price,"plus");
     setOrderList([...ordersList, order])
     setNumBadge(ordersList.length)
-    console.log(ordersList)
+
  }
 
  const handleUpToCart = (order) => {
@@ -196,9 +211,9 @@ const [numBadge, setNumBadge] = useState(0)
                     }
                 </div>
 
-                <div className="box-total">
+                <div className="box-total"> 
                     <h3>Total</h3>
-                    <h3 className="total">10000</h3>
+                    <h3 className="total">{`$${totalPrice}`}</h3>
                 </div>
 
             </section>
