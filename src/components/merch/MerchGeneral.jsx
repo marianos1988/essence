@@ -52,6 +52,19 @@ const handleTotalPrice = (newPrice, lessPlus) => {
 
  }
 
+  const handleDeleteToCart = (orderDelete) => {
+    let newList = []
+    ordersList.map(
+        (order) => {
+            if(order.id !== orderDelete) {
+                newList.push(order)
+            }
+        }
+    )
+
+    setOrderList(newList)
+ }
+
  const handleOpenGrid = ( data ) => {
     setOpenGrid(data)
 
@@ -60,6 +73,8 @@ const handleTotalPrice = (newPrice, lessPlus) => {
  const handleViewCart = () => {
     setViewCart(!viewCart)
  }
+
+
 
   const options = [
     { label: "Mayor precio", value: 1 },
@@ -202,9 +217,12 @@ const handleTotalPrice = (newPrice, lessPlus) => {
                             (order) => (
                                 <ProductCart
                                     key={order.id}
+                                    id={order.id}
                                     name={order.name}
                                     price={order.price}
                                     image={`${order.id}-1`}
+                                    deleteProduct={handleDeleteToCart}
+                                    
                                 />
                             )
                         )
