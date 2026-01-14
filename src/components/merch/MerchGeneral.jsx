@@ -43,49 +43,26 @@ const handleTotalPrice = (newPrice, lessPlus) => {
 //MAnejar agregar producto al carrito
  const handleSetOrderList = (newOrder) => {
 
-    let newListOrder = [];
 
-    //Si no hay lista lo agrega el primer producto sin mapear
-    if(ordersList.length < 1) {
-        handleTotalPrice(newOrder.price,"plus");
-        setOrderList([...ordersList, newOrder])
-        setNumBadge(ordersList.length + 1)
+    //Agregar producto carritod e compras
+    setOrderList(prev => {
+        const exists = prev.some(p => p.id === newOrder.id);
+        if (exists) return prev;     // no agrega duplicado
+        else if(!exists) {
 
-    } else {
-        ordersList.map(
-            (order) => {
-                if(order.id !== newOrder.id) { 
-                    newListOrder.push(newOrder)
-                    handleTotalPrice(newOrder.price,"plus");
-                    setNumBadge(ordersList.length + 1)
-                }
-            }
-        )
+            //Suma el total
+            handleTotalPrice(newOrder.price,"plus");
 
-        const finalListOrder = ordersList.concat(newListOrder);
-        setOrderList(finalListOrder)
-
-    }
-    
-    // let newList = []
-    // ordersList.map(
-    //     (order) => {
-    //         if(order.id !== orderDelete) {
-    //             newList.push(order)
-    //         }
-    //     }
-    // )
-
-    // handleTotalPrice(order.price,"plus");
-    // setOrderList([...ordersList, order])
-    // setNumBadge(ordersList.length + 1)
+            //Aumenta el nummero de badge
+            setNumBadge(ordersList.length + 1)
+        }
+        return [...prev, newOrder];
+    });
+        
 
  }
 
- const handleUpToCart = (order) => {
-    handleSetOrderList(order)
 
- }
 
 //Borrar producto del carrito
   const handleDeleteToCart = (orderDelete) => {
@@ -229,7 +206,7 @@ const handleTotalPrice = (newPrice, lessPlus) => {
                                     images={product.images}
                                     description={product.description}
                                     isThereStock={true} 
-                                    upToCart2={ handleUpToCart }
+                                    upToCart2={ handleSetOrderList }
                                 />
                             )
                         )
@@ -252,9 +229,9 @@ const handleTotalPrice = (newPrice, lessPlus) => {
                 <div className="list-cart">
                     {
                         ordersList.map(
-                            (order) => (
+                            (order, index) => (
                                 <ProductCart
-                                    key={order.id}
+                                    key={index}
                                     id={order.id}
                                     name={order.name}
                                     price={order.price}
