@@ -28,6 +28,8 @@ const [numBadge, setNumBadge] = useState(0);
 
 const [ totalPrice, setTotalPrice ] = useState(0);
 
+
+//Manejar totales de carrito de compras
 const handleTotalPrice = (newPrice, lessPlus) => {
 
     if(lessPlus == "plus")
@@ -38,12 +40,45 @@ const handleTotalPrice = (newPrice, lessPlus) => {
 }
 
 
+//MAnejar agregar producto al carrito
+ const handleSetOrderList = (newOrder) => {
 
- const handleSetOrderList = (order) => {
+    let newListOrder = [];
 
-    handleTotalPrice(order.price,"plus");
-    setOrderList([...ordersList, order])
-    setNumBadge(ordersList.length)
+    //Si no hay lista lo agrega el primer producto sin mapear
+    if(ordersList.length < 1) {
+        handleTotalPrice(newOrder.price,"plus");
+        setOrderList([...ordersList, newOrder])
+        setNumBadge(ordersList.length + 1)
+
+    } else {
+        ordersList.map(
+            (order) => {
+                if(order.id !== newOrder.id) { 
+                    newListOrder.push(newOrder)
+                    handleTotalPrice(newOrder.price,"plus");
+                    setNumBadge(ordersList.length + 1)
+                }
+            }
+        )
+
+        const finalListOrder = ordersList.concat(newListOrder);
+        setOrderList(finalListOrder)
+
+    }
+    
+    // let newList = []
+    // ordersList.map(
+    //     (order) => {
+    //         if(order.id !== orderDelete) {
+    //             newList.push(order)
+    //         }
+    //     }
+    // )
+
+    // handleTotalPrice(order.price,"plus");
+    // setOrderList([...ordersList, order])
+    // setNumBadge(ordersList.length + 1)
 
  }
 
@@ -52,6 +87,7 @@ const handleTotalPrice = (newPrice, lessPlus) => {
 
  }
 
+//Borrar producto del carrito
   const handleDeleteToCart = (orderDelete) => {
     let newList = []
     ordersList.map(
@@ -65,11 +101,13 @@ const handleTotalPrice = (newPrice, lessPlus) => {
     setOrderList(newList)
  }
 
+ //Abrir y cerrar filtros
  const handleOpenGrid = ( data ) => {
     setOpenGrid(data)
 
  }
 
+ //Abrir y cerrar Carrito de compras
  const handleViewCart = () => {
     setViewCart(!viewCart)
  }
@@ -174,7 +212,7 @@ const handleTotalPrice = (newPrice, lessPlus) => {
                         label="Ordenar por:" options={options} onSelect={ selectOrder }
                     />
                     <BtnCart 
-                        ordersList = {ordersList}
+                        ordersList = {numBadge}
                         handleViewCart = {() => handleViewCart()}
                     />
                 </div>
