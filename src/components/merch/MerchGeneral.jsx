@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Card } from "./Card";
 import BtnCart from "./BtnCart";
 import ProductCart from "./ProductCart";
+import { set } from "astro:schema";
 
 
 
@@ -47,7 +48,11 @@ const handleTotalPrice = (newPrice, lessPlus) => {
     //Agregar producto carritod e compras
     setOrderList(prev => {
         const exists = prev.some(p => p.id === newOrder.id);
-        if (exists) return prev;     // no agrega duplicado
+
+        // no agrega duplicado
+        if (exists) return prev;     
+
+        //Agrega funciona extras si no se duplica
         else if(!exists) {
 
             //Suma el total
@@ -166,6 +171,18 @@ const handleTotalPrice = (newPrice, lessPlus) => {
         }
   }
 
+
+  //MAnejar precio sumando unidades
+  const handlePlusTotalPrice = (newPrice) => {
+    setTotalPrice(totalPrice+newPrice)
+  }
+
+//MAnejar precio restando unidades
+  const handleLessTotalPrice = (newPrice) => {
+    setTotalPrice(totalPrice-newPrice)
+  }
+
+
     return(
         <div className={(openGrid) ? `container-merch active` : `container-merch`}>
             <section className="sec-tittles">
@@ -236,7 +253,11 @@ const handleTotalPrice = (newPrice, lessPlus) => {
                                     name={order.name}
                                     price={order.price}
                                     image={`${order.id}-1`}
-                                    deleteProduct={handleDeleteToCart}
+                                    deleteProduct= { handleDeleteToCart }
+                                    plusPrice= { handlePlusTotalPrice }
+                                    lessPrice= { handleLessTotalPrice }
+                                
+
                                     
                                 />
                             )

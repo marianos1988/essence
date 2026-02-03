@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../../styles/merch/ProductCart.css"
 
 
-export default function ProductCart({id ,name, price, image, deleteProduct }) {
+export default function ProductCart({id ,name, price, image, deleteProduct, plusPrice,lessPrice }) {
 
 
 
@@ -22,13 +22,18 @@ export default function ProductCart({id ,name, price, image, deleteProduct }) {
 
     const plusUnits = (unit) => {
         const plusUnit = unit + 1;
+
+        const plusPricee = price++;
         setUnits(plusUnit)
+        plusPrice(plusPricee)
     } 
 
     const lessUnits = (unit) => {
         if(!(unit == 1)) {
             const lessUnits = unit - 1
+            const lessPricee = price--;
             setUnits(lessUnits)
+            lessPrice(lessPricee)
         }
         
     }
