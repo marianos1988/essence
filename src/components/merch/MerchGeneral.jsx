@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Card } from "./Card";
 import BtnCart from "./BtnCart";
 import ProductCart from "./ProductCart";
-import { set } from "astro:schema";
+
 
 
 
@@ -182,6 +182,10 @@ const handleTotalPrice = (newPrice, lessPlus) => {
     setTotalPrice(totalPrice-newPrice)
   }
 
+  //MAnejar precio cambio de stock en input
+  const handleChangePrice = (newPrice) => {
+    setTotalPrice(newPrice)
+  }
 
     return(
         <div className={(openGrid) ? `container-merch active` : `container-merch`}>
@@ -256,6 +260,7 @@ const handleTotalPrice = (newPrice, lessPlus) => {
                                     deleteProduct= { handleDeleteToCart }
                                     plusPrice= { handlePlusTotalPrice }
                                     lessPrice= { handleLessTotalPrice }
+                                    changePrice={ handleChangePrice }
                                 
 
                                     

@@ -2,15 +2,16 @@ import { useState } from "react";
 import "../../styles/merch/ProductCart.css"
 
 
-export default function ProductCart({id ,name, price, image, deleteProduct, plusPrice,lessPrice }) {
+
+export default function ProductCart({id ,name, price, image, deleteProduct, plusPrice,lessPrice, changePrice }) {
 
 
 
-      // Carga todas las imágenes de la carpeta correcta
-  const images = import.meta.glob(`../../assets/merch/products/*`, {
-    eager: true,
-    import: "default"
-  });
+    // Carga todas las imágenes de la carpeta correcta
+    const images = import.meta.glob(`../../assets/merch/products/*`, {
+        eager: true,
+        import: "default"
+    });
  
 
   // Filtra solo las imágenes del producto que estan en la carpeta y mapea todas las fotos de la carpeta
@@ -18,33 +19,57 @@ export default function ProductCart({id ,name, price, image, deleteProduct, plus
     .filter(([key]) => key.includes(`/${image}`))
     .map(([, value]) => value.src);
 
-    const [units, setUnits] = useState(1);
-
-    const plusUnits = (unit) => {
-        const plusUnit = unit + 1;
-
-        const plusPricee = price++;
-        setUnits(plusUnit)
-        plusPrice(plusPricee)
-    } 
-
-    const lessUnits = (unit) => {
-        if(!(unit == 1)) {
-            const lessUnits = unit - 1
-            const lessPricee = price--;
-            setUnits(lessUnits)
-            lessPrice(lessPricee)
-        }
-        
+    const initialStateProduct = {
+        units: 1,
+        subtotal: price
     }
+    const [ product, setProduct ] = useState(initialStateProduct);
 
-    const handleOnchange = (value ) => {
 
-        const num = parseInt(value)
+    // Boton Sumar
+    const plusUnit = () => {
+        setProduct(prev => ({
+            ...prev,
+            units: prev.units + 1,
+            subtotal: prev.subtotal + price
+        }));
+    };
+
+
+    //Boton restar
+    const lessUnit = () => {
+        setProduct(prev => {
+            if (prev.units === 1) return prev; // no baja de 1
+
+            return {
+            ...prev,
+            units: prev.units - 1,
+            subtotal: prev.subtotal - price
+            };
+        });
+    };
+
+
+
+    const handleOnchange = (value) => {
+
+       
         if(value == "") {
-            setUnits(1)
+            setUnits(initialStateProduct)
         }else {
-        setUnits(num)
+        const num = parseInt(value) || 1;
+        setProduct(prev => {
+            if (prev.units  < 1) return prev; // no baja de 1
+
+            return {
+            ...prev,
+            units: num,
+            subtotal: num * price
+            };
+        });
+
+
+
         }
 
     }
@@ -53,6 +78,18 @@ export default function ProductCart({id ,name, price, image, deleteProduct, plus
         deleteProduct(id)
 
     }
+
+
+// const [debouncedSubtotal, setDebouncedSubtotal] = useState(product.subtotal);
+
+// useEffect(() => {
+//   const timer = setTimeout(() => {
+//     setDebouncedSubtotal(product.subtotal);
+//   }, 300);
+
+//   return () => clearTimeout(timer);
+// }, [debouncedSubtotal]);
+
 
     return(
         <div className="container-product-cart">
@@ -65,13 +102,13 @@ export default function ProductCart({id ,name, price, image, deleteProduct, plus
                 </div>
                 <div className="box-plus-less">
                     <div className="plus-less">
-                        <button onClick={()=>plusUnits(units)}>
+                        <button onClick={()=>plusUnit(product.units)}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-circle-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M9 12h6" /><path d="M12 9v6" /></svg>
                         </button>
 
-                        <input className="input-count" type="number"  value={units} onChange={(e) =>handleOnchange(e.target.value)}/>
+                        <input className="input-count" type="number"  value={product.units} onChange={(e) =>handleOnchange(e.target.value)}/>
                         
-                        <button onClick={()=>lessUnits(units)}>
+                        <button onClick={()=>lessUnit(product.units)}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-circle-minus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M9 12l6 0" /></svg>
                         </button>
                     </div>
@@ -79,7 +116,7 @@ export default function ProductCart({id ,name, price, image, deleteProduct, plus
             </div>
             <div className="box-right">
                 <div className="box-price">
-                    <h5>{price}</h5>
+                    <h5>{product.subtotal}</h5>
                 </div>
                 <div className="box-trash">
 
