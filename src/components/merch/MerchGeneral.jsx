@@ -2,7 +2,7 @@
 import Dropdown from "./Dropdown";
 import Filters from "./Filters";
 import "../../styles/merch/MerchGeneral.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Card } from "./Card";
 import BtnCart from "./BtnCart";
 import ProductCart from "./ProductCart";
@@ -14,7 +14,22 @@ export default function MerchGeneral( { categories, products }) {
 
 const stateOpenGrid = false;
 const stateViewCart = false;
-const stateProducts = products;
+const stateProducts = [];
+
+products.map( (product) => {
+
+let configProduct = {
+    ...product,
+    config: {
+        addTilde: false
+    }
+}
+stateProducts.push(configProduct)
+
+})
+
+
+
 
 
 const stateNameCategory = "Productos";
@@ -23,12 +38,18 @@ const stateNameCategory = "Productos";
  const [ nameCategory, setNameCategory ] = useState(stateNameCategory);
  const [viewCart, setViewCart] = useState(stateViewCart)
 
+ console.log(viewProducts)
+
 const stateOrdersList = []
  const [ ordersList, setOrderList ] = useState(stateOrdersList);
 const [numBadge, setNumBadge] = useState(0);
 
 const [ totalPrice, setTotalPrice ] = useState(0);
 
+
+// MAnejar tildes Seleccioanr producto en Carrito
+
+const [selectTildeCa] = useState([])
 
 //Manejar totales de carrito de compras
 const handleTotalPrice = (newPrice, lessPlus) => {
@@ -60,6 +81,7 @@ const handleTotalPrice = (newPrice, lessPlus) => {
 
             //Aumenta el nummero de badge
             setNumBadge(ordersList.length + 1)
+
         }
         return [...prev, newOrder];
     });
@@ -187,6 +209,22 @@ const handleTotalPrice = (newPrice, lessPlus) => {
     setTotalPrice(newPrice)
   }
 
+//   useEffect(()=>{
+//     const stateProducts = []
+
+//     products.map((product) => {
+        
+//         let producto = {
+//             ...product,
+//             config: {
+//                 selectCart: false
+//             }
+//         }
+//         stateProducts.push(producto)
+
+//     });
+//   },[stateProducts])
+
     return(
         <div className={(openGrid) ? `container-merch active` : `container-merch`}>
             <section className="sec-tittles">
@@ -224,10 +262,10 @@ const handleTotalPrice = (newPrice, lessPlus) => {
                                     id={product.id}
                                     name={product.name}
                                     price={product.price}
-                                    images={product.images}
                                     description={product.description}
                                     isThereStock={true} 
                                     upToCart2={ handleSetOrderList }
+                                    tilde={product.config.addTilde}
                                 />
                             )
                         )

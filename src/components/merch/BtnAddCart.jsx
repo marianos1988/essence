@@ -7,7 +7,11 @@ export default function BtnAddCart({ isThereStock, addToCart, upToCart  }) {
 
         const addCart = {
             ...addToCart,
-            selectProduct: true
+            config: {
+            
+                selectProduct: true,
+            }
+            
         } 
 
 

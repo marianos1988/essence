@@ -68,8 +68,6 @@ export default function ProductCart({id ,name, price, image, deleteProduct, plus
             };
         });
 
-
-
         }
 
     }
@@ -79,16 +77,6 @@ export default function ProductCart({id ,name, price, image, deleteProduct, plus
 
     }
 
-
-// const [debouncedSubtotal, setDebouncedSubtotal] = useState(product.subtotal);
-
-// useEffect(() => {
-//   const timer = setTimeout(() => {
-//     setDebouncedSubtotal(product.subtotal);
-//   }, 300);
-
-//   return () => clearTimeout(timer);
-// }, [debouncedSubtotal]);
 
 
     return(
