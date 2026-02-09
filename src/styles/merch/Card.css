@@ -33,14 +33,29 @@
 }
 
 .desc-product h4 {
- font-family: "Badcomic", sans-serif;
+  font-family: "Badcomic", sans-serif;
   line-height: 0px;
   font-size: small;
 
 }
 
-.desc-product button {
+
+
+.desc-product .group-btns button {
   color: #fff;
+}
+
+.desc-product .group-btns svg {
+  display: none;
+  transform: translate(170px, -40px);
+  width: 35px;
+  height: 35px;
+  color: #0FF0FC;
+  animation: aparecer .4s ease-in;
+}
+
+.desc-product .group-btns svg.checked {
+  display: inherit;
 }
 
 @media (min-width:300px) AND (max-width:350px) {

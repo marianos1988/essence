@@ -5,7 +5,11 @@ export default function BtnAddCart({ isThereStock, addToCart, upToCart  }) {
     
     const handleAddToCart = () => {
 
-        const addCart = addToCart
+        const addCart = {
+            ...addToCart,
+            selectProduct: true
+        } 
+
 
         upToCart(addCart);
     }
