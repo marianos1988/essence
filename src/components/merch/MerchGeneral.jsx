@@ -24,11 +24,10 @@ let configProduct = {
         addTilde: false
     }
 }
+
 stateProducts.push(configProduct)
 
 })
-
-
 
 
 
@@ -38,7 +37,7 @@ const stateNameCategory = "Productos";
  const [ nameCategory, setNameCategory ] = useState(stateNameCategory);
  const [viewCart, setViewCart] = useState(stateViewCart)
 
- console.log(viewProducts)
+
 
 const stateOrdersList = []
  const [ ordersList, setOrderList ] = useState(stateOrdersList);
@@ -46,10 +45,6 @@ const [numBadge, setNumBadge] = useState(0);
 
 const [ totalPrice, setTotalPrice ] = useState(0);
 
-
-// MAnejar tildes Seleccioanr producto en Carrito
-
-const [selectTildeCa] = useState([])
 
 //Manejar totales de carrito de compras
 const handleTotalPrice = (newPrice, lessPlus) => {
@@ -87,23 +82,74 @@ const handleTotalPrice = (newPrice, lessPlus) => {
     });
         
 
- }
+        // Agregar tilde en productos
+        // const newViewProducts = []
+        // viewProducts.map((product) => {
+
+
+        //     if(product.id !== newOrder.id) {
+
+        //         newViewProducts.push(product)
+                
+        //     } else {
+
+        //         let object = {
+        //             ...product,
+        //             config: {
+        //                 addTilde: true
+        //             }
+        //         }
+
+        //         newViewProducts.push(object)
+        //     }
+
+
+        // })
+        //     setViewProducts(newViewProducts)
+
+        // Agregar tilde en producto
+        // setViewProducts(prevProducts =>
+        //     prevProducts.map(product =>
+        //     product.id === newOrder.id
+        //         ? { 
+        //             ...product,
+        //             config: { addTilde: false } 
+        //         }
+        //         : product
+        // ))
+
+}
 
 
 
 //Borrar producto del carrito
   const handleDeleteToCart = (orderDelete) => {
-    let newList = []
-    ordersList.map(
-        (order) => {
-            if(order.id !== orderDelete) {
-                newList.push(order)
-            }
-        }
-    )
+        let newList = []
+        ordersList.map(
+            (order) => {
+                if(order.id !== orderDelete) {
+                    newList.push(order)
 
-    setOrderList(newList)
- }
+                }
+            }
+        )
+
+        setOrderList(newList)
+
+         // Quitar tilde agregar carrito
+        setViewProducts(prevProducts =>
+            prevProducts.map(product =>
+            product.id === orderDelete
+                ? { 
+                    ...product,
+                    config: { addTilde: false } 
+                }
+                : product
+        ))
+
+    }
+
+
 
  //Abrir y cerrar filtros
  const handleOpenGrid = ( data ) => {
@@ -209,21 +255,22 @@ const handleTotalPrice = (newPrice, lessPlus) => {
     setTotalPrice(newPrice)
   }
 
-//   useEffect(()=>{
-//     const stateProducts = []
 
-//     products.map((product) => {
-        
-//         let producto = {
-//             ...product,
-//             config: {
-//                 selectCart: false
-//             }
-//         }
-//         stateProducts.push(producto)
+  useEffect(() => {
 
-//     });
-//   },[stateProducts])
+    products.map( (product) => {
+
+        let configProduct = {
+            ...product,
+            config: {
+                addTilde: false
+            }
+        }
+
+        stateProducts.push(configProduct)
+
+        })
+  },[])
 
     return(
         <div className={(openGrid) ? `container-merch active` : `container-merch`}>
@@ -266,6 +313,7 @@ const handleTotalPrice = (newPrice, lessPlus) => {
                                     isThereStock={true} 
                                     upToCart2={ handleSetOrderList }
                                     tilde={product.config.addTilde}
+
                                 />
                             )
                         )

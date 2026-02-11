@@ -3,7 +3,7 @@ import "../../styles/merch/ProductCart.css"
 
 
 
-export default function ProductCart({id ,name, price, image, deleteProduct, plusPrice,lessPrice, changePrice }) {
+export default function ProductCart({id ,name, price, image, deleteProduct }) {
 
 
 
