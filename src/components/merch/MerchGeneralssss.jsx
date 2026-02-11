@@ -31,6 +31,9 @@ stateProducts.push(configProduct)
 
 
 
+
+
+
 const stateNameCategory = "Productos";
  const [ openGrid, setOpenGrid ] = useState(stateOpenGrid);
  const [viewProducts, setViewProducts ] = useState(stateProducts);
@@ -45,6 +48,10 @@ const [numBadge, setNumBadge] = useState(0);
 
 const [ totalPrice, setTotalPrice ] = useState(0);
 
+
+// MAnejar tildes Seleccioanr producto en Carrito
+
+const [selectTildeCa] = useState([])
 
 //Manejar totales de carrito de compras
 const handleTotalPrice = (newPrice, lessPlus) => {
@@ -103,20 +110,8 @@ const handleTotalPrice = (newPrice, lessPlus) => {
                 newViewProducts.push(object)
             }
 
-
-        })
             setViewProducts(newViewProducts)
-
-        // Agregar tilde en producto
-        // setViewProducts(prevProducts =>
-        //     prevProducts.map(product =>
-        //     product.id === newOrder.id
-        //         ? { 
-        //             ...product,
-        //             config: { addTilde: false } 
-        //         }
-        //         : product
-        // ))
+        })
 
 }
 
@@ -130,26 +125,48 @@ const handleTotalPrice = (newPrice, lessPlus) => {
                 if(order.id !== orderDelete) {
                     newList.push(order)
 
+
+
+
+
                 }
             }
         )
 
         setOrderList(newList)
 
-         // Quitar tilde agregar carrito
-        setViewProducts(prevProducts =>
-            prevProducts.map(product =>
-            product.id === orderDelete
-                ? { 
-                    ...product,
-                    config: { addTilde: false } 
-                }
-                : product
-        ))
+
 
     }
 
+    const handleDeleteTilde = () => {
 
+        // Quitar tilde agregar carrito
+        const newViewProducts = []
+        viewProducts.map((product) => {
+
+
+            if(product.id !== orderDelete) {
+
+                newViewProducts.push(product)
+                
+            } else {
+
+                let object = {
+                    ...product,
+                    config: {
+                        addTilde: false
+                    }
+                }
+
+                newViewProducts.push(object)
+            }
+
+
+        })
+
+        setViewProducts(newViewProducts)
+    }
 
  //Abrir y cerrar filtros
  const handleOpenGrid = ( data ) => {
@@ -301,7 +318,7 @@ const handleTotalPrice = (newPrice, lessPlus) => {
                                     isThereStock={true} 
                                     upToCart2={ handleSetOrderList }
                                     tilde={product.config.addTilde}
-
+                                    upTilde={ handleDeleteTilde }
                                 />
                             )
                         )
