@@ -147,6 +147,9 @@ const handleTotalPrice = (newPrice, lessPlus) => {
                 : product
         ))
 
+            //Disminuye el numero de badge
+            setNumBadge(ordersList.length - 1)
+
     }
 
 
