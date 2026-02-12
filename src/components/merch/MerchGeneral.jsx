@@ -82,41 +82,16 @@ const handleTotalPrice = (newPrice, lessPlus) => {
     });
         
 
-        // Agregar tilde en productos
-        const newViewProducts = []
-        viewProducts.map((product) => {
-
-
-            if(product.id !== newOrder.id) {
-
-                newViewProducts.push(product)
-                
-            } else {
-
-                let object = {
+        //Agregar tilde en producto
+        setViewProducts(prevProducts =>
+            prevProducts.map(product =>
+            product.id === newOrder.id
+                ? { 
                     ...product,
-                    config: {
-                        addTilde: true
-                    }
+                    config: { addTilde: true } 
                 }
-
-                newViewProducts.push(object)
-            }
-
-
-        })
-            setViewProducts(newViewProducts)
-
-        // Agregar tilde en producto
-        // setViewProducts(prevProducts =>
-        //     prevProducts.map(product =>
-        //     product.id === newOrder.id
-        //         ? { 
-        //             ...product,
-        //             config: { addTilde: false } 
-        //         }
-        //         : product
-        // ))
+                : product
+        ))
 
 }
 
