@@ -46,7 +46,7 @@ const [numBadge, setNumBadge] = useState(0);
 const [ totalPrice, setTotalPrice ] = useState(0);
 
 
-//Manejar totales de carrito de compras
+//Manejar totales agregar o eliminar de carrito de compras
 const handleTotalPrice = (newPrice, lessPlus) => {
 
     if(lessPlus == "plus")
@@ -71,7 +71,7 @@ const handleTotalPrice = (newPrice, lessPlus) => {
         //Agrega funciona extras si no se duplica
         else if(!exists) {
 
-            //Suma el total
+            //Suma el total 
             handleTotalPrice(newOrder.price,"plus");
 
             //Aumenta el nummero de badge
@@ -220,12 +220,15 @@ const handleTotalPrice = (newPrice, lessPlus) => {
 
   //MAnejar precio sumando unidades
   const handlePlusTotalPrice = (newPrice) => {
+
     setTotalPrice(totalPrice+newPrice)
   }
 
 //MAnejar precio restando unidades
   const handleLessTotalPrice = (newPrice) => {
-    setTotalPrice(totalPrice-newPrice)
+     setTotalPrice(prev => (prev > newPrice ? totalPrice - newPrice : prev));// no baja de 1
+    // if(newPrice < newPrice) setTotalPrice(totalPrice-newPrice) 
+    
   }
 
   //MAnejar precio cambio de stock en input
@@ -310,9 +313,10 @@ const handleTotalPrice = (newPrice, lessPlus) => {
                                     price={order.price}
                                     image={`${order.id}-1`}
                                     deleteProduct= { handleDeleteToCart }
-                                    plusPrice= { handlePlusTotalPrice }
-                                    lessPrice= { handleLessTotalPrice }
+                                    plusTotalPrice= { handlePlusTotalPrice }
+                                    lessTotalPrice= { handleLessTotalPrice }
                                     changePrice={ handleChangePrice }
+
                                 
 
                                     

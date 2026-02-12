@@ -3,7 +3,7 @@ import "../../styles/merch/ProductCart.css"
 
 
 
-export default function ProductCart({id ,name, price, image, deleteProduct }) {
+export default function ProductCart({id ,name, price, image, deleteProduct, plusTotalPrice, lessTotalPrice, changePrice }) {
 
 
 
@@ -33,6 +33,9 @@ export default function ProductCart({id ,name, price, image, deleteProduct }) {
             units: prev.units + 1,
             subtotal: prev.subtotal + price
         }));
+
+        plusTotalPrice(price)
+
     };
 
 
@@ -47,6 +50,8 @@ export default function ProductCart({id ,name, price, image, deleteProduct }) {
             subtotal: prev.subtotal - price
             };
         });
+
+        lessTotalPrice(price)
     };
 
 
@@ -67,6 +72,7 @@ export default function ProductCart({id ,name, price, image, deleteProduct }) {
             subtotal: num * price
             };
         });
+
 
         }
 
