@@ -50,8 +50,10 @@ export default function ProductCart({id ,name, price, image, deleteProduct, plus
             subtotal: prev.subtotal - price
             };
         });
+        if(product.units > 1) {
+            lessTotalPrice(price)
+        }
 
-        lessTotalPrice(price)
     };
 
 

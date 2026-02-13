@@ -226,7 +226,7 @@ const handleTotalPrice = (newPrice, lessPlus) => {
 
 //MAnejar precio restando unidades
   const handleLessTotalPrice = (newPrice) => {
-     setTotalPrice(prev => (prev > newPrice ? totalPrice - newPrice : prev));// no baja de 1
+     setTotalPrice(prev => (prev > newPrice ? totalPrice - newPrice : totalPrice+newPrice));// no baja de 1
     // if(newPrice < newPrice) setTotalPrice(totalPrice-newPrice) 
     
   }
