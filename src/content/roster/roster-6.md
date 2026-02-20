@@ -18,5 +18,11 @@
 ---
 
 
-Desarrolla un sonido profundo y melódico, donde conviven grooves hipnóticos, atmósferas envolventes y una narrativa pensada para la pista. 
-Con influencias que van desde Pink Floyd hasta referentes de la escena como Solomun y HOSH, sus sets equilibran dark disco, emoción y energía de club con una oscura identidad distintiva.
+D'LOSANTOS es un Dj/Productor oriundo de Buenos Aires, Argentina.
+Su proyecto se basa en crear una profunda atmósfera, experimentando con sonidos percusivos y disruptivos, explorando desde el indie dance hasta el melodic house & techno.
+
+Se ah presentado en clubes como Crobar, Dvne Park, Futura, Quba, Under, Bahrein.
+
+Además compartió cabina con Djs de renombre como Raxon, Adam sellouk, Mark Reeve, Gespona, Emiliano Demarco, Bob tosh, Xul Nox, Agustin Giri, entre otros.
+
+Por ultimo creo la productora Undergate, con su sello discográfico. Impulsando la escena Nacional y abriendo la puerta a nuevos artistas internacionales.
