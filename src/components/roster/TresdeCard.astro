@@ -20,6 +20,10 @@ import Atmoz1 from "../../assets/roster/atmoz1.jpg"
 import Atmoz2 from "../../assets/roster/atmoz2.jpg"
 import AtmozLogo from "../../assets/roster/atmozlogo.png"
 
+import Xoa1 from "../../assets/roster/xoa1.jpg"
+import Xoa2 from "../../assets/roster/xoa2.jpg"
+import XoaLogo from "../../assets/roster/xoalogo.png"
+
 let finalImg1:any;
 let finalImg2:any;
 let finalLogo:any;
@@ -41,6 +45,10 @@ switch(img1) {
     case "atmoz1": 
       finalImg1 = Atmoz1.src; 
     break;
+
+    case "xoa1": 
+      finalImg1 = Xoa1.src; 
+    break;
 }
 
 switch(img2) {
@@ -60,6 +68,10 @@ switch(img2) {
     case "atmoz2": 
         finalImg2 = Atmoz2.src; 
     break;
+
+    case "xoa2": 
+        finalImg2 = Xoa2.src; 
+    break;
 }
 
 switch(logo) {
@@ -78,6 +90,10 @@ switch(logo) {
 
     case "atmozlogo": 
       finalLogo = AtmozLogo.src; 
+    break;
+
+    case "xoalogo": 
+      finalLogo = XoaLogo.src; 
     break;
 }
 
@@ -194,6 +210,14 @@ switch(logo) {
 
     .title.aliagalogo {
       transform: translateY(-50px);
+    }
+
+    .title.xoalogo {
+      transform: translateY(-10px);
+    }
+
+    .card:hover .title.xoalogo {
+      transform: translateY(-60px);
     }
 
     .card:hover .title.aliagalogo {

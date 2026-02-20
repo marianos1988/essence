@@ -16,6 +16,9 @@ import RapettiLogo from "../../assets/roster/rapettilogo.png"
 import Atmoz2 from "../../assets/roster/atmoz2.jpg"
 import AtmozLogo from "../../assets/roster/atmozlogo.png"
 
+import Xoa2 from "../../assets/roster/xoa2.jpg";
+import XoaLogo from "../../assets/roster/xoalogo.png"
+
 import BtnReturn from '../../components/roster/BtnReturn.astro';
 
 import BtnSocialMedia from '../../components/roster/BtnSocialMedia.astro';
@@ -93,8 +96,20 @@ switch(infoRoster.slug) {
         socialMedia = {
             instagram: data.instagram,
             youtube: data.youtube,
-            spotify: data.instagram,
+            spotify: data.spotify,
             soundcloud: null,
+            tiktok: null
+        }
+        break;
+
+    case "roster-5": 
+        imagen = Xoa2; 
+        logoDj = XoaLogo;
+        socialMedia = {
+            instagram: data.instagram,
+            youtube: data.youtube,
+            spotify: null,
+            soundcloud: data.soundcloud,
             tiktok: null
         }
         break;
@@ -147,16 +162,16 @@ switch(infoRoster.slug) {
                             {
                                 socialMedia.spotify != null && (
                                     <BtnSocialMedia
-                                        socialMedia="youtube"
-                                        link={socialMedia.youtube}
+                                        socialMedia="spotify"
+                                        link={socialMedia.spotify}
                                     />
                                 )
                             }
                             {
                                 socialMedia.youtube != null && (
                                     <BtnSocialMedia
-                                        socialMedia="spotify"
-                                        link={socialMedia.spotify}
+                                        socialMedia="youtube"
+                                        link={socialMedia.youtube}
                                     />
                                 )
                             }
@@ -325,11 +340,10 @@ switch(infoRoster.slug) {
         margin-left: -8px;
     } 
 
-    /* .aliagalogo {
-        width: 197px;
-        height: 47px;
-        transform: scale(1.1);
-    } */
+    .xoalogo {
+        width: 200px;
+        transform: scaleX(1.2);
+    }
     .aliagalogo {
         transform: scale(1.2);
         width:280px;
@@ -402,6 +416,11 @@ switch(infoRoster.slug) {
         transform: scale(1, .5);
         width: 200px;
     }
+
+        .xoalogo {
+        width: 200px;
+        transform: scaleX(1.2);
+    }
    
     @media (min-width:401px) AND (max-width: 500px) {
         .box-info {
@@ -441,6 +460,11 @@ switch(infoRoster.slug) {
     .atmozlogo {
         transform: scale(1, .5);
         width: 200px;
+    }
+
+        .xoalogo {
+        width: 250px;
+        transform: scaleX(1.2);
     }
     }
 
