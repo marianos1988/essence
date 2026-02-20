@@ -24,6 +24,10 @@ import Xoa1 from "../../assets/roster/xoa1.jpg"
 import Xoa2 from "../../assets/roster/xoa2.jpg"
 import XoaLogo from "../../assets/roster/xoalogo.png"
 
+import Dlosantos1 from "../../assets/roster/dlosantos1.jpg"
+import Dlosantos2 from "../../assets/roster/dlosantos2.jpg"
+import DlosantosLogo from "../../assets/roster/dlosantoslogo.png"
+
 let finalImg1:any;
 let finalImg2:any;
 let finalLogo:any;
@@ -49,6 +53,10 @@ switch(img1) {
     case "xoa1": 
       finalImg1 = Xoa1.src; 
     break;
+
+    case "dlosantos1": 
+      finalImg1 = Dlosantos1.src; 
+    break;
 }
 
 switch(img2) {
@@ -72,6 +80,10 @@ switch(img2) {
     case "xoa2": 
         finalImg2 = Xoa2.src; 
     break;
+
+    case "dlosantos2": 
+        finalImg2 = Dlosantos2.src; 
+    break;
 }
 
 switch(logo) {
@@ -94,6 +106,10 @@ switch(logo) {
 
     case "xoalogo": 
       finalLogo = XoaLogo.src; 
+    break;
+        
+    case "dlosantoslogo": 
+      finalLogo = DlosantosLogo.src; 
     break;
 }
 
@@ -214,6 +230,16 @@ switch(logo) {
 
     .title.xoalogo {
       transform: translateY(-10px);
+    }
+
+    .title.dlosantoslogo {
+      transform: translateY(40px) scale(1.2);;
+
+    }
+
+      .card:hover .title.dlosantoslogo {
+      transform: translateY(-20px) scale(1.2);;
+
     }
 
     .card:hover .title.xoalogo {
