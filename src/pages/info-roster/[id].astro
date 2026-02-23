@@ -22,6 +22,9 @@ import XoaLogo from "../../assets/roster/xoalogo.png"
 import Dlosantos2 from "../../assets/roster/dlosantos2.jpg";
 import DlosantosLogo from "../../assets/roster/dlosantoslogo.png"
 
+import Nymino2 from "../../assets/roster/nymino2.jpg";
+import NyminoLogo from "../../assets/roster/nyminologo.png"
+
 import BtnReturn from '../../components/roster/BtnReturn.astro';
 
 import BtnSocialMedia from '../../components/roster/BtnSocialMedia.astro';
@@ -124,6 +127,18 @@ switch(infoRoster.slug) {
             instagram: data.instagram,
             youtube: data.youtube,
             spotify: data.spotify,
+            soundcloud: data.soundcloud,
+            tiktok: null
+        }
+        break;
+
+        case "roster-7": 
+        imagen = Nymino2; 
+        logoDj = NyminoLogo;
+        socialMedia = {
+            instagram: data.instagram,
+            youtube: null,
+            spotify: null,
             soundcloud: data.soundcloud,
             tiktok: null
         }

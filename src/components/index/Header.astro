@@ -1,5 +1,4 @@
 ---
-import BorderEffectLogo from "./BorderEffectLogo.astro";
 import Logo from "../../assets/header/logo.png"
 
 
@@ -14,10 +13,7 @@ import Logo from "../../assets/header/logo.png"
         </div>
     </a>
     <div class="eslogan">
-        <BorderEffectLogo>
             <h1>WHERE MUSIC BECOMES ESSENCE, AND EVERY BEAT IS AN EXPERIENCE</h1>
-        </BorderEffectLogo>
-
     </div>
 </header>
 
@@ -39,7 +35,9 @@ import Logo from "../../assets/header/logo.png"
 
     }
     
-
+    .eslogan h1 {
+        transform: translateY(-35px);
+    }
 
     @media (min-width:769px) {
 
