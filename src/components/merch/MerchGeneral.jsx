@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { Card } from "./Card";
 import BtnCart from "./BtnCart";
 import ProductCart from "./ProductCart";
-
+import BtnOrder from "./BtnOrder";
 
 
 
@@ -62,7 +62,7 @@ const handleTotalPrice = (newPrice, lessPlus) => {
 
 
     //Agregar producto carritod e compras
-    setOrderList(prev => {
+    setOrderList(prev => { 
         const exists = prev.some(p => p.id === newOrder.id);
 
         // no agrega duplicado
@@ -330,7 +330,11 @@ const handleTotalPrice = (newPrice, lessPlus) => {
                     <h3>Total</h3>
                     <h3 className="total">{`$${totalPrice}`}</h3>
                 </div>
-
+                <div className="box-order">
+                    <BtnOrder 
+                        isThereStock={true}
+                    />
+                </div>
             </section>
         </div>
     )  

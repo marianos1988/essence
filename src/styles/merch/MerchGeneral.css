@@ -150,6 +150,13 @@
     transform: translateX(-25px);
 }
 
+.box-order {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+
 
 
 

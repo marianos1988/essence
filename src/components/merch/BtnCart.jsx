@@ -1,4 +1,4 @@
-import { object } from "astro:schema";
+
 import "../../styles/merch/BtnCart.css";
 
 export default function BtnCart({ ordersList, handleViewCart }) {
