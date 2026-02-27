@@ -3,7 +3,7 @@ import "../../styles/merch/ProductCart.css"
 
 
 
-export default function ProductCart({id ,name, price, image, deleteProduct, plusTotalPrice, lessTotalPrice, changePrice }) {
+export default function ProductCart({id ,name, price, image, subtotal, quantity, increaseQuantity, decreaseQuantity, changeQuantity}) {
 
 
 
@@ -19,40 +19,34 @@ export default function ProductCart({id ,name, price, image, deleteProduct, plus
     .filter(([key]) => key.includes(`/${image}`))
     .map(([, value]) => value.src);
 
-    const initialStateProduct = {
-        units: 1,
-        subtotal: price
-    }
-    const [ product, setProduct ] = useState(initialStateProduct);
 
+    const [valueInput, setValueInput] = useState(quantity)
 
     // Boton Sumar
     const plusUnit = () => {
-        setProduct(prev => ({
-            ...prev,
-            units: prev.units + 1,
-            subtotal: prev.subtotal + price
-        }));
 
-        plusTotalPrice(price)
+        const object = {
+            id: id,
+            quantity: quantity + 1
+        }
+
+        increaseQuantity(object)
+        setValueInput(object.quantity)
 
     };
 
 
     //Boton restar
     const lessUnit = () => {
-        setProduct(prev => {
-            if (prev.units === 1) return prev; // no baja de 1
-
-            return {
-            ...prev,
-            units: prev.units - 1,
-            subtotal: prev.subtotal - price
-            };
-        });
-        if(product.units > 1) {
-            lessTotalPrice(price)
+        
+        const object = {
+            id: id,
+            quantity: quantity - 1
         }
+
+        decreaseQuantity(object)
+        setValueInput(object.quantity)
+        
 
     };
 
@@ -62,18 +56,25 @@ export default function ProductCart({id ,name, price, image, deleteProduct, plus
 
        
         if(value == "") {
-            setUnits(initialStateProduct)
+            quantity = 1
+
         }else {
         const num = parseInt(value) || 1;
-        setProduct(prev => {
-            if (prev.units  < 1) return prev; // no baja de 1
 
-            return {
-            ...prev,
-            units: num,
-            subtotal: num * price
-            };
-        });
+            if (quantity < 1) return 1; // no baja de 1
+
+            return (
+                
+
+                changeQuantity({
+                    id:id,
+                    quantity: num
+                })
+
+                                
+
+            );
+
 
 
         }
@@ -98,13 +99,16 @@ export default function ProductCart({id ,name, price, image, deleteProduct, plus
                 </div>
                 <div className="box-plus-less">
                     <div className="plus-less">
-                        <button onClick={()=>plusUnit(product.units)}>
+                        <button onClick={()=>plusUnit()}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-circle-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M9 12h6" /><path d="M12 9v6" /></svg>
                         </button>
 
-                        <input className="input-count" type="number"  value={product.units} onChange={(e) =>handleOnchange(e.target.value)}/>
+                        <input className="input-count" type="number"  value={quantity} onChange={(e) =>{changeQuantity({
+                                id:id,
+                                quantity:e.target.value
+                            })}}/>
                         
-                        <button onClick={()=>lessUnit(product.units)}>
+                        <button onClick={()=>lessUnit()}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-circle-minus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M9 12l6 0" /></svg>
                         </button>
                     </div>
@@ -112,7 +116,7 @@ export default function ProductCart({id ,name, price, image, deleteProduct, plus
             </div>
             <div className="box-right">
                 <div className="box-price">
-                    <h5>{product.subtotal}</h5>
+                    <h5>{subtotal}</h5>
                 </div>
                 <div className="box-trash">
 

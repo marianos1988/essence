@@ -7,7 +7,6 @@ import { Card } from "./Card";
 import BtnCart from "./BtnCart";
 import ProductCart from "./ProductCart";
 import BtnOrder from "./BtnOrder";
-import { object } from "astro:schema";
 
 
 
@@ -227,58 +226,21 @@ const handleTotalPrice = (newPrice, lessPlus) => {
 
 
   //MAnejar precio sumando unidades
-  const handleIncreaseQuantity = ({id, quantity}) => {
+  const handlePlusTotalPrice = (newPrice) => {
 
-
-    setOrderList(prevCart =>
-        prevCart.map(product =>
-        product.id === id
-            ? {
-                ...product,
-                quantity: quantity,
-                subtotal: product.price * quantity
-            }
-            : product
-        )
-    );
-
-
-
-    };
+    setTotalPrice(totalPrice+newPrice)
+  }
 
 //MAnejar precio restando unidades
-  const handleDecreaseQuantity = ({ id, quantity }) => {
-
-    //  setTotalPrice(prev => (prev > newPrice ? totalPrice - newPrice : totalPrice+newPrice));// no baja de 1
-    setOrderList(prevCart =>
-        prevCart.map(product =>
-        product.id === id & product.quantity > 1
-            ? {
-                ...product,
-                quantity: quantity,
-                subtotal: product.price * quantity
-            }
-            : product
-        )
-    );
+  const handleLessTotalPrice = (newPrice) => {
+     setTotalPrice(prev => (prev > newPrice ? totalPrice - newPrice : totalPrice+newPrice));// no baja de 1
+    // if(newPrice < newPrice) setTotalPrice(totalPrice-newPrice) 
     
   }
 
   //MAnejar precio cambio de stock en input
-  const handleChangeQuantity = ({id, quantity}) => {
-
-    setOrderList(prevCart =>
-        prevCart.map(product =>
-        product.id === id & product.quantity > 1
-            ? {
-                ...product,
-                quantity: quantity,
-                subtotal: product.price * quantity
-            }
-            : product
-        )
-    );
-    console.log(ordersList)
+  const handleChangePrice = (newPrice) => {
+    setTotalPrice(newPrice)
   }
 
 
@@ -357,13 +319,14 @@ const handleTotalPrice = (newPrice, lessPlus) => {
                                     name={order.name}
                                     price={order.price}
                                     image={`${order.id}-1`}
-                                    subtotal={order.subtotal}
-                                    quantity={order.quantity}
                                     deleteProduct= { handleDeleteToCart }
-                                    increaseQuantity= { handleIncreaseQuantity }
-                                    decreaseQuantity= { handleDecreaseQuantity }
-                                    changeQuantity={ handleChangeQuantity }
+                                    plusTotalPrice= { handlePlusTotalPrice }
+                                    lessTotalPrice= { handleLessTotalPrice }
+                                    changePrice={ handleChangePrice }
 
+                                
+
+                                    
                                 />
                             )
                         )
