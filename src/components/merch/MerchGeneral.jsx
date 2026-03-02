@@ -7,7 +7,7 @@ import { Card } from "./Card";
 import BtnCart from "./BtnCart";
 import ProductCart from "./ProductCart";
 import BtnOrder from "./BtnOrder";
-import { object } from "astro:schema";
+
 
 
 
@@ -40,6 +40,7 @@ const stateNameCategory = "Productos";
 
 
 
+
 const stateOrdersList = []
  const [ ordersList, setOrderList ] = useState(stateOrdersList);
 const [numBadge, setNumBadge] = useState(0);
@@ -62,7 +63,7 @@ const handleTotalPrice = (newPrice, lessPlus) => {
  const handleSetOrderList = (newOrder) => {
 
 
-    //Agregar producto carritod e compras
+    //Agregar producto carrito de compras
     setOrderList(prev => { 
         const exists = prev.some(p => p.id === newOrder.id);
 
@@ -267,9 +268,10 @@ const handleTotalPrice = (newPrice, lessPlus) => {
   //MAnejar precio cambio de stock en input
   const handleChangeQuantity = ({id, quantity}) => {
 
+
     setOrderList(prevCart =>
         prevCart.map(product =>
-        product.id === id & product.quantity > 1
+        product.id === id
             ? {
                 ...product,
                 quantity: quantity,
@@ -278,7 +280,7 @@ const handleTotalPrice = (newPrice, lessPlus) => {
             : product
         )
     );
-    console.log(ordersList)
+
   }
 
 
