@@ -42,21 +42,22 @@ const stateNameCategory = "Productos";
 
 
 const stateOrdersList = []
+const [total, setTotal] = useState(0)
  const [ ordersList, setOrderList ] = useState(stateOrdersList);
 const [numBadge, setNumBadge] = useState(0);
 
-const [ totalPrice, setTotalPrice ] = useState(0);
+
 
 
 //Manejar totales agregar o eliminar de carrito de compras
-const handleTotalPrice = (newPrice, lessPlus) => {
+// const handleTotalPrice = (newPrice, lessPlus) => {
 
-    if(lessPlus == "plus")
-        setTotalPrice(totalPrice + newPrice)
-    else if(lessPlus == "less") {
-       setTotalPrice(totalPrice - newPrice)
-    }
-}
+//     if(lessPlus == "plus")
+//         setTotalPrice(totalPrice + newPrice)
+//     else if(lessPlus == "less") {
+//        setTotalPrice(totalPrice - newPrice)
+//     }
+// }
 
 
 //Manejar agregar producto al carrito
@@ -74,18 +75,21 @@ const handleTotalPrice = (newPrice, lessPlus) => {
         else if(!exists) {
 
             //Suma el total 
-            handleTotalPrice(newOrder.price,"plus");
+            setTotal(total + newOrder.price)
 
             //Aumenta el nummero de badge
             setNumBadge(ordersList.length + 1)
 
         }
-        return [...prev, {
-            ...newOrder,
-            quantity: 1,
-            subtotal: newOrder.price
 
-        }];
+    
+        return [...prev,
+                    {
+                    ...newOrder,
+                    quantity: 1,
+                    subtotal: newOrder.price
+
+                }];
     });
         
 
@@ -100,7 +104,7 @@ const handleTotalPrice = (newPrice, lessPlus) => {
                 : product
         ))
 
-        console.log(ordersList)
+
 
 }
 
@@ -243,7 +247,13 @@ const handleTotalPrice = (newPrice, lessPlus) => {
         )
     );
 
-
+  ordersList.map(
+    (product) => {
+        if(product.id === id) {
+            setTotal(total + product.price)
+        }
+    }
+  )
 
     };
 
@@ -262,6 +272,13 @@ const handleTotalPrice = (newPrice, lessPlus) => {
             : product
         )
     );
+
+    ordersList.map(
+    (product) => {
+        if(product.id === id & quantity > 0 ) {
+            setTotal(total - product.price)
+        }
+    });
     
   }
 
@@ -374,7 +391,7 @@ const handleTotalPrice = (newPrice, lessPlus) => {
 
                 <div className="box-total"> 
                     <h3>Total</h3>
-                    <h3 className="total">{`$${totalPrice}`}</h3>
+                    <h3 className="total">{`$${total}`}</h3>
                 </div>
                 <div className="box-order">
                     <BtnOrder 
