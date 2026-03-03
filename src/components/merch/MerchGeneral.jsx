@@ -42,22 +42,10 @@ const stateNameCategory = "Productos";
 
 
 const stateOrdersList = []
-const [total, setTotal] = useState(0)
+
  const [ ordersList, setOrderList ] = useState(stateOrdersList);
 const [numBadge, setNumBadge] = useState(0);
 
-
-
-
-//Manejar totales agregar o eliminar de carrito de compras
-// const handleTotalPrice = (newPrice, lessPlus) => {
-
-//     if(lessPlus == "plus")
-//         setTotalPrice(totalPrice + newPrice)
-//     else if(lessPlus == "less") {
-//        setTotalPrice(totalPrice - newPrice)
-//     }
-// }
 
 
 //Manejar agregar producto al carrito
@@ -73,9 +61,6 @@ const [numBadge, setNumBadge] = useState(0);
 
         //Agrega funciona extras si no se duplica
         else if(!exists) {
-
-            //Suma el total 
-            setTotal(total + newOrder.price)
 
             //Aumenta el nummero de badge
             setNumBadge(ordersList.length + 1)
@@ -247,20 +232,14 @@ const [numBadge, setNumBadge] = useState(0);
         )
     );
 
-  ordersList.map(
-    (product) => {
-        if(product.id === id) {
-            setTotal(total + product.price)
-        }
-    }
-  )
+
 
     };
 
 //MAnejar precio restando unidades
   const handleDecreaseQuantity = ({ id, quantity }) => {
 
-    //  setTotalPrice(prev => (prev > newPrice ? totalPrice - newPrice : totalPrice+newPrice));// no baja de 1
+
     setOrderList(prevCart =>
         prevCart.map(product =>
         product.id === id & product.quantity > 1
@@ -273,13 +252,6 @@ const [numBadge, setNumBadge] = useState(0);
         )
     );
 
-    ordersList.map(
-    (product) => {
-        if(product.id === id & quantity > 0 ) {
-            setTotal(total - product.price)
-        }
-    });
-    
   }
 
 
@@ -302,7 +274,7 @@ const [numBadge, setNumBadge] = useState(0);
 
 
   }
-  
+
   //Funcion sumar total del carrito
         const totalR = ordersList.reduce(
         (acc, product) => acc + product.price * product.quantity,
