@@ -282,6 +282,8 @@ const [numBadge, setNumBadge] = useState(0);
     
   }
 
+
+
   //MAnejar precio cambio de stock en input
   const handleChangeQuantity = ({id, quantity}) => {
 
@@ -298,8 +300,14 @@ const [numBadge, setNumBadge] = useState(0);
         )
     );
 
-  }
 
+  }
+  
+  //Funcion sumar total del carrito
+        const totalR = ordersList.reduce(
+        (acc, product) => acc + product.price * product.quantity,
+        0,
+    );
 
   useEffect(() => {
 
@@ -391,7 +399,7 @@ const [numBadge, setNumBadge] = useState(0);
 
                 <div className="box-total"> 
                     <h3>Total</h3>
-                    <h3 className="total">{`$${total}`}</h3>
+                    <h3 className="total">{`$${totalR}`}</h3>
                 </div>
                 <div className="box-order">
                     <BtnOrder 
