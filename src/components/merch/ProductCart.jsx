@@ -3,7 +3,7 @@ import "../../styles/merch/ProductCart.css"
 
 
 
-export default function ProductCart({id ,name, price, image, subtotal, quantity, increaseQuantity, decreaseQuantity, changeQuantity}) {
+export default function ProductCart({ id ,name, price, image, subtotal, quantity, increaseQuantity, decreaseQuantity, changeQuantity, deleteProduct }) {
 
 
 
