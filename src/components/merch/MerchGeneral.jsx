@@ -281,6 +281,8 @@ const [numBadge, setNumBadge] = useState(0);
         0,
     );
 
+
+
   useEffect(() => {
 
   },[])
@@ -376,6 +378,9 @@ const [numBadge, setNumBadge] = useState(0);
                 <div className="box-order">
                     <BtnOrder 
                         isThereStock={true}
+                        listOrder={ordersList}
+                        total={totalR}
+
                     />
                 </div>
             </section>
