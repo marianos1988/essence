@@ -3,25 +3,7 @@ import "../../styles/merch/BtnOrder.css";
 
 export default function BtnOrder({ isThereStock, listOrder, total}) {
     
-
     
-    //Genera el mensaje
-    // const generarMensaje = () => {
-    //     const texto = `
-    //     Hola! Quiero realizar el siguiente pedido:
-
-    //     ${listOrder.map(p =>
-    //     `• ${p.name} - Cantidad: ${p.quantity} - Subtotal: $${p.subtotal}`
-    //     ).join("\n")}
-
-    //     Total: $${total}
-
-    //     Gracias!
-    //     `;
-
-    //     return encodeURIComponent(texto);
-    // };
-
     const generarMensaje = () => {
 
         const fecha = new Date().toLocaleDateString("es-AR");
@@ -37,7 +19,7 @@ export default function BtnOrder({ isThereStock, listOrder, total}) {
         }).join("\n\n");
 
         const texto = `
-        *NUEVO PEDIDO*
+        *Solicitud de nuevo pedido*
         Fecha: ${fecha}
 
         ━━━━━━━━━━━━━━

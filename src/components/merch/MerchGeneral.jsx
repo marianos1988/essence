@@ -377,7 +377,7 @@ const [numBadge, setNumBadge] = useState(0);
                 </div>
                 <div className="box-order">
                     <BtnOrder 
-                        isThereStock={true}
+                        isThereStock={(ordersList.length > 0) ? true : false}
                         listOrder={ordersList}
                         total={totalR}
 
