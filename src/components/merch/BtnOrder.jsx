@@ -13,13 +13,18 @@ export default function BtnOrder({ isThereStock, listOrder, total}) {
 
             return `
         Producto: ${p.name}
+
         Cantidad: ${p.quantity}
+
         Precio unitario: $${p.price}
+
         Subtotal: $${p.subtotal}`;
+
         }).join("\n\n");
 
         const texto = `
         *Solicitud de nuevo pedido*
+        
         Fecha: ${fecha}
 
         ━━━━━━━━━━━━━━

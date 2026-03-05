@@ -2,8 +2,8 @@
 
 .btn-order {
  font-family: "Neo-latina" ,sans-serif;
-  position: absolute;
- transform: translate(211%);
+ 
+ transform: translate(200%, -73%);
   background: #444;
   color: #fff;
   font-weight: 600;
@@ -15,6 +15,7 @@
   transition: 0.2s;
   border-radius: 10px;
   padding: 0 5px;
+
 }
 
 .btn-order.disabled {
@@ -107,5 +108,12 @@
   }
   100% {
     box-shadow: #27272c;
+  }
+}
+
+@media (max-width:480px) {
+  .btn-order {
+    transform: translate(0px, 0px);
+
   }
 }

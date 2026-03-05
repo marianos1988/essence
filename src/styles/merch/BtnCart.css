@@ -145,3 +145,9 @@
     box-shadow: #27272c;
   }
 }
+
+@media (min-width:300px) AND (max-width: 350px) {
+    .btn-cart  {
+        transform: scale(.8) translateX(10px);
+    }
+}

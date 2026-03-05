@@ -190,3 +190,9 @@ button .icon-tabler-plus {
 button .icon-tabler-coin {
     transform: translateX(-25px) !important;
 }
+
+@media (min-width:300px) AND (max-width: 350px) {
+    .container-filters {
+        transform: scale(.8);
+    }
+}

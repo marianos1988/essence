@@ -87,3 +87,9 @@
 .arrow.open {
   transform: rotate(180deg);
 }
+
+@media (min-width:300px) AND (max-width: 350px) {
+    .dropdown  {
+        transform: scale(.8) translateX(25px);
+    }
+}
