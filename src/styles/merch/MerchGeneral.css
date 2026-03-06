@@ -6,7 +6,7 @@
     grid-template-columns: minmax(0,84px) 3fr minmax(0,280px);
     grid-template-rows: 200px 1fr;
     transition: all .4s ease-in;
-    padding-bottom: 100px;
+
 
 }
 
@@ -162,9 +162,6 @@
 }
 
 
-
-
-
     
 @media (max-width:480px) {
 
@@ -198,4 +195,12 @@
         /* transform: translateX(-20px); */
     }
 
+}
+
+@media (min-width:1588px) {
+    .container-merch {
+
+        margin-bottom: -500px;
+
+    }
 }
