@@ -96,13 +96,6 @@ export default function EventsR( data ) {
     const [ dataEvents, setDataEvents ] = useState(allData.arrEvents);
     
 
-    // const handleNext = () => {
-    //     setDataEvents((prev) => {
-    //     const [first, ...rest] = prev;
-    //     return [...rest, first];
-    //     });
-    // };
-
 
         const handleNext = () => {
             setDataEvents(prev => {

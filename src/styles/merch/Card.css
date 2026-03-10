@@ -39,24 +39,38 @@
 
 }
 
-
+.desc-product .group-btns {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 100%;
+}
 
 .desc-product .group-btns button {
   color: #fff;
 }
 
-.desc-product .group-btns svg {
+.group-btns .box-tilde.hidden{
   display: none;
-  transform: translate(170px, -40px);
+  /* transform: translate(170px, -40px); */
   width: 35px;
   height: 35px;
   color: #0FF0FC;
   animation: aparecer .4s ease-in;
 }
 
-.desc-product .group-btns svg.checked {
+.group-btns .box-tilde.active {
   display: inherit;
-  position: absolute;
+
+}
+
+.box-tilde.active svg {
+   position: absolute;
+    width: 35px;
+  height: 35px;
+  color: #0FF0FC;
+  animation: aparecer .4s ease-in;
+  transform: translate(52px,4px);
 }
 
 @media (min-width:300px) AND (max-width:350px) {

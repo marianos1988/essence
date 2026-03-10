@@ -1,7 +1,7 @@
 
 import "../../styles/events/BtnInfo.css";
 
-export default function BtnBuy({ children }) {
+export default function BtnInfo({ children }) {
     
     return (
 

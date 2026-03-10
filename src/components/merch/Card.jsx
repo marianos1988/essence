@@ -1,7 +1,8 @@
 
 import "../../styles/merch/Card.css";
 import BtnAddCart from "./BtnAddCart";
-import ImgCarousel from "./ImgCarousel"; 
+import ImgCarousel from "./ImgCarousel";
+import BtnInfo from "./BtnInfo";
 
 
 export const Card = ({id, name, price, description, isThereStock, upToCart2, tilde }) => {
@@ -37,11 +38,13 @@ export const Card = ({id, name, price, description, isThereStock, upToCart2, til
               }}
               upToCart = { handleUpToCart }
             />
-            <div>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={(tilde === true) ? "icon icon-tabler icons-tabler-outline icon-tabler-checks checked" : "icon icon-tabler icons-tabler-outline icon-tabler-checks" }><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 12l5 5l10 -10" /><path d="M2 12l5 5m5 -5l5 -5" /></svg>
-            </div> 
-          </div>
 
+            <div className={(tilde === true) ? "box-tilde active" : "box-tilde hidden" }>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-checks"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 12l5 5l10 -10" /><path d="M2 12l5 5m5 -5l5 -5" /></svg>
+            </div> 
+
+            <BtnInfo />
+          </div>
         </div>
       </div>
     </>
