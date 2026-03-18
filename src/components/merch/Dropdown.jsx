@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import "../../styles/merch/Dropdown.css";
 
-export default function Dropdown({ label = "Seleccionar", options = [], onSelect }) {
+export default function Dropdown({ label = "Seleccionar", moodInfo, options = [], onSelect }) {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState(null);
   const dropdownRef = useRef(null);
@@ -24,23 +24,56 @@ export default function Dropdown({ label = "Seleccionar", options = [], onSelect
   }, []);
 
   return (
-    <div className="dropdown" ref={dropdownRef}>
-      <button className="dropdown-button" onClick={() => setOpen(!open)}>
-        {selected ? selected.label : label}
-        <span className={`arrow ${open ? "open" : ""}`}>▼</span>
-      </button>
+<>
+    { 
 
-      <ul className={`dropdown-menu ${open ? "open" : ""}`}>
-        {options.map((option) => (
-          <li
-            key={option.value}
-            className="dropdown-item"
-            onClick={() => handleSelect(option)}
-          >
-            {option.label}
-          </li>
-        ))}
-      </ul>
-    </div>
+    (moodInfo === false) /* El modo info es si esta seccio info producto o modo lsita de productos */
+    
+    ? (
+        <div className="dropdown" ref={dropdownRef}>
+          <button className="dropdown-button" onClick={() => setOpen(!open)}>
+            {selected ? selected.label : label}
+            <span className={`arrow ${open ? "open" : ""}`}>▼</span>
+          </button>
+
+          <ul className={`dropdown-menu ${open ? "open" : ""}`}>
+            {options.map((option) => (
+              <li
+                key={option.value}
+                className="dropdown-item"
+                onClick={() => handleSelect(option)}
+              >
+                {option.label}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )
+    
+    : (
+        <div className="dropdown" ref={dropdownRef}>
+          <button className="dropdown-button disabled" onClick={() => setOpen(!open)} disabled>
+            {selected ? selected.label : label}
+            <span className={`arrow ${open ? "open" : ""}`}>▼</span>
+          </button>
+
+          <ul className={`dropdown-menu ${open ? "open" : ""}`}>
+            {options.map((option) => (
+              <li
+                key={option.value}
+                className="dropdown-item"
+                onClick={() => handleSelect(option)}
+              >
+                {option.label}
+              </li>
+            ))}
+          </ul>
+        </div>
+    )
+
+    }
+</>
+
+
   );
 }

@@ -1,7 +1,7 @@
-
+import "../../styles/merch/MerchGeneral.css";
 import Dropdown from "./Dropdown";
 import Filters from "./Filters";
-import "../../styles/merch/MerchGeneral.css";
+
 import { useEffect, useState } from "react";
 import { Card } from "./Card";
 import BtnCart from "./BtnCart";
@@ -33,11 +33,38 @@ stateProducts.push(configProduct)
 
 
 const stateNameCategory = "Productos";
- const [ openGrid, setOpenGrid ] = useState(stateOpenGrid);
- const [viewProducts, setViewProducts ] = useState(stateProducts);
- const [ nameCategory, setNameCategory ] = useState(stateNameCategory);
- const [viewCart, setViewCart] = useState(stateViewCart)
+const [ openGrid, setOpenGrid ] = useState(stateOpenGrid);
+const [viewProducts, setViewProducts ] = useState(stateProducts);
+const [ nameCategory, setNameCategory ] = useState(stateNameCategory);
+const [viewCart, setViewCart] = useState(stateViewCart)
 
+
+const initialStateChangeScreenProducts = {
+    optionScreen: 1,
+    id: undefined
+}
+
+const [ changeScreenProducts, setChangeScreenProducts ] = useState(initialStateChangeScreenProducts)
+
+
+const handleChangeScreenProducts = (option) => {
+
+    switch(option.optionScreen) {
+
+        case 1: setChangeScreenProducts(initialStateChangeScreenProducts);
+            break;
+        
+        case 2: setChangeScreenProducts({
+            optionScreen: option.optionScreen,
+            id: option.id
+        });
+            break;
+
+
+    }
+
+    console.log(changeScreenProducts)
+}
 
 
 
@@ -304,37 +331,89 @@ const [numBadge, setNumBadge] = useState(0);
                 />
             </section>
             
-            <section className="sec-products">
-                <div className="box-dropdown">
-                    <Dropdown 
-                        label="Ordenar por:" options={options} onSelect={ selectOrder }
-                    />
-                    <BtnCart 
-                        ordersList = {numBadge}
-                        handleViewCart = {() => handleViewCart()}
-                    />
-                </div>
-                <div className="list-products" key={viewProducts.map(p => p.id).join("-")}>
+            
+            {
+                /*Cambiar pantalla de lista de productos por info del producto*/
+                (changeScreenProducts.optionScreen === 1) && (
+                    
+                    <section className="sec-products">
+                        <div className="box-dropdown">
+                            <Dropdown
+                                label="Ordenar por:" options={options} onSelect={ selectOrder }
+                                moodInfo={false}                            />
+                            <BtnCart 
+                                ordersList = {numBadge}
+                                handleViewCart = {() => handleViewCart()}
+                            />
+                        </div>
+                        <div className="list-products" key={viewProducts.map(p => p.id).join("-")}>
 
-                    {
-                        viewProducts.map(
-                            (product) => (
-                                <Card 
-                                    key={product.id}
-                                    id={product.id}
-                                    name={product.name}
-                                    price={product.price}
-                                    description={product.description}
-                                    isThereStock={true} 
-                                    upToCart2={ handleSetOrderList }
-                                    tilde={product.config.addTilde}
+                            {
+                                viewProducts.map(
+                                    (product) => (
+                                        <Card 
+                                            key={product.id}
+                                            id={product.id}
+                                            name={product.name}
+                                            price={product.price}
+                                            description={product.description}
+                                            isThereStock={true} 
+                                            upToCart2={ handleSetOrderList }
+                                            tilde={product.config.addTilde}
+                                            screenOption={handleChangeScreenProducts}
+                                        />
+                                    )
+                                )
+                            }
+                        </div>
+                    </section> 
+                )
+            }
 
-                                />
-                            )
-                        )
-                    }
-                </div>
-            </section> 
+            {
+                /*Cambiar pantalla de info productos por lista del productos*/
+                (changeScreenProducts.optionScreen === 2) && (
+                    
+                    <section className="sec-info-product">
+
+                        <div className="box-dropdown">
+                            <Dropdown 
+                                label="Ordenar por:" options={options} onSelect={ selectOrder }
+                                moodInfo={true}
+                            />
+                            <BtnCart 
+                                ordersList = {numBadge}
+                                handleViewCart = {() => handleViewCart()}
+                            />
+                        </div>
+                        <div className="info-product">
+
+                            {
+                                viewProducts.map(
+                                    (product) => (
+                                        (product.id === changeScreenProducts.id) && (
+                                        <Card 
+                                            key={product.id}
+                                            id={product.id}
+                                            name={product.name}
+                                            price={product.price}
+                                            description={product.description}
+                                            isThereStock={true} 
+                                            upToCart2={ handleSetOrderList }
+                                            tilde={product.config.addTilde}
+                                            screenOption={handleChangeScreenProducts}
+
+                                        />  
+                                    )
+
+                                    )
+                                )
+                            }
+                        </div>
+                    </section> 
+                )
+            }
+
 
             <section className={(viewCart) ? `sec-cart active` : `sec-cart`}>
                 <div className="box-close">

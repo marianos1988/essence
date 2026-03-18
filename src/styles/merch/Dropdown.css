@@ -26,6 +26,17 @@
   transition: background-color 0.2s ease;
 }
 
+.dropdown-button.disabled {
+
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.dropdown-button.disabled:hover {
+  color: #fff;
+
+}
+
 .dropdown-button:hover {
   color: #0FF0FC;
   transition: all .4s ease-in;
