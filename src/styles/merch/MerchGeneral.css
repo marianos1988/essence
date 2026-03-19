@@ -96,9 +96,9 @@
 
 .sec-info-product .info-product {
 
-    margin: 30px 20px; 
+   
     display: flex;
-    flex-wrap: wrap;
+
     justify-content: space-evenly;
     width: 100%;    
 

@@ -4,6 +4,7 @@ import Filters from "./Filters";
 
 import { useEffect, useState } from "react";
 import { Card } from "./Card";
+import { CardInfo } from "./CardInfo";
 import BtnCart from "./BtnCart";
 import ProductCart from "./ProductCart";
 import BtnOrder from "./BtnOrder";
@@ -47,6 +48,7 @@ const initialStateChangeScreenProducts = {
 const [ changeScreenProducts, setChangeScreenProducts ] = useState(initialStateChangeScreenProducts)
 
 
+// Cambia la pantalla de lista de productospor info de productos y biseversa
 const handleChangeScreenProducts = (option) => {
 
     switch(option.optionScreen) {
@@ -63,7 +65,7 @@ const handleChangeScreenProducts = (option) => {
 
     }
 
-    console.log(changeScreenProducts)
+    
 }
 
 
@@ -328,6 +330,7 @@ const [numBadge, setNumBadge] = useState(0);
                     handleOpenGrid = { handleOpenGrid }
                     openGrid={ openGrid }
                     handleSelectCategory={ (c)=> selectCategory(c) }
+                    screenOption={ handleChangeScreenProducts }
                 />
             </section>
             
@@ -392,7 +395,7 @@ const [numBadge, setNumBadge] = useState(0);
                                 viewProducts.map(
                                     (product) => (
                                         (product.id === changeScreenProducts.id) && (
-                                        <Card 
+                                        <CardInfo 
                                             key={product.id}
                                             id={product.id}
                                             name={product.name}
