@@ -23,7 +23,11 @@ const entries = await Promise.all(
   })
 );
 
-const sortedBySlug = entries.sort((a, b) => b.slug.localeCompare(a.slug));
+const sortedBySlug = entries.sort((a, b) => {
+  const numA = parseInt(a.slug.replace("set-", ""));
+  const numB = parseInt(b.slug.replace("set-", ""));
+  return numB - numA; // descendente
+});
 ---
  
 <Layout>
